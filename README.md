@@ -1,6 +1,3 @@
-Okay, here's a comprehensive README.md for your "S-2000 (Scrapper-2000)" program. It incorporates the dual functionality of orchestrating DiscordChatExporter and then scraping the generated JSON.
-
-
 # S-2000 (Scrapper-2000) - Discord Chat Export & Scrape Tool
 
 S-2000 is a powerful Go-based command-line tool designed to automate the process of exporting Discord chat history using [DiscordChatExporter (DCE)](https://github.com/Tyrrrz/DiscordChatExporter) and then scraping specific user and role information from the generated JSON files. It supports chunking large channel exports by date ranges for parallel processing and aggregates all scraped data into a single, deduplicated CSV file.
