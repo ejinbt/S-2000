@@ -1,0 +1,15 @@
+config:
+  token: "YOUR_DISCORD_BOT_TOKEN"
+  dce_execpath: "./DiscordChatExporter.Cli" # Path to DCE executable
+  intermediate_export_directory: "./s2000_json_exports" # Where DCE chunks go
+  final_csv_output_path: "./s2000_aggregated_data.csv" # Final output
+  dce_export_format: "Json" # Should always be Json for this tool
+  dce_max_concurrent: 4
+  channels:
+    - id: "YOUR_BIG_CHANNEL_ID"
+      name: "the-big-channel"
+      autochunk:
+        startdate: "2019-05-23"
+        enddate: "YYYY-MM-DD" # Today's date
+        chunkdurationmonths: 1
+    # ... other channels
