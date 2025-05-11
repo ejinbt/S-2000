@@ -165,10 +165,3 @@ S-2000 is written in Go. Key components:
 (Specify your chosen license, e.g., MIT, Apache 2.0, or "Proprietary".)
 ```
 
-**Before finalizing this README:**
-
-*   Replace placeholders like `YOUR_DISCORD_BOT_TOKEN`, `YOUR_CHANNEL_ID_1`, and the example `enddate` in the sample `config.yaml` section.
-*   Fill in the "Contributing" and "License" sections as appropriate for your project.
-*   Verify the `dce_execpath` examples match common scenarios for users.
-
-This README should provide a good overview and usage instructions for your S-2000 tool!
