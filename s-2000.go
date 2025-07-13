@@ -6,70 +6,73 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io"
 	"log"
 	"os"
 	"os/exec"
 	"path/filepath"
+	"runtime"
 	"strings"
 	"sync"
 	"time"
 
+	"github.com/schollz/progressbar/v3"
 	"gopkg.in/yaml.v2"
 )
 
 // --- S-2000 Configuration Structures ---
 type DateRangeStr string
-
 type AutoChunkConfig struct {
 	StartDate           string `yaml:"startdate"`
 	EndDate             string `yaml:"enddate"`
 	ChunkDurationMonths int    `yaml:"chunkdurationmonths"`
 }
-
 type ChannelConfig struct {
 	ID         string           `yaml:"id"`
 	Name       string           `yaml:"name"`
 	DateRanges []DateRangeStr   `yaml:"dateranges"`
 	AutoChunk  *AutoChunkConfig `yaml:"autochunk"`
 }
-
 type S2000AppConfig struct {
 	Token                       string          `yaml:"token"`
 	DceExecPath                 string          `yaml:"dce_execpath"`
 	IntermediateExportDirectory string          `yaml:"intermediate_export_directory"`
 	FinalCsvOutputPath          string          `yaml:"final_csv_output_path"`
-	DceExportFormat             string          `yaml:"dce_export_format"` // Should likely be hardcoded to Json
+	MessagesCsvOutputPath       string          `yaml:"messages_csv_output_path"`
+	DceExportFormat             string          `yaml:"dce_export_format"`
 	DceMaxConcurrent            int             `yaml:"dce_max_concurrent"`
 	Channels                    []ChannelConfig `yaml:"channels"`
 }
-
 type RootConfig struct {
 	Config S2000AppConfig `yaml:"config"`
 }
 
-type ScraperMessage struct {
-	Author ScraperAuthor `json:"author"`
+// --- JSON Scraping Structures ---
+// For user/role scraping
+type ScraperMessageRoles struct {
+	Author ScraperAuthorRoles `json:"author"`
 }
-
-type ScraperAuthor struct {
+type ScraperAuthorRoles struct {
 	ID       string        `json:"id"`
 	Name     string        `json:"name"`
 	Nickname string        `json:"nickname"`
 	Roles    []ScraperRole `json:"roles"`
 }
-
 type ScraperRole struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
 }
-
 type UserRoleEntry struct {
-	UserID      string
-	Username    string
-	DisplayName string
-	RoleID      string
-	RoleName    string
+	UserID, Username, DisplayName, RoleID, RoleName string
+}
+
+// For message content scraping
+type ScraperMessageContent struct {
+	Content string               `json:"content"`
+	Author  ScraperAuthorContent `json:"author"`
+}
+type ScraperAuthorContent struct {
+	Name     string `json:"name"`
+	Nickname string `json:"nickname"`
 }
 
 // --- Helper Functions ---
@@ -112,7 +115,6 @@ func generateDateRanges(autoChunk AutoChunkConfig) ([]DateRangeStr, error) {
 	return ranges, nil
 }
 
-// CommandAndFileOutput stores the command arguments and the expected output JSON file path
 type CommandAndFileOutput struct {
 	CommandArgs    []string
 	OutputJSONPath string
@@ -124,19 +126,13 @@ func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error)
 	if err != nil {
 		return nil, fmt.Errorf("error creating intermediate export directory '%s': %v", appConfig.IntermediateExportDirectory, err)
 	}
-
 	for _, channel := range appConfig.Channels {
 		channelSubDir := channel.ID
 		if channel.Name != "" {
 			channelSubDir = sanitizeFilename(channel.Name) + "_" + channel.ID
 		}
 		channelOutputDir := filepath.Join(appConfig.IntermediateExportDirectory, channelSubDir)
-		err := os.MkdirAll(channelOutputDir, os.ModePerm)
-		if err != nil {
-			log.Printf("Warning: error creating channel-specific directory '%s': %v.", channelOutputDir, err)
-			// Continue, DCE might still write to base if subdir creation fails
-		}
-
+		_ = os.MkdirAll(channelOutputDir, os.ModePerm)
 		var effectiveDateRanges []DateRangeStr
 		if channel.AutoChunk != nil {
 			generatedRanges, errGen := generateDateRanges(*channel.AutoChunk)
@@ -148,12 +144,7 @@ func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error)
 		} else {
 			effectiveDateRanges = channel.DateRanges
 		}
-
 		exportFormat := appConfig.DceExportFormat
-		if exportFormat == "" { // Default to Json if not specified
-			exportFormat = "Json"
-		}
-
 		if len(effectiveDateRanges) == 0 {
 			filenameSuffix := fmt.Sprintf("%s_all.%s", channel.ID, strings.ToLower(exportFormat))
 			if channel.Name != "" {
@@ -161,8 +152,7 @@ func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error)
 			}
 			outputJSONPath := filepath.Join(channelOutputDir, filenameSuffix)
 			args := []string{
-				appConfig.DceExecPath, "export", "-t", appConfig.Token,
-				"-c", channel.ID, "-f", exportFormat, "-o", outputJSONPath,
+				appConfig.DceExecPath, "export", "-t", appConfig.Token, "-c", channel.ID, "-f", exportFormat, "-o", outputJSONPath,
 			}
 			commandsAndOutputs = append(commandsAndOutputs, CommandAndFileOutput{CommandArgs: args, OutputJSONPath: outputJSONPath})
 		} else {
@@ -173,14 +163,10 @@ func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error)
 					continue
 				}
 				startDateStr, endDateStr := strings.TrimSpace(parts[0]), strings.TrimSpace(parts[1])
-				filenameSuffix := fmt.Sprintf("%s_from_%s_to_%s.%s", channel.ID, strings.ReplaceAll(startDateStr, "-", ""), strings.ReplaceAll(endDateStr, "-", ""), strings.ToLower(exportFormat))
-				if channel.Name != "" {
-					filenameSuffix = fmt.Sprintf("%s_%s_from_%s_to_%s.%s", sanitizeFilename(channel.Name), channel.ID, strings.ReplaceAll(startDateStr, "-", ""), strings.ReplaceAll(endDateStr, "-", ""), strings.ToLower(exportFormat))
-				}
+				filenameSuffix := fmt.Sprintf("%s_%s_from_%s_to_%s.%s", sanitizeFilename(channel.Name), channel.ID, strings.ReplaceAll(startDateStr, "-", ""), strings.ReplaceAll(endDateStr, "-", ""), strings.ToLower(exportFormat))
 				outputJSONPath := filepath.Join(channelOutputDir, filenameSuffix)
 				args := []string{
-					appConfig.DceExecPath, "export", "-t", appConfig.Token,
-					"-c", channel.ID, "-f", exportFormat,
+					appConfig.DceExecPath, "export", "-t", appConfig.Token, "-c", channel.ID, "-f", exportFormat,
 					"--after", startDateStr, "--before", endDateStr, "-o", outputJSONPath,
 				}
 				commandsAndOutputs = append(commandsAndOutputs, CommandAndFileOutput{CommandArgs: args, OutputJSONPath: outputJSONPath})
@@ -190,203 +176,22 @@ func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error)
 	return commandsAndOutputs, nil
 }
 
-func runDceCommand(cmdAndOutput CommandAndFileOutput, wg *sync.WaitGroup, sem chan struct{}, successfulFiles *[]string, muFiles *sync.Mutex) {
+func runDceCommand(cmdAndOutput CommandAndFileOutput, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
 	defer wg.Done()
 	sem <- struct{}{}
 	defer func() { <-sem }()
+	defer bar.Add(1)
 
 	executable := cmdAndOutput.CommandArgs[0]
 	argsOnly := cmdAndOutput.CommandArgs[1:]
-
-	log.Printf("DCE Starting: %s %s", executable, strings.Join(argsOnly, " "))
 	cmd := exec.Command(executable, argsOnly...)
 	output, err := cmd.CombinedOutput()
-
 	if err != nil {
-		log.Printf("DCE ERROR: %s %s\nError: %v\nOutput (last 500 chars):\n%s\n",
-			executable, strings.Join(argsOnly, " "), err, limitString(string(output), 500))
-		return
+		log.Printf("\nDCE ERROR: %s %s\nError: %v\nOutput (last 500 chars):\n%s\n", executable, strings.Join(argsOnly, " "), err, limitString(string(output), 500))
 	}
-	log.Printf("DCE SUCCESS: %s %s (Output: %s)", executable, strings.Join(argsOnly, " "), cmdAndOutput.OutputJSONPath)
-	muFiles.Lock()
-	*successfulFiles = append(*successfulFiles, cmdAndOutput.OutputJSONPath)
-	muFiles.Unlock()
 }
 
-// --- Phase 2: JSON Scraping Functions ---
-func processJSONFileForScraping(filePath string, uniqueEntries map[string]UserRoleEntry, muData *sync.Mutex, wgScrape *sync.WaitGroup, semScrape chan struct{}) {
-	defer wgScrape.Done()
-	semScrape <- struct{}{}
-	defer func() { <-semScrape }()
-
-	log.Printf("Scraper Processing: %s", filePath)
-	file, err := os.Open(filePath)
-	if err != nil {
-		log.Printf("Scraper ERROR opening file %s: %v", filePath, err)
-		return
-	}
-	defer file.Close()
-
-	reader := bufio.NewReader(file)
-	decoder := json.NewDecoder(reader)
-	_, err = decoder.Token() // Read '{'
-	if err != nil {
-		log.Printf("Scraper ERROR reading opening brace from %s: %v", filePath, err)
-		return
-	}
-
-	foundMessages := false
-	for decoder.More() {
-		token, errToken := decoder.Token()
-		if errToken == io.EOF {
-			break
-		}
-		if errToken != nil {
-			log.Printf("Scraper ERROR reading token key from %s: %v", filePath, errToken)
-			return
-		}
-		key, ok := token.(string)
-		if !ok {
-			var dummy interface{}
-			if errDec := decoder.Decode(&dummy); errDec != nil && errDec != io.EOF {
-				log.Printf("Scraper ERROR skipping value in %s: %v", filePath, errDec)
-				return
-			}
-			continue
-		}
-		if key == "messages" {
-			foundMessages = true
-			_, errToken = decoder.Token() // Read '['
-			if errToken != nil {
-				log.Printf("Scraper ERROR reading opening bracket for messages in %s: %v", filePath, errToken)
-				return
-			}
-			for decoder.More() { // Outer loop for messages
-				var msg ScraperMessage
-				if errDec := decoder.Decode(&msg); errDec != nil { // Attempt to decode a ScraperMessage
-					if errDec == io.EOF { // If EOF during message decode, break message loop
-						break
-					}
-					// Log the initial decode error for ScraperMessage
-					log.Printf("Scraper WARNING: Error decoding ScraperMessage object in %s: %v. Attempting to skip this value.", filePath, errDec)
-
-					// Attempt to skip the entire JSON value that caused the ScraperMessage decode error.
-					var skipDummy interface{}
-					if errSkip := decoder.Decode(&skipDummy); errSkip != nil {
-						log.Printf("Scraper ERROR: Also failed to skip the problematic value using Decode(&skipDummy) in %s: %v. The JSON stream might be badly corrupted. Stopping processing of messages for this file.", filePath, errSkip)
-						// If skipping also fails, it's hard to recover robustly.
-						// Break from the outer "for decoder.More()" (messages loop) for this file.
-						break
-					} else {
-						log.Printf("Scraper INFO: Successfully skipped one problematic JSON value in %s. Will attempt to process next message.", filePath)
-					}
-
-					// After attempting to skip (successfully or not, followed by a break on failure),
-					// continue to the next iteration of the *outer* message loop.
-					// The decoder.More() will then check if there's more data for another message.
-					continue
-				}
-
-				// If decode into ScraperMessage was successful:
-				if msg.Author.ID == "" { // Basic validation for a successfully decoded message
-					// log.Printf("Scraper INFO: Decoded message has no author ID in %s. Skipping.", filePath)
-					continue
-				}
-
-				displayName := msg.Author.Nickname
-				if displayName == "" {
-					displayName = msg.Author.Name
-				}
-
-				if len(msg.Author.Roles) == 0 {
-					entryKey := fmt.Sprintf("%s-NO_ROLE_ASSIGNED", msg.Author.ID)
-					muData.Lock() // Assuming muData is the mutex for uniqueEntries
-					if _, exists := uniqueEntries[entryKey]; !exists {
-						uniqueEntries[entryKey] = UserRoleEntry{
-							UserID:      msg.Author.ID,
-							Username:    msg.Author.Name,
-							DisplayName: displayName,
-							RoleID:      "",
-							RoleName:    "",
-						}
-					}
-					muData.Unlock()
-				} else {
-					for _, role := range msg.Author.Roles {
-						roleID := role.ID
-						roleName := role.Name
-						roleKeyPart := role.ID
-						if roleKeyPart == "" {
-							roleKeyPart = "EMPTY_ROLE_ID"
-						}
-						entryKey := fmt.Sprintf("%s-%s", msg.Author.ID, roleKeyPart)
-						muData.Lock() // Assuming muData is the mutex for uniqueEntries
-						if _, exists := uniqueEntries[entryKey]; !exists {
-							uniqueEntries[entryKey] = UserRoleEntry{
-								UserID:      msg.Author.ID,
-								Username:    msg.Author.Name,
-								DisplayName: displayName,
-								RoleID:      roleID,
-								RoleName:    roleName,
-							}
-						}
-						muData.Unlock()
-					}
-				}
-			}
-			_, errToken = decoder.Token() // Read ']'
-			if errToken != nil && errToken != io.EOF {
-				log.Printf("Scraper ERROR reading closing bracket for messages in %s: %v", filePath, errToken)
-			}
-			break // Done with "messages" key
-		} else {
-			var dummy interface{}
-			if errDec := decoder.Decode(&dummy); errDec != nil {
-				if errDec == io.EOF {
-					break
-				}
-				log.Printf("Scraper ERROR skipping value for key '%s' in %s: %v", key, filePath, errDec)
-				return
-			}
-		}
-	}
-	if !foundMessages {
-		log.Printf("Scraper WARNING: 'messages' key not found in %s", filePath)
-	}
-	// log.Printf("Scraper Finished: %s", filePath)
-}
-
-// --- Main S-2000 Program ---
-func main() {
-	startTime := time.Now()
-	log.Println("S-2000 (Scrapper-2000) Initializing...")
-
-	// --- Configuration Loading ---
-	var configFile string
-	flag.StringVar(&configFile, "config", "config.yaml", "Path to the configuration file")
-	flag.Parse() // Parse command-line flags
-
-	log.Printf("Using config file: %s", configFile)
-	data, err := os.ReadFile(configFile)
-	if err != nil {
-		log.Fatalf("FATAL: Error reading config file '%s': %v", configFile, err)
-	}
-	var rootCfg RootConfig
-	err = yaml.Unmarshal(data, &rootCfg)
-	if err != nil {
-		log.Fatalf("FATAL: Error parsing YAML from '%s': %v", configFile, err)
-	}
-	appConfig := rootCfg.Config
-	if appConfig.DceMaxConcurrent <= 0 {
-		appConfig.DceMaxConcurrent = 4
-		log.Printf("DCE MaxConcurrent not set or invalid, defaulting to %d", appConfig.DceMaxConcurrent)
-	}
-	if appConfig.DceExportFormat == "" || strings.ToLower(appConfig.DceExportFormat) != "json" {
-		log.Printf("Warning: dce_export_format is not 'Json' or is empty. Forcing to 'Json' for S-2000 operation.")
-		appConfig.DceExportFormat = "Json"
-	}
-
-	// --- Phase 1: Execute DCE Commands ---
+func executeDcePhase(appConfig S2000AppConfig) {
 	log.Println("--- Phase 1: Starting Discord Chat Exporter Tasks ---")
 	dceCommandsAndOutputs, err := createDceCommands(appConfig)
 	if err != nil {
@@ -394,76 +199,345 @@ func main() {
 	}
 	if len(dceCommandsAndOutputs) == 0 {
 		log.Println("No DCE export tasks generated. Exiting Phase 1.")
-	} else {
-		var wgDce sync.WaitGroup
-		semDce := make(chan struct{}, appConfig.DceMaxConcurrent)
-		var successfulJSONFiles []string
-		var muFiles sync.Mutex // Mutex to protect successfulJSONFiles slice
+		return
+	}
+	bar := progressbar.NewOptions(len(dceCommandsAndOutputs),
+		progressbar.OptionSetDescription("Exporting Chat Logs (DCE)"),
+		progressbar.OptionSetWriter(os.Stderr),
+		progressbar.OptionShowBytes(false),
+		progressbar.OptionSetWidth(30),
+		progressbar.OptionThrottle(65*time.Millisecond),
+		progressbar.OptionShowCount(),
+		progressbar.OptionOnCompletion(func() { fmt.Fprint(os.Stderr, "\n") }),
+		progressbar.OptionSpinnerType(14),
+		progressbar.OptionFullWidth(),
+		progressbar.OptionSetTheme(progressbar.Theme{
+			Saucer: "[green]=[reset]", SaucerHead: "[green]>[reset]", SaucerPadding: " ",
+			BarStart: "[", BarEnd: "]",
+		}),
+	)
+	var wgDce sync.WaitGroup
+	semDce := make(chan struct{}, appConfig.DceMaxConcurrent)
+	log.Printf("Launching %d DCE export tasks (Concurrency: %d)...", len(dceCommandsAndOutputs), appConfig.DceMaxConcurrent)
+	for _, cmdAndOut := range dceCommandsAndOutputs {
+		wgDce.Add(1)
+		go runDceCommand(cmdAndOut, &wgDce, semDce, bar)
+	}
+	wgDce.Wait()
+	log.Println("--- Phase 1: All DCE export tasks completed. ---")
+}
 
-		log.Printf("Launching %d DCE export tasks (Concurrency: %d)...", len(dceCommandsAndOutputs), appConfig.DceMaxConcurrent)
-		for _, cmdAndOut := range dceCommandsAndOutputs {
-			wgDce.Add(1)
-			go runDceCommand(cmdAndOut, &wgDce, semDce, &successfulJSONFiles, &muFiles)
+// --- Phase 2: JSON Scraping Functions ---
+func processJSONFileForRoles(filePath string, uniqueEntries map[string]UserRoleEntry, muData *sync.Mutex, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
+	defer wg.Done()
+	defer bar.Add(1)
+	sem <- struct{}{}
+	defer func() { <-sem }()
+	file, err := os.Open(filePath)
+	if err != nil {
+		log.Printf("\nRoleScrape ERROR opening file %s: %v", filePath, err)
+		return
+	}
+	defer file.Close()
+	decoder := json.NewDecoder(bufio.NewReader(file))
+	_, err = decoder.Token() // '{'
+	if err != nil {
+		return
+	}
+	for decoder.More() {
+		token, _ := decoder.Token()
+		key, ok := token.(string)
+		if !ok || key != "messages" {
+			var dummy interface{}
+			decoder.Decode(&dummy)
+			continue
 		}
-		wgDce.Wait()
-		log.Println("--- Phase 1: All DCE export tasks completed. ---")
-		if len(successfulJSONFiles) == 0 {
-			log.Println("No JSON files were successfully exported by DCE. Skipping scraping phase.")
-			log.Printf("S-2000 finished in %s.", time.Since(startTime))
-			return
+		_, err = decoder.Token() // '['
+		if err != nil {
+			break
 		}
-		log.Printf("%d JSON files successfully exported by DCE.", len(successfulJSONFiles))
-
-		// --- Phase 2: Scrape JSON Files ---
-		log.Println("--- Phase 2: Starting JSON Scraping Tasks ---")
-		uniqueEntries := make(map[string]UserRoleEntry)
-		var muData sync.Mutex // Mutex for uniqueEntries map
-		var wgScrape sync.WaitGroup
-		// Concurrency for scraping can be higher, as it's mostly CPU/disk bound locally
-		// Let's use number of CPU cores or a reasonable default for scraper concurrency
-		// For simplicity, using DceMaxConcurrent here, but ideally could be a separate config.
-		scraperConcurrency := appConfig.DceMaxConcurrent * 2
-		if scraperConcurrency < 4 {
-			scraperConcurrency = 4
-		}
-		if scraperConcurrency > 16 {
-			scraperConcurrency = 16
-		}
-
-		semScrape := make(chan struct{}, scraperConcurrency)
-
-		log.Printf("Scraping %d JSON files (Concurrency: %d)...", len(successfulJSONFiles), scraperConcurrency)
-		for _, jsonPath := range successfulJSONFiles {
-			wgScrape.Add(1)
-			go processJSONFileForScraping(jsonPath, uniqueEntries, &muData, &wgScrape, semScrape)
-		}
-		wgScrape.Wait()
-		log.Println("--- Phase 2: All JSON scraping tasks completed. ---")
-
-		// --- Output to CSV ---
-		log.Printf("Writing %d unique user-role entries to CSV: %s", len(uniqueEntries), appConfig.FinalCsvOutputPath)
-		csvFile, errCsv := os.Create(appConfig.FinalCsvOutputPath)
-		if errCsv != nil {
-			log.Fatalf("FATAL: Error creating CSV file %s: %v", appConfig.FinalCsvOutputPath, errCsv)
-		}
-		defer csvFile.Close()
-		csvWriter := csv.NewWriter(bufio.NewWriter(csvFile))
-		headers := []string{"UserID", "Username", "DisplayName", "RoleID", "RoleName"}
-		if errHead := csvWriter.Write(headers); errHead != nil {
-			log.Fatalf("FATAL: Error writing CSV header: %v", errHead)
-		}
-		for _, entry := range uniqueEntries {
-			record := []string{entry.UserID, entry.Username, entry.DisplayName, entry.RoleID, entry.RoleName}
-			if errWrite := csvWriter.Write(record); errWrite != nil {
-				log.Printf("ERROR writing record to CSV: %v", errWrite)
+		for decoder.More() {
+			var msg ScraperMessageRoles
+			if err := decoder.Decode(&msg); err != nil {
+				var skipDummy interface{}
+				decoder.Decode(&skipDummy)
+				continue
+			}
+			if msg.Author.ID == "" {
+				continue
+			}
+			displayName := msg.Author.Nickname
+			if displayName == "" {
+				displayName = msg.Author.Name
+			}
+			if len(msg.Author.Roles) == 0 {
+				entryKey := fmt.Sprintf("%s-NO_ROLE_ASSIGNED", msg.Author.ID)
+				muData.Lock()
+				if _, exists := uniqueEntries[entryKey]; !exists {
+					uniqueEntries[entryKey] = UserRoleEntry{UserID: msg.Author.ID, Username: msg.Author.Name, DisplayName: displayName, RoleID: "", RoleName: ""}
+				}
+				muData.Unlock()
+			} else {
+				for _, role := range msg.Author.Roles {
+					roleID, roleName := role.ID, role.Name
+					roleKeyPart := role.ID
+					if roleKeyPart == "" {
+						roleKeyPart = "EMPTY_ROLE_ID"
+					}
+					entryKey := fmt.Sprintf("%s-%s", msg.Author.ID, roleKeyPart)
+					muData.Lock()
+					if _, exists := uniqueEntries[entryKey]; !exists {
+						uniqueEntries[entryKey] = UserRoleEntry{UserID: msg.Author.ID, Username: msg.Author.Name, DisplayName: displayName, RoleID: roleID, RoleName: roleName}
+					}
+					muData.Unlock()
+				}
 			}
 		}
-		csvWriter.Flush()
-		if errFlush := csvWriter.Error(); errFlush != nil {
-			log.Fatalf("FATAL: Error flushing CSV writer: %v", errFlush)
-		}
-		log.Printf("Successfully wrote data to %s", appConfig.FinalCsvOutputPath)
+		break
 	}
+}
 
-	log.Printf("S-2000 (Scrapper-2000) finished successfully in %s.", time.Since(startTime))
+func scrapeMessagesFromJSON(filePath string, writer *csv.Writer, muWriter *sync.Mutex, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
+	defer wg.Done()
+	defer bar.Add(1)
+	sem <- struct{}{}
+	defer func() { <-sem }()
+	file, err := os.Open(filePath)
+	if err != nil {
+		log.Printf("\nMessageScrape ERROR opening file %s: %v", filePath, err)
+		return
+	}
+	defer file.Close()
+	decoder := json.NewDecoder(bufio.NewReader(file))
+	_, err = decoder.Token() // '{'
+	if err != nil {
+		return
+	}
+	for decoder.More() {
+		token, _ := decoder.Token()
+		key, ok := token.(string)
+		if !ok || key != "messages" {
+			var dummy interface{}
+			decoder.Decode(&dummy)
+			continue
+		}
+		_, err = decoder.Token() // '['
+		if err != nil {
+			break
+		}
+		for decoder.More() {
+			var msg ScraperMessageContent
+			if err := decoder.Decode(&msg); err != nil {
+				var skipDummy interface{}
+				decoder.Decode(&skipDummy)
+				continue
+			}
+			if msg.Content == "" {
+				continue
+			}
+			displayName := msg.Author.Nickname
+			if displayName == "" {
+				displayName = msg.Author.Name
+			}
+			muWriter.Lock()
+			_ = writer.Write([]string{displayName, msg.Content})
+			muWriter.Unlock()
+		}
+		break
+	}
+}
+
+// --- S-2000 Main Program & Subcommands ---
+func main() {
+	startTime := time.Now()
+	log.Println("S-2000 (Scrapper-2000) Initializing...")
+	flag.Usage = func() {
+		fmt.Fprintf(os.Stderr, "Usage: %s <command> -config <path/to/config.yaml>\n", os.Args[0])
+		fmt.Fprintln(os.Stderr, "Commands:")
+		fmt.Fprintln(os.Stderr, "  run-all         : Runs DCE export, then scrapes for user/role data.")
+		fmt.Fprintln(os.Stderr, "  scrape-roles    : Scrapes user/role data from existing JSON files.")
+		fmt.Fprintln(os.Stderr, "  scrape-messages : Scrapes usernames and messages from existing JSON files.")
+	}
+	if len(os.Args) < 2 {
+		flag.Usage()
+		os.Exit(1)
+	}
+	var configFile string
+	switch os.Args[1] {
+	case "run-all", "scrape-roles", "scrape-messages":
+		cmdFlags := flag.NewFlagSet(os.Args[1], flag.ExitOnError)
+		cmdFlags.StringVar(&configFile, "config", "config.yaml", "Path to the configuration file.")
+		_ = cmdFlags.Parse(os.Args[2:])
+	default:
+		log.Printf("Error: Unknown command '%s'", os.Args[1])
+		flag.Usage()
+		os.Exit(1)
+	}
+	appConfig, err := loadConfig(configFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	switch os.Args[1] {
+	case "run-all":
+		runFullOrchestrationAndScrape(appConfig, startTime)
+	case "scrape-roles":
+		runScrapeRolesOnly(appConfig, startTime)
+	case "scrape-messages":
+		runMessageScrapeOnly(appConfig, startTime)
+	}
+}
+
+func loadConfig(configFile string) (S2000AppConfig, error) {
+	log.Printf("Using config file: %s", configFile)
+	data, err := os.ReadFile(configFile)
+	if err != nil {
+		return S2000AppConfig{}, fmt.Errorf("FATAL: Error reading config file '%s': %w", configFile, err)
+	}
+	var rootCfg RootConfig
+	err = yaml.Unmarshal(data, &rootCfg)
+	if err != nil {
+		return S2000AppConfig{}, fmt.Errorf("FATAL: Error parsing YAML from '%s': %w", configFile, err)
+	}
+	appConfig := rootCfg.Config
+	if appConfig.DceMaxConcurrent <= 0 {
+		appConfig.DceMaxConcurrent = 4
+	}
+	if appConfig.DceExportFormat == "" || strings.ToLower(appConfig.DceExportFormat) != "json" {
+		appConfig.DceExportFormat = "Json"
+	}
+	return appConfig, nil
+}
+
+func getJSONFilesFromExportDir(dir string) ([]string, error) {
+	var files []string
+	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if !info.IsDir() && strings.HasSuffix(strings.ToLower(info.Name()), ".json") {
+			files = append(files, path)
+		}
+		return nil
+	})
+	return files, err
+}
+
+func runFullOrchestrationAndScrape(appConfig S2000AppConfig, startTime time.Time) {
+	log.Println("--- Mode: Full Orchestration & Role Scrape ---")
+	executeDcePhase(appConfig)
+	jsonFiles, err := getJSONFilesFromExportDir(appConfig.IntermediateExportDirectory)
+	if err != nil {
+		log.Fatalf("FATAL: Could not read JSON files after export: %v", err)
+	}
+	if len(jsonFiles) == 0 {
+		log.Println("No JSON files were exported by DCE. Cannot proceed with scraping.")
+	} else {
+		runScrapeRoles(appConfig, jsonFiles)
+	}
+	log.Printf("S-2000 (run-all) finished successfully in %s.", time.Since(startTime))
+}
+
+func runScrapeRolesOnly(appConfig S2000AppConfig, startTime time.Time) {
+	log.Println("--- Mode: Scrape Roles Only ---")
+	jsonFiles, err := getJSONFilesFromExportDir(appConfig.IntermediateExportDirectory)
+	if err != nil {
+		log.Fatalf("FATAL: Could not read JSON files from export directory: %v", err)
+	}
+	if len(jsonFiles) == 0 {
+		log.Fatalf("No JSON files found in %s to scrape.", appConfig.IntermediateExportDirectory)
+	}
+	runScrapeRoles(appConfig, jsonFiles)
+	log.Printf("S-2000 (scrape-roles) finished in %s.", time.Since(startTime))
+}
+
+func runScrapeRoles(appConfig S2000AppConfig, jsonFiles []string) {
+	log.Println("--- Starting Role Scrape ---")
+	bar := progressbar.NewOptions(len(jsonFiles),
+		progressbar.OptionSetDescription("Scraping User/Role Data "),
+		progressbar.OptionSetTheme(progressbar.Theme{Saucer: "[cyan]=[reset]", SaucerHead: "[cyan]>[reset]", BarStart: "[", BarEnd: "]"}),
+		progressbar.OptionSetWidth(30),
+		progressbar.OptionShowCount(),
+		progressbar.OptionOnCompletion(func() { fmt.Fprint(os.Stderr, "\n") }),
+	)
+	uniqueEntries := make(map[string]UserRoleEntry)
+	var muData sync.Mutex
+	var wgScrape sync.WaitGroup
+	scraperConcurrency := runtime.NumCPU() * 2
+	if scraperConcurrency < 4 {
+		scraperConcurrency = 4
+	}
+	if scraperConcurrency > 16 {
+		scraperConcurrency = 16
+	}
+	semScrape := make(chan struct{}, scraperConcurrency)
+	log.Printf("Scraping roles from %d JSON files (Concurrency: %d)...", len(jsonFiles), scraperConcurrency)
+	for _, jsonPath := range jsonFiles {
+		wgScrape.Add(1)
+		go processJSONFileForRoles(jsonPath, uniqueEntries, &muData, &wgScrape, semScrape, bar)
+	}
+	wgScrape.Wait()
+	log.Println("--- Role scraping tasks completed. ---")
+	log.Printf("Writing %d unique user-role entries to CSV: %s", len(uniqueEntries), appConfig.FinalCsvOutputPath)
+	csvFile, err := os.Create(appConfig.FinalCsvOutputPath)
+	if err != nil {
+		log.Fatalf("FATAL: Error creating role CSV file %s: %v", appConfig.FinalCsvOutputPath, err)
+	}
+	defer csvFile.Close()
+	csvWriter := csv.NewWriter(bufio.NewWriter(csvFile))
+	defer csvWriter.Flush()
+	_ = csvWriter.Write([]string{"UserID", "Username", "DisplayName", "RoleID", "RoleName"})
+	for _, entry := range uniqueEntries {
+		_ = csvWriter.Write([]string{entry.UserID, entry.Username, entry.DisplayName, entry.RoleID, entry.RoleName})
+	}
+	if err := csvWriter.Error(); err != nil {
+		log.Fatalf("FATAL: Error flushing CSV writer for roles: %v", err)
+	}
+	log.Printf("Successfully wrote role data to %s", appConfig.FinalCsvOutputPath)
+}
+
+func runMessageScrapeOnly(appConfig S2000AppConfig, startTime time.Time) {
+	log.Println("--- Mode: Scrape Messages & Usernames Only ---")
+	jsonFiles, err := getJSONFilesFromExportDir(appConfig.IntermediateExportDirectory)
+	if err != nil {
+		log.Fatalf("FATAL: Could not read JSON files from export directory: %v", err)
+	}
+	if len(jsonFiles) == 0 {
+		log.Fatalf("No JSON files found in %s to scrape.", appConfig.IntermediateExportDirectory)
+	}
+	bar := progressbar.NewOptions(len(jsonFiles),
+		progressbar.OptionSetDescription("Scraping Message Content  "),
+		progressbar.OptionSetTheme(progressbar.Theme{Saucer: "[magenta]=[reset]", SaucerHead: "[magenta]>[reset]", BarStart: "[", BarEnd: "]"}),
+		progressbar.OptionSetWidth(30),
+		progressbar.OptionShowCount(),
+		progressbar.OptionOnCompletion(func() { fmt.Fprint(os.Stderr, "\n") }),
+	)
+	csvFile, err := os.Create(appConfig.MessagesCsvOutputPath)
+	if err != nil {
+		log.Fatalf("FATAL: Error creating message CSV file %s: %v", appConfig.MessagesCsvOutputPath, err)
+	}
+	defer csvFile.Close()
+	csvWriter := csv.NewWriter(bufio.NewWriter(csvFile))
+	defer csvWriter.Flush()
+	_ = csvWriter.Write([]string{"DisplayName", "MessageContent"})
+	var wg sync.WaitGroup
+	var muWriter sync.Mutex
+	scraperConcurrency := runtime.NumCPU() * 2
+	if scraperConcurrency < 4 {
+		scraperConcurrency = 4
+	}
+	if scraperConcurrency > 16 {
+		scraperConcurrency = 16
+	}
+	sem := make(chan struct{}, scraperConcurrency)
+	log.Printf("Scraping messages from %d JSON files (Concurrency: %d)...", len(jsonFiles), scraperConcurrency)
+	for _, jsonPath := range jsonFiles {
+		wg.Add(1)
+		go scrapeMessagesFromJSON(jsonPath, csvWriter, &muWriter, &wg, sem, bar)
+	}
+	wg.Wait()
+	if err := csvWriter.Error(); err != nil {
+		log.Fatalf("FATAL: Error flushing CSV writer for messages: %v", err)
+	}
+	log.Printf("Successfully scraped messages to %s", appConfig.MessagesCsvOutputPath)
+	log.Printf("S-2000 (scrape-messages) finished in %s.", time.Since(startTime))
 }

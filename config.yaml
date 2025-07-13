@@ -1,15 +1,21 @@
 config:
   token: "YOUR_DISCORD_BOT_TOKEN"
-  dce_execpath: "./DiscordChatExporter.Cli" # Path to DCE executable
-  intermediate_export_directory: "./s2000_json_exports" # Where DCE chunks go
-  final_csv_output_path: "./s2000_aggregated_data.csv" # Final output
-  dce_export_format: "Json" # Should always be Json for this tool
+  dce_execpath: "DiscordChatExporter.Cli" 
+  intermediate_export_directory: "./s2000_json_exports"
+  
+  # --- Output Paths for Different Modes ---
+  # For 'run-all' and 'scrape-roles' modes
+  final_csv_output_path: "./s2000_aggregated_user_role_data.csv" 
+  # For 'scrape-messages' mode
+  messages_csv_output_path: "./s2000_scraped_messages.csv" 
+
+  dce_export_format: "Json"
   dce_max_concurrent: 4
   channels:
     - id: "YOUR_BIG_CHANNEL_ID"
       name: "the-big-channel"
       autochunk:
         startdate: "2019-05-23"
-        enddate: "YYYY-MM-DD" # Today's date
+        enddate: "2024-07-21" # Remember to update this to the current date
         chunkdurationmonths: 1
-    # ... other channels
+    # You can add other channels here
