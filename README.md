@@ -1,5 +1,3 @@
----
-
 # S-2000 (Scrapper-2000) - Discord Chat Ops Tool
 
 S-2000 is a powerful, Go-based command-line tool designed to automate the process of exporting Discord chat history using [DiscordChatExporter (DCE)](https://github.com/Tyrrrz/DiscordChatExporter) and then scraping specific data from the generated JSON files. It features multiple modes of operation for flexible data extraction.
