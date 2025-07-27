@@ -1,0 +1,152 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "1051771243751288842",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "work-orders",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2024-11-01T00:00:00+05:30",
+    "before": "2024-11-30T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T17:44:21.2288511+05:30",
+  "messages": [
+    {
+      "id": "1303876402898010135",
+      "type": "Default",
+      "timestamp": "2024-11-07T05:49:19.303+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF Blacksmithing Zul'jin for craft everforged Sabatons R5",
+      "author": {
+        "id": "752291737246105690",
+        "name": "faoz_",
+        "discriminator": "0000",
+        "nickname": "Fa0z",
+        "color": "#BB30FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "861946436132274216",
+            "name": "Godlike Booster",
+            "color": "#FF25AE",
+            "position": 118
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002575463313428",
+            "name": "Guardian Druid",
+            "color": "#FF7C0A",
+            "position": 53
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1310184002229112832",
+      "type": "Default",
+      "timestamp": "2024-11-24T15:33:28.173+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF recraft everforged greataxe r5 terenas",
+      "author": {
+        "id": "493860261229494273",
+        "name": "ballongpung",
+        "discriminator": "0000",
+        "nickname": "Rathunter64",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/493860261229494273/d0a249649cae2f31178ff4e30db33d03.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 2
+}

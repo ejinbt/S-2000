@@ -1,0 +1,511 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "1051771243751288842",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "work-orders",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2023-04-01T00:00:00+05:30",
+    "before": "2023-04-30T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T17:36:43.4368451+05:30",
+  "messages": [
+    {
+      "id": "1092481779987923055",
+      "type": "Default",
+      "timestamp": "2023-04-03T21:42:33.679+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF LeatherWorker to Craft boots 418 ilvl - tichondrius horde - 5k with free recrafts",
+      "author": {
+        "id": "325389887819874315",
+        "name": "yibrak78",
+        "discriminator": "0000",
+        "nickname": "'Yibra",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/325389887819874315/626701b79590e6308c9bc53a74394f44.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1092575491367653416",
+      "type": "Default",
+      "timestamp": "2023-04-04T03:54:56.213+05:30",
+      "timestampEdited": "2023-04-04T03:55:21.369+05:30",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF LW for Venom-Steeped Stompers 418\nRealm: Tichondrius\nFaction: Horde\nMin. quality: 418\nCommission: 7k",
+      "author": {
+        "id": "152682389955543040",
+        "name": "genzz_",
+        "discriminator": "0000",
+        "nickname": "yenzz",
+        "color": "#6D5E44",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "785363503450947605",
+            "name": "Junior Booster",
+            "color": "#6D5E44",
+            "position": 97
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760387390210060",
+            "name": "Hunter",
+            "color": "#AAD372",
+            "position": 85
+          },
+          {
+            "id": "698760637920182402",
+            "name": "Priest",
+            "color": "#FFFFFF",
+            "position": 82
+          },
+          {
+            "id": "698760413764124783",
+            "name": "Shaman",
+            "color": "#0070DD",
+            "position": 80
+          },
+          {
+            "id": "698760523499569202",
+            "name": "Rogue",
+            "color": "#FFF468",
+            "position": 79
+          },
+          {
+            "id": "698760787547652104",
+            "name": "Warlock",
+            "color": "#8788EE",
+            "position": 78
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002579892494346",
+            "name": "Balance Druid",
+            "color": "#FF7C0A",
+            "position": 51
+          },
+          {
+            "id": "982002581322727435",
+            "name": "Feral Druid",
+            "color": "#FF7C0A",
+            "position": 50
+          },
+          {
+            "id": "982002583352803328",
+            "name": "Beast Mastery Hunter",
+            "color": "#AAD372",
+            "position": 49
+          },
+          {
+            "id": "982002585294766081",
+            "name": "Marksmanship Hunter",
+            "color": "#AAD372",
+            "position": 48
+          },
+          {
+            "id": "982002587266076732",
+            "name": "Survival Hunter",
+            "color": "#AAD372",
+            "position": 47
+          },
+          {
+            "id": "982002608623452222",
+            "name": "Discipline Priest",
+            "color": "#FFFFFF",
+            "position": 37
+          },
+          {
+            "id": "982002611077152838",
+            "name": "Holy Priest",
+            "color": "#FFFFFF",
+            "position": 36
+          },
+          {
+            "id": "982002613123940402",
+            "name": "Shadow Priest",
+            "color": "#FFFFFF",
+            "position": 35
+          },
+          {
+            "id": "982002614990426142",
+            "name": "Assassination Rogue",
+            "color": "#FFF468",
+            "position": 34
+          },
+          {
+            "id": "982002616743624714",
+            "name": "Outlaw Rogue",
+            "color": "#FFF468",
+            "position": 33
+          },
+          {
+            "id": "982002618073239643",
+            "name": "Subtlety Rogue",
+            "color": "#FFF468",
+            "position": 32
+          },
+          {
+            "id": "982002619562205254",
+            "name": "Restoration Shaman",
+            "color": "#0070DD",
+            "position": 31
+          },
+          {
+            "id": "982002621307052062",
+            "name": "Elemental Shaman",
+            "color": "#0070DD",
+            "position": 30
+          },
+          {
+            "id": "982002623106400297",
+            "name": "Enhancement Shaman",
+            "color": "#0070DD",
+            "position": 29
+          },
+          {
+            "id": "982002624373063750",
+            "name": "Affliction Warlock",
+            "color": "#8788EE",
+            "position": 28
+          },
+          {
+            "id": "982002625958510633",
+            "name": "Demonology Warlock",
+            "color": "#8788EE",
+            "position": 27
+          },
+          {
+            "id": "982002627485261824",
+            "name": "Destruction Warlock",
+            "color": "#8788EE",
+            "position": 26
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/152682389955543040/a_7e2467f910cf474249b4bf1b459626fa.gif?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1094700442635747339",
+      "type": "Default",
+      "timestamp": "2023-04-10T00:38:44.075+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF Tailor for recrafting 418 at Area 52",
+      "author": {
+        "id": "927040347425628161",
+        "name": "moistr",
+        "discriminator": "0000",
+        "nickname": "MOIST",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/927040347425628161/902b3f6fa99511990b6be931723eec39.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1096336070498598994",
+      "type": "Default",
+      "timestamp": "2023-04-14T12:58:08.146+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Buying [ Speed Set ] - Shadowland Leatherworking (70)\n\nFaction: Horde\nRealm: Illidan",
+      "author": {
+        "id": "456226577798135808",
+        "name": "Deleted User",
+        "discriminator": "0000",
+        "nickname": "Deleted User",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1097548729659166872",
+      "type": "Default",
+      "timestamp": "2023-04-17T21:16:48.62+05:30",
+      "timestampEdited": "2023-04-17T21:16:53.492+05:30",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF Blacksmith Full insp \nTwo handed Sword Weapon 392 ilvl\nRealm: Sargeras - alliance\nMin Quality 418 ilvl\nCut : 10k",
+      "author": {
+        "id": "325389887819874315",
+        "name": "yibrak78",
+        "discriminator": "0000",
+        "nickname": "'Yibra",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/325389887819874315/626701b79590e6308c9bc53a74394f44.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1101187254627618816",
+      "type": "Default",
+      "timestamp": "2023-04-27T22:15:00.573+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF LeatherWorker to Craft hunter weapon illidan",
+      "author": {
+        "id": "744899415852187710",
+        "name": "polarpun",
+        "discriminator": "0000",
+        "nickname": "polar",
+        "color": "#FF5555",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "785363483159035954",
+            "name": "Demigod Booster",
+            "color": "#FF5555",
+            "position": 114
+          },
+          {
+            "id": "782166705723539466",
+            "name": "Monster Poster",
+            "color": "#CBFF83",
+            "position": 108
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698760325545066546",
+            "name": "Death Knight",
+            "color": "#C41E3A",
+            "position": 89
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760444168372311",
+            "name": "Monk",
+            "color": "#00FF98",
+            "position": 83
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002565489254472",
+            "name": "Blood Death Knight",
+            "color": "#C41E3A",
+            "position": 58
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002575463313428",
+            "name": "Guardian Druid",
+            "color": "#FF7C0A",
+            "position": 53
+          },
+          {
+            "id": "982002598481658007",
+            "name": "Brewmaster Monk",
+            "color": "#00FF98",
+            "position": 43
+          },
+          {
+            "id": "982002601862267000",
+            "name": "Windwalker Monk",
+            "color": "#00FF98",
+            "position": 41
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982002629280432238",
+            "name": "Protection Warrior",
+            "color": "#C69B6D",
+            "position": 25
+          },
+          {
+            "id": "982002630723248178",
+            "name": "Arms Warrior",
+            "color": "#C69B6D",
+            "position": 24
+          },
+          {
+            "id": "982002631901863989",
+            "name": "Fury Warrior",
+            "color": "#C69B6D",
+            "position": 23
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/744899415852187710/756e13a7f7da52b39352b9abae8e2ae1.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 6
+}

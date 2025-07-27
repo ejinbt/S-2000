@@ -1,0 +1,420 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "1051771243751288842",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "work-orders",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2025-05-01T00:00:00+05:30",
+    "before": "2025-05-31T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T17:45:10.2531059+05:30",
+  "messages": [
+    {
+      "id": "1372356418082177054",
+      "type": "Default",
+      "timestamp": "2025-05-15T05:04:27.22+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF recraft Charged Runeaxe R5",
+      "author": {
+        "id": "229729724597927937",
+        "name": "sanzinhow",
+        "discriminator": "0000",
+        "nickname": "San",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/229729724597927937/65d10ae8eee14fbfdc6b319559bbfb71.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1372438076844015727",
+      "type": "Reply",
+      "timestamp": "2025-05-15T10:28:56.186+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you should add your realm.. crafting is not cross realm",
+      "author": {
+        "id": "168273596064595968",
+        "name": "chibimon",
+        "discriminator": "0000",
+        "nickname": "ß î ß î",
+        "color": "#9994F7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "980392791387537488",
+            "name": "the squad",
+            "color": "#9994F7",
+            "position": 232
+          },
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1082603441387475044",
+            "name": "\uD83C\uDD71\uD83C\uDD78\uD83C\uDD71\uD83C\uDD78",
+            "color": "#A020F0",
+            "position": 136
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782167289956663346",
+            "name": "Legendary Poster",
+            "color": "#55B200",
+            "position": 113
+          },
+          {
+            "id": "785363496396128296",
+            "name": "Elite Booster",
+            "color": "#FFB649",
+            "position": 103
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/168273596064595968/08010e71f6db1e448f619b18939a4d72.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "229729724597927937",
+          "name": "sanzinhow",
+          "discriminator": "0000",
+          "nickname": "San",
+          "color": null,
+          "isBot": false,
+          "roles": [
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/229729724597927937/65d10ae8eee14fbfdc6b319559bbfb71.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1372356418082177054",
+        "channelId": "1051771243751288842",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1372672125797662760",
+      "type": "Default",
+      "timestamp": "2025-05-16T01:58:57.805+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "master of all here. guild crafts to all realms",
+      "author": {
+        "id": "587423580623601712",
+        "name": "raulmdos9929",
+        "discriminator": "0000",
+        "nickname": "Raul MDOS",
+        "color": "#866451",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "785363500943671307",
+            "name": "Senior Booster",
+            "color": "#866451",
+            "position": 99
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/587423580623601712/9c9a4711d719eadc52ab1318f88e0849.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1373123876124364851",
+      "type": "Default",
+      "timestamp": "2025-05-17T07:54:03.476+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Looking for tier 3 cursed cloth crafters",
+      "author": {
+        "id": "812083992638652467",
+        "name": "imgrooty",
+        "discriminator": "0000",
+        "nickname": "Nebuwowza",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/812083992638652467/a_404ddb369949df22731f1ca820cd6dfe.gif?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1374992110675169374",
+      "type": "Reply",
+      "timestamp": "2025-05-22T11:37:45.303+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "should add a realm",
+      "author": {
+        "id": "161310382080786432",
+        "name": "jojoswaps",
+        "discriminator": "0000",
+        "nickname": "Saltie #2 Simp",
+        "color": "#D4843D",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1079248421946396803",
+            "name": "Admins",
+            "color": null,
+            "position": 244
+          },
+          {
+            "id": "874549191806963742",
+            "name": "Admins",
+            "color": "#D4843D",
+            "position": 243
+          },
+          {
+            "id": "780168180415856650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\uD83C\uDF1F  Management \uD83C\uDF1F\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#2ECC71",
+            "position": 234
+          },
+          {
+            "id": "698772961154302031",
+            "name": "Moderators",
+            "color": null,
+            "position": 233
+          },
+          {
+            "id": "723076361069133855",
+            "name": "WoWLFG #1 Fan",
+            "color": null,
+            "position": 134
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "861878018352087050",
+            "name": "Pantheon Poster",
+            "color": "#09A0FD",
+            "position": 123
+          },
+          {
+            "id": "861879061981823027",
+            "name": "Pantheon Booster",
+            "color": "#AF16B9",
+            "position": 122
+          },
+          {
+            "id": "757790326508355614",
+            "name": "Titan Poster",
+            "color": "#9ACD05",
+            "position": 110
+          },
+          {
+            "id": "785363503450947605",
+            "name": "Junior Booster",
+            "color": "#6D5E44",
+            "position": 97
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/161310382080786432/60edb9940ed73fc47b82b5107f5f1b89.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "812083992638652467",
+          "name": "imgrooty",
+          "discriminator": "0000",
+          "nickname": "Nebuwowza",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/812083992638652467/a_404ddb369949df22731f1ca820cd6dfe.gif?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1373123876124364851",
+        "channelId": "1051771243751288842",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1375969398442954823",
+      "type": "Default",
+      "timestamp": "2025-05-25T04:21:08.864+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF Vagabound Staff recraft 681 dentarg",
+      "author": {
+        "id": "206211030106243072",
+        "name": "sharkbait8043",
+        "discriminator": "0000",
+        "nickname": "cbmSharkbait",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/206211030106243072/c169a0bea3b5a140a2824fa94d7d9cf4.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 6
+}

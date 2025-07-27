@@ -1,0 +1,2217 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "999380212280217670",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "wow-lounge",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2024-02-01T00:00:00+05:30",
+    "before": "2024-02-29T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T17:42:39.4876743+05:30",
+  "messages": [
+    {
+      "id": "1205538515409182760",
+      "type": "Default",
+      "timestamp": "2024-02-09T21:09:39.896+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Guys, what is the average price of a Mythic Raid boost for one boss?",
+      "author": {
+        "id": "259363646956765184",
+        "name": "slashzinhuu",
+        "discriminator": "0000",
+        "nickname": "Slashzinhuu",
+        "color": "#6D5E44",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "785363503450947605",
+            "name": "Junior Booster",
+            "color": "#6D5E44",
+            "position": 97
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002573173202974",
+            "name": "Havoc Demon Hunter",
+            "color": "#A330C9",
+            "position": 54
+          },
+          {
+            "id": "982002575463313428",
+            "name": "Guardian Druid",
+            "color": "#FF7C0A",
+            "position": 53
+          },
+          {
+            "id": "982002579892494346",
+            "name": "Balance Druid",
+            "color": "#FF7C0A",
+            "position": 51
+          },
+          {
+            "id": "982002581322727435",
+            "name": "Feral Druid",
+            "color": "#FF7C0A",
+            "position": 50
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982002606559854612",
+            "name": "Retribution Paladin",
+            "color": "#F48CBA",
+            "position": 38
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/259363646956765184/6afb770560d78af298284e7fcfa0d7e5.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1205539198942060574",
+      "type": "Reply",
+      "timestamp": "2024-02-09T21:12:22.863+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "check #book-with-guilds",
+      "author": {
+        "id": "129478633327689728",
+        "name": "luminawastaken",
+        "discriminator": "0000",
+        "nickname": "Lumina",
+        "color": "#9994F7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "980392791387537488",
+            "name": "the squad",
+            "color": "#9994F7",
+            "position": 232
+          },
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847394123568119858",
+            "name": "Spanish Support",
+            "color": "#99AAB5",
+            "position": 225
+          },
+          {
+            "id": "723076361069133855",
+            "name": "WoWLFG #1 Fan",
+            "color": null,
+            "position": 134
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "1082139778784448552",
+            "name": "[ever]",
+            "color": "#FC0328",
+            "position": 127
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760787547652104",
+            "name": "Warlock",
+            "color": "#8788EE",
+            "position": 78
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002577942118510",
+            "name": "Restoration Druid",
+            "color": "#FF7C0A",
+            "position": 52
+          },
+          {
+            "id": "982002579892494346",
+            "name": "Balance Druid",
+            "color": "#FF7C0A",
+            "position": 51
+          },
+          {
+            "id": "982002581322727435",
+            "name": "Feral Druid",
+            "color": "#FF7C0A",
+            "position": 50
+          },
+          {
+            "id": "982002624373063750",
+            "name": "Affliction Warlock",
+            "color": "#8788EE",
+            "position": 28
+          },
+          {
+            "id": "982002625958510633",
+            "name": "Demonology Warlock",
+            "color": "#8788EE",
+            "position": 27
+          },
+          {
+            "id": "982002627485261824",
+            "name": "Destruction Warlock",
+            "color": "#8788EE",
+            "position": 26
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/129478633327689728/f048d629df166f93617759c371544741.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "259363646956765184",
+          "name": "slashzinhuu",
+          "discriminator": "0000",
+          "nickname": "Slashzinhuu",
+          "color": "#6D5E44",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "785363503450947605",
+              "name": "Junior Booster",
+              "color": "#6D5E44",
+              "position": 97
+            },
+            {
+              "id": "698746862009843853",
+              "name": "Tank",
+              "color": "#C69B6D",
+              "position": 93
+            },
+            {
+              "id": "698746942213062776",
+              "name": "DPS",
+              "color": "#AAD372",
+              "position": 91
+            },
+            {
+              "id": "698763148148080660",
+              "name": "Demon Hunter",
+              "color": "#A330C9",
+              "position": 88
+            },
+            {
+              "id": "698760102395641997",
+              "name": "Druid",
+              "color": "#FF7C0A",
+              "position": 87
+            },
+            {
+              "id": "698760282520027146",
+              "name": "Paladin",
+              "color": "#F48CBA",
+              "position": 81
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "982002571583569950",
+              "name": "Vengeance Demon Hunter",
+              "color": "#A330C9",
+              "position": 55
+            },
+            {
+              "id": "982002573173202974",
+              "name": "Havoc Demon Hunter",
+              "color": "#A330C9",
+              "position": 54
+            },
+            {
+              "id": "982002575463313428",
+              "name": "Guardian Druid",
+              "color": "#FF7C0A",
+              "position": 53
+            },
+            {
+              "id": "982002579892494346",
+              "name": "Balance Druid",
+              "color": "#FF7C0A",
+              "position": 51
+            },
+            {
+              "id": "982002581322727435",
+              "name": "Feral Druid",
+              "color": "#FF7C0A",
+              "position": 50
+            },
+            {
+              "id": "982002603749679164",
+              "name": "Protection Paladin",
+              "color": "#F48CBA",
+              "position": 40
+            },
+            {
+              "id": "982002606559854612",
+              "name": "Retribution Paladin",
+              "color": "#F48CBA",
+              "position": 38
+            },
+            {
+              "id": "982569083755184169",
+              "name": "Plate",
+              "color": "#F48CBA",
+              "position": 19
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/259363646956765184/6afb770560d78af298284e7fcfa0d7e5.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1205538515409182760",
+        "channelId": "999380212280217670",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1205977191477940324",
+      "type": "Default",
+      "timestamp": "2024-02-11T02:12:48.421+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "k",
+      "author": {
+        "id": "439270752513032192",
+        "name": "qhi",
+        "discriminator": "0000",
+        "nickname": "Qhi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/439270752513032192/a_01b8e9fe13963d051ba6bcae2da0ee4a.gif?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1206006188559310969",
+      "type": "Default",
+      "timestamp": "2024-02-11T04:08:01.864+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "o/",
+      "author": {
+        "id": "225486025085026305",
+        "name": ".farnir",
+        "discriminator": "0000",
+        "nickname": "Geraxes",
+        "color": "#F79857",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "785363489778696192",
+            "name": "Titan Booster",
+            "color": "#F79857",
+            "position": 109
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "698760325545066546",
+            "name": "Death Knight",
+            "color": "#C41E3A",
+            "position": 89
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "1053532680811188314",
+            "name": "Evoker",
+            "color": "#33937F",
+            "position": 86
+          },
+          {
+            "id": "698760387390210060",
+            "name": "Hunter",
+            "color": "#AAD372",
+            "position": 85
+          },
+          {
+            "id": "698760807798014032",
+            "name": "Mage",
+            "color": "#3FC7EB",
+            "position": 84
+          },
+          {
+            "id": "698760444168372311",
+            "name": "Monk",
+            "color": "#00FF98",
+            "position": 83
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "698760787547652104",
+            "name": "Warlock",
+            "color": "#8788EE",
+            "position": 78
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002565489254472",
+            "name": "Blood Death Knight",
+            "color": "#C41E3A",
+            "position": 58
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002573173202974",
+            "name": "Havoc Demon Hunter",
+            "color": "#A330C9",
+            "position": 54
+          },
+          {
+            "id": "982002575463313428",
+            "name": "Guardian Druid",
+            "color": "#FF7C0A",
+            "position": 53
+          },
+          {
+            "id": "982002577942118510",
+            "name": "Restoration Druid",
+            "color": "#FF7C0A",
+            "position": 52
+          },
+          {
+            "id": "982002583352803328",
+            "name": "Beast Mastery Hunter",
+            "color": "#AAD372",
+            "position": 49
+          },
+          {
+            "id": "982002585294766081",
+            "name": "Marksmanship Hunter",
+            "color": "#AAD372",
+            "position": 48
+          },
+          {
+            "id": "982002587266076732",
+            "name": "Survival Hunter",
+            "color": "#AAD372",
+            "position": 47
+          },
+          {
+            "id": "982002593331044372",
+            "name": "Arcane Mage",
+            "color": "#3FC7EB",
+            "position": 46
+          },
+          {
+            "id": "982002595587567676",
+            "name": "Fire Mage",
+            "color": "#3FC7EB",
+            "position": 45
+          },
+          {
+            "id": "982002597093335050",
+            "name": "Frost Mage",
+            "color": "#3FC7EB",
+            "position": 44
+          },
+          {
+            "id": "982002599425376387",
+            "name": "Mistweaver Monk",
+            "color": "#00FF98",
+            "position": 42
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982002606559854612",
+            "name": "Retribution Paladin",
+            "color": "#F48CBA",
+            "position": 38
+          },
+          {
+            "id": "982002624373063750",
+            "name": "Affliction Warlock",
+            "color": "#8788EE",
+            "position": 28
+          },
+          {
+            "id": "982002625958510633",
+            "name": "Demonology Warlock",
+            "color": "#8788EE",
+            "position": 27
+          },
+          {
+            "id": "982002627485261824",
+            "name": "Destruction Warlock",
+            "color": "#8788EE",
+            "position": 26
+          },
+          {
+            "id": "982002630723248178",
+            "name": "Arms Warrior",
+            "color": "#C69B6D",
+            "position": 24
+          },
+          {
+            "id": "982002631901863989",
+            "name": "Fury Warrior",
+            "color": "#C69B6D",
+            "position": 23
+          },
+          {
+            "id": "1077318081937948693",
+            "name": "Preservation Evoker",
+            "color": "#33937F",
+            "position": 22
+          },
+          {
+            "id": "1077318083569520751",
+            "name": "Devastation Evoker",
+            "color": "#33937F",
+            "position": 21
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/225486025085026305/af777ea94df33b4b4484d841fb7f1d6d.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1206006349692141599",
+      "type": "Default",
+      "timestamp": "2024-02-11T04:08:40.281+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": ".",
+      "author": {
+        "id": "391734843966226443",
+        "name": ".seld",
+        "discriminator": "0000",
+        "nickname": "Seld",
+        "color": "#FDB0B0",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "785363486217469962",
+            "name": "Legendary Booster",
+            "color": "#FDB0B0",
+            "position": 111
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "1053532680811188314",
+            "name": "Evoker",
+            "color": "#33937F",
+            "position": 86
+          },
+          {
+            "id": "698760807798014032",
+            "name": "Mage",
+            "color": "#3FC7EB",
+            "position": 84
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "698760413764124783",
+            "name": "Shaman",
+            "color": "#0070DD",
+            "position": 80
+          },
+          {
+            "id": "698760787547652104",
+            "name": "Warlock",
+            "color": "#8788EE",
+            "position": 78
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624308771905608",
+            "name": "M+ 01-13",
+            "color": null,
+            "position": 73
+          },
+          {
+            "id": "972624515211337768",
+            "name": "M+ 14-17",
+            "color": null,
+            "position": 72
+          },
+          {
+            "id": "972624635692724244",
+            "name": "+20K",
+            "color": null,
+            "position": 68
+          },
+          {
+            "id": "972624638377082900",
+            "name": "+40K",
+            "color": null,
+            "position": 67
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002573173202974",
+            "name": "Havoc Demon Hunter",
+            "color": "#A330C9",
+            "position": 54
+          },
+          {
+            "id": "982002593331044372",
+            "name": "Arcane Mage",
+            "color": "#3FC7EB",
+            "position": 46
+          },
+          {
+            "id": "982002595587567676",
+            "name": "Fire Mage",
+            "color": "#3FC7EB",
+            "position": 45
+          },
+          {
+            "id": "982002597093335050",
+            "name": "Frost Mage",
+            "color": "#3FC7EB",
+            "position": 44
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982002619562205254",
+            "name": "Restoration Shaman",
+            "color": "#0070DD",
+            "position": 31
+          },
+          {
+            "id": "982002624373063750",
+            "name": "Affliction Warlock",
+            "color": "#8788EE",
+            "position": 28
+          },
+          {
+            "id": "982002625958510633",
+            "name": "Demonology Warlock",
+            "color": "#8788EE",
+            "position": 27
+          },
+          {
+            "id": "982002627485261824",
+            "name": "Destruction Warlock",
+            "color": "#8788EE",
+            "position": 26
+          },
+          {
+            "id": "982002629280432238",
+            "name": "Protection Warrior",
+            "color": "#C69B6D",
+            "position": 25
+          },
+          {
+            "id": "982002630723248178",
+            "name": "Arms Warrior",
+            "color": "#C69B6D",
+            "position": 24
+          },
+          {
+            "id": "982002631901863989",
+            "name": "Fury Warrior",
+            "color": "#C69B6D",
+            "position": 23
+          },
+          {
+            "id": "1077318081937948693",
+            "name": "Preservation Evoker",
+            "color": "#33937F",
+            "position": 22
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/391734843966226443/548d7b5f5c22cda4644caaa2b6f3b954.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1209966000720580658",
+      "type": "Default",
+      "timestamp": "2024-02-22T02:22:54.653+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hello! I am new to this service. What is the best way to verify someone?",
+      "author": {
+        "id": "373923816025489408",
+        "name": "losbasterdos",
+        "discriminator": "0000",
+        "nickname": "Losbasterdos",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/373923816025489408/50c5ec521fa7e4e73b963db0d36fe02a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1210061151975641138",
+      "type": "Reply",
+      "timestamp": "2024-02-22T08:41:00.48+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Head to the website and link your btag: wowlfg.com",
+      "author": {
+        "id": "424693750019915778",
+        "name": "newlander",
+        "discriminator": "0000",
+        "nickname": "Newlander",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "785363483159035954",
+            "name": "Demigod Booster",
+            "color": "#FF5555",
+            "position": 114
+          },
+          {
+            "id": "782167289956663346",
+            "name": "Legendary Poster",
+            "color": "#55B200",
+            "position": 113
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "1053532680811188314",
+            "name": "Evoker",
+            "color": "#33937F",
+            "position": 86
+          },
+          {
+            "id": "698760807798014032",
+            "name": "Mage",
+            "color": "#3FC7EB",
+            "position": 84
+          },
+          {
+            "id": "698760444168372311",
+            "name": "Monk",
+            "color": "#00FF98",
+            "position": 83
+          },
+          {
+            "id": "698760637920182402",
+            "name": "Priest",
+            "color": "#FFFFFF",
+            "position": 82
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "698760413764124783",
+            "name": "Shaman",
+            "color": "#0070DD",
+            "position": 80
+          },
+          {
+            "id": "698760523499569202",
+            "name": "Rogue",
+            "color": "#FFF468",
+            "position": 79
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624308771905608",
+            "name": "M+ 01-13",
+            "color": null,
+            "position": 73
+          },
+          {
+            "id": "972624515211337768",
+            "name": "M+ 14-17",
+            "color": null,
+            "position": 72
+          },
+          {
+            "id": "972624629531295804",
+            "name": "M+ 18-20",
+            "color": null,
+            "position": 70
+          },
+          {
+            "id": "972624632370843689",
+            "name": "M+ 21+",
+            "color": null,
+            "position": 69
+          },
+          {
+            "id": "972624635692724244",
+            "name": "+20K",
+            "color": null,
+            "position": 68
+          },
+          {
+            "id": "972624638377082900",
+            "name": "+40K",
+            "color": null,
+            "position": 67
+          },
+          {
+            "id": "972624641162084372",
+            "name": "+60K",
+            "color": null,
+            "position": 66
+          },
+          {
+            "id": "972624643909374032",
+            "name": "+80K",
+            "color": null,
+            "position": 65
+          },
+          {
+            "id": "972624646514040872",
+            "name": "+100K",
+            "color": null,
+            "position": 64
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002573173202974",
+            "name": "Havoc Demon Hunter",
+            "color": "#A330C9",
+            "position": 54
+          },
+          {
+            "id": "982002575463313428",
+            "name": "Guardian Druid",
+            "color": "#FF7C0A",
+            "position": 53
+          },
+          {
+            "id": "982002577942118510",
+            "name": "Restoration Druid",
+            "color": "#FF7C0A",
+            "position": 52
+          },
+          {
+            "id": "982002579892494346",
+            "name": "Balance Druid",
+            "color": "#FF7C0A",
+            "position": 51
+          },
+          {
+            "id": "982002581322727435",
+            "name": "Feral Druid",
+            "color": "#FF7C0A",
+            "position": 50
+          },
+          {
+            "id": "982002593331044372",
+            "name": "Arcane Mage",
+            "color": "#3FC7EB",
+            "position": 46
+          },
+          {
+            "id": "982002595587567676",
+            "name": "Fire Mage",
+            "color": "#3FC7EB",
+            "position": 45
+          },
+          {
+            "id": "982002597093335050",
+            "name": "Frost Mage",
+            "color": "#3FC7EB",
+            "position": 44
+          },
+          {
+            "id": "982002598481658007",
+            "name": "Brewmaster Monk",
+            "color": "#00FF98",
+            "position": 43
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982002605028941884",
+            "name": "Holy Paladin",
+            "color": "#F48CBA",
+            "position": 39
+          },
+          {
+            "id": "982002608623452222",
+            "name": "Discipline Priest",
+            "color": "#FFFFFF",
+            "position": 37
+          },
+          {
+            "id": "982002611077152838",
+            "name": "Holy Priest",
+            "color": "#FFFFFF",
+            "position": 36
+          },
+          {
+            "id": "982002613123940402",
+            "name": "Shadow Priest",
+            "color": "#FFFFFF",
+            "position": 35
+          },
+          {
+            "id": "982002619562205254",
+            "name": "Restoration Shaman",
+            "color": "#0070DD",
+            "position": 31
+          },
+          {
+            "id": "982002621307052062",
+            "name": "Elemental Shaman",
+            "color": "#0070DD",
+            "position": 30
+          },
+          {
+            "id": "982002623106400297",
+            "name": "Enhancement Shaman",
+            "color": "#0070DD",
+            "position": 29
+          },
+          {
+            "id": "982002629280432238",
+            "name": "Protection Warrior",
+            "color": "#C69B6D",
+            "position": 25
+          },
+          {
+            "id": "982002630723248178",
+            "name": "Arms Warrior",
+            "color": "#C69B6D",
+            "position": 24
+          },
+          {
+            "id": "982002631901863989",
+            "name": "Fury Warrior",
+            "color": "#C69B6D",
+            "position": 23
+          },
+          {
+            "id": "1077318083569520751",
+            "name": "Devastation Evoker",
+            "color": "#33937F",
+            "position": 21
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/424693750019915778/9a3328e6760d0513773b396f78094daf.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "373923816025489408",
+          "name": "losbasterdos",
+          "discriminator": "0000",
+          "nickname": "Losbasterdos",
+          "color": null,
+          "isBot": false,
+          "roles": [
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/373923816025489408/50c5ec521fa7e4e73b963db0d36fe02a.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1209966000720580658",
+        "channelId": "999380212280217670",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1210301560345858098",
+      "type": "Reply",
+      "timestamp": "2024-02-23T00:36:18.302+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Thank you!",
+      "author": {
+        "id": "373923816025489408",
+        "name": "losbasterdos",
+        "discriminator": "0000",
+        "nickname": "Losbasterdos",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/373923816025489408/50c5ec521fa7e4e73b963db0d36fe02a.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "424693750019915778",
+          "name": "newlander",
+          "discriminator": "0000",
+          "nickname": "Newlander",
+          "color": "#11BAD7",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "780150794262937650",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+              "color": "#11BAD7",
+              "position": 230
+            },
+            {
+              "id": "740292114570543235",
+              "name": "Senior Support",
+              "color": null,
+              "position": 229
+            },
+            {
+              "id": "736282229881176194",
+              "name": "Support Team",
+              "color": null,
+              "position": 228
+            },
+            {
+              "id": "847393992542912543",
+              "name": "English Support",
+              "color": "#99AAB5",
+              "position": 227
+            },
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "785363483159035954",
+              "name": "Demigod Booster",
+              "color": "#FF5555",
+              "position": 114
+            },
+            {
+              "id": "782167289956663346",
+              "name": "Legendary Poster",
+              "color": "#55B200",
+              "position": 113
+            },
+            {
+              "id": "780248592954032158",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 94
+            },
+            {
+              "id": "698746862009843853",
+              "name": "Tank",
+              "color": "#C69B6D",
+              "position": 93
+            },
+            {
+              "id": "698746917940887602",
+              "name": "Healer",
+              "color": "#FF7C0A",
+              "position": 92
+            },
+            {
+              "id": "698746942213062776",
+              "name": "DPS",
+              "color": "#AAD372",
+              "position": 91
+            },
+            {
+              "id": "780240733881368597",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 90
+            },
+            {
+              "id": "698763148148080660",
+              "name": "Demon Hunter",
+              "color": "#A330C9",
+              "position": 88
+            },
+            {
+              "id": "698760102395641997",
+              "name": "Druid",
+              "color": "#FF7C0A",
+              "position": 87
+            },
+            {
+              "id": "1053532680811188314",
+              "name": "Evoker",
+              "color": "#33937F",
+              "position": 86
+            },
+            {
+              "id": "698760807798014032",
+              "name": "Mage",
+              "color": "#3FC7EB",
+              "position": 84
+            },
+            {
+              "id": "698760444168372311",
+              "name": "Monk",
+              "color": "#00FF98",
+              "position": 83
+            },
+            {
+              "id": "698760637920182402",
+              "name": "Priest",
+              "color": "#FFFFFF",
+              "position": 82
+            },
+            {
+              "id": "698760282520027146",
+              "name": "Paladin",
+              "color": "#F48CBA",
+              "position": 81
+            },
+            {
+              "id": "698760413764124783",
+              "name": "Shaman",
+              "color": "#0070DD",
+              "position": 80
+            },
+            {
+              "id": "698760523499569202",
+              "name": "Rogue",
+              "color": "#FFF468",
+              "position": 79
+            },
+            {
+              "id": "698760229650694204",
+              "name": "Warrior",
+              "color": "#C69B6D",
+              "position": 77
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624308771905608",
+              "name": "M+ 01-13",
+              "color": null,
+              "position": 73
+            },
+            {
+              "id": "972624515211337768",
+              "name": "M+ 14-17",
+              "color": null,
+              "position": 72
+            },
+            {
+              "id": "972624629531295804",
+              "name": "M+ 18-20",
+              "color": null,
+              "position": 70
+            },
+            {
+              "id": "972624632370843689",
+              "name": "M+ 21+",
+              "color": null,
+              "position": 69
+            },
+            {
+              "id": "972624635692724244",
+              "name": "+20K",
+              "color": null,
+              "position": 68
+            },
+            {
+              "id": "972624638377082900",
+              "name": "+40K",
+              "color": null,
+              "position": 67
+            },
+            {
+              "id": "972624641162084372",
+              "name": "+60K",
+              "color": null,
+              "position": 66
+            },
+            {
+              "id": "972624643909374032",
+              "name": "+80K",
+              "color": null,
+              "position": 65
+            },
+            {
+              "id": "972624646514040872",
+              "name": "+100K",
+              "color": null,
+              "position": 64
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972624651110973462",
+              "name": "EU Alliance",
+              "color": null,
+              "position": 62
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "982002571583569950",
+              "name": "Vengeance Demon Hunter",
+              "color": "#A330C9",
+              "position": 55
+            },
+            {
+              "id": "982002573173202974",
+              "name": "Havoc Demon Hunter",
+              "color": "#A330C9",
+              "position": 54
+            },
+            {
+              "id": "982002575463313428",
+              "name": "Guardian Druid",
+              "color": "#FF7C0A",
+              "position": 53
+            },
+            {
+              "id": "982002577942118510",
+              "name": "Restoration Druid",
+              "color": "#FF7C0A",
+              "position": 52
+            },
+            {
+              "id": "982002579892494346",
+              "name": "Balance Druid",
+              "color": "#FF7C0A",
+              "position": 51
+            },
+            {
+              "id": "982002581322727435",
+              "name": "Feral Druid",
+              "color": "#FF7C0A",
+              "position": 50
+            },
+            {
+              "id": "982002593331044372",
+              "name": "Arcane Mage",
+              "color": "#3FC7EB",
+              "position": 46
+            },
+            {
+              "id": "982002595587567676",
+              "name": "Fire Mage",
+              "color": "#3FC7EB",
+              "position": 45
+            },
+            {
+              "id": "982002597093335050",
+              "name": "Frost Mage",
+              "color": "#3FC7EB",
+              "position": 44
+            },
+            {
+              "id": "982002598481658007",
+              "name": "Brewmaster Monk",
+              "color": "#00FF98",
+              "position": 43
+            },
+            {
+              "id": "982002603749679164",
+              "name": "Protection Paladin",
+              "color": "#F48CBA",
+              "position": 40
+            },
+            {
+              "id": "982002605028941884",
+              "name": "Holy Paladin",
+              "color": "#F48CBA",
+              "position": 39
+            },
+            {
+              "id": "982002608623452222",
+              "name": "Discipline Priest",
+              "color": "#FFFFFF",
+              "position": 37
+            },
+            {
+              "id": "982002611077152838",
+              "name": "Holy Priest",
+              "color": "#FFFFFF",
+              "position": 36
+            },
+            {
+              "id": "982002613123940402",
+              "name": "Shadow Priest",
+              "color": "#FFFFFF",
+              "position": 35
+            },
+            {
+              "id": "982002619562205254",
+              "name": "Restoration Shaman",
+              "color": "#0070DD",
+              "position": 31
+            },
+            {
+              "id": "982002621307052062",
+              "name": "Elemental Shaman",
+              "color": "#0070DD",
+              "position": 30
+            },
+            {
+              "id": "982002623106400297",
+              "name": "Enhancement Shaman",
+              "color": "#0070DD",
+              "position": 29
+            },
+            {
+              "id": "982002629280432238",
+              "name": "Protection Warrior",
+              "color": "#C69B6D",
+              "position": 25
+            },
+            {
+              "id": "982002630723248178",
+              "name": "Arms Warrior",
+              "color": "#C69B6D",
+              "position": 24
+            },
+            {
+              "id": "982002631901863989",
+              "name": "Fury Warrior",
+              "color": "#C69B6D",
+              "position": 23
+            },
+            {
+              "id": "1077318083569520751",
+              "name": "Devastation Evoker",
+              "color": "#33937F",
+              "position": 21
+            },
+            {
+              "id": "982569083755184169",
+              "name": "Plate",
+              "color": "#F48CBA",
+              "position": 19
+            },
+            {
+              "id": "982569085541974086",
+              "name": "Mail",
+              "color": "#0070DD",
+              "position": 18
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            },
+            {
+              "id": "982569088884801546",
+              "name": "Cloth",
+              "color": "#FFFFFF",
+              "position": 16
+            },
+            {
+              "id": "1038533774448799884",
+              "name": "M+ Group",
+              "color": null,
+              "position": 14
+            },
+            {
+              "id": "1038555113733758976",
+              "name": "Guild",
+              "color": null,
+              "position": 13
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/424693750019915778/9a3328e6760d0513773b396f78094daf.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1210061151975641138",
+        "channelId": "999380212280217670",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1211038593749885018",
+      "type": "Default",
+      "timestamp": "2024-02-25T01:25:00.759+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**STOP DOING CLICS ON FREE ADOBE :wtf:**",
+      "author": {
+        "id": "432700275925581824",
+        "name": "cheese8090",
+        "discriminator": "0000",
+        "nickname": "Saltie EXTRA-legendary SIMP",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847394123568119858",
+            "name": "Spanish Support",
+            "color": "#99AAB5",
+            "position": 225
+          },
+          {
+            "id": "1224212122989498440",
+            "name": "\uD83E\uDDC0",
+            "color": "#572364",
+            "position": 180
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "785363486217469962",
+            "name": "Legendary Booster",
+            "color": "#FDB0B0",
+            "position": 111
+          },
+          {
+            "id": "782166705723539466",
+            "name": "Monster Poster",
+            "color": "#CBFF83",
+            "position": 108
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "698760325545066546",
+            "name": "Death Knight",
+            "color": "#C41E3A",
+            "position": 89
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760807798014032",
+            "name": "Mage",
+            "color": "#3FC7EB",
+            "position": 84
+          },
+          {
+            "id": "698760444168372311",
+            "name": "Monk",
+            "color": "#00FF98",
+            "position": 83
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "698760523499569202",
+            "name": "Rogue",
+            "color": "#FFF468",
+            "position": 79
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624308771905608",
+            "name": "M+ 01-13",
+            "color": null,
+            "position": 73
+          },
+          {
+            "id": "972624515211337768",
+            "name": "M+ 14-17",
+            "color": null,
+            "position": 72
+          },
+          {
+            "id": "972624629531295804",
+            "name": "M+ 18-20",
+            "color": null,
+            "position": 70
+          },
+          {
+            "id": "972624635692724244",
+            "name": "+20K",
+            "color": null,
+            "position": 68
+          },
+          {
+            "id": "972624638377082900",
+            "name": "+40K",
+            "color": null,
+            "position": 67
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002565489254472",
+            "name": "Blood Death Knight",
+            "color": "#C41E3A",
+            "position": 58
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002598481658007",
+            "name": "Brewmaster Monk",
+            "color": "#00FF98",
+            "position": 43
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982002614990426142",
+            "name": "Assassination Rogue",
+            "color": "#FFF468",
+            "position": 34
+          },
+          {
+            "id": "982002616743624714",
+            "name": "Outlaw Rogue",
+            "color": "#FFF468",
+            "position": 33
+          },
+          {
+            "id": "982002618073239643",
+            "name": "Subtlety Rogue",
+            "color": "#FFF468",
+            "position": 32
+          },
+          {
+            "id": "982002629280432238",
+            "name": "Protection Warrior",
+            "color": "#C69B6D",
+            "position": 25
+          },
+          {
+            "id": "982002630723248178",
+            "name": "Arms Warrior",
+            "color": "#C69B6D",
+            "position": 24
+          },
+          {
+            "id": "982002631901863989",
+            "name": "Fury Warrior",
+            "color": "#C69B6D",
+            "position": 23
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/432700275925581824/48ce6d3b4df118abc1594294ee067188.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "743343750184435714",
+          "name": "wtf",
+          "code": "wtf",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.discordapp.com/emojis/743343750184435714.png"
+        }
+      ]
+    }
+  ],
+  "messageCount": 9
+}

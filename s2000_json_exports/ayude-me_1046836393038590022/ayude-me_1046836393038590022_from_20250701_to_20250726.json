@@ -1,0 +1,561 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "1046836393038590022",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "ajude-me",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2025-07-01T00:00:00+05:30",
+    "before": "2025-07-26T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T18:02:48.3316957+05:30",
+  "messages": [
+    {
+      "id": "1394831372207657132",
+      "type": "Default",
+      "timestamp": "2025-07-16T05:31:53.848+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Alguém sabe se eu posso usar um gift Premium que eu comprei na minha conta?",
+      "author": {
+        "id": "327793916554248192",
+        "name": "pepe99",
+        "discriminator": "0000",
+        "nickname": "pepe99",
+        "color": "#F09BFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1002680446607446056",
+            "name": "Premium Tier 1",
+            "color": "#F09BFF",
+            "position": 128
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/327793916554248192/b0d6e835379197ef1a5921394861611f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1394831399852441700",
+      "type": "Default",
+      "timestamp": "2025-07-16T05:32:00.439+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Eu achei que dava pra usar e pelo visto não dá",
+      "author": {
+        "id": "327793916554248192",
+        "name": "pepe99",
+        "discriminator": "0000",
+        "nickname": "pepe99",
+        "color": "#F09BFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1002680446607446056",
+            "name": "Premium Tier 1",
+            "color": "#F09BFF",
+            "position": 128
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/327793916554248192/b0d6e835379197ef1a5921394861611f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1394831412858720267",
+      "type": "Default",
+      "timestamp": "2025-07-16T05:32:03.54+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Da só pra mandar",
+      "author": {
+        "id": "327793916554248192",
+        "name": "pepe99",
+        "discriminator": "0000",
+        "nickname": "pepe99",
+        "color": "#F09BFF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1002680446607446056",
+            "name": "Premium Tier 1",
+            "color": "#F09BFF",
+            "position": 128
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/327793916554248192/b0d6e835379197ef1a5921394861611f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1395583893968650240",
+      "type": "Default",
+      "timestamp": "2025-07-18T07:22:09.017+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Pessoal como fazer pra terminar uma run? Fiz um post e ja fiz o pagamento e quando eu vou fazer o upload do pagamento fica querendo reconectar",
+      "author": {
+        "id": "281148279327293449",
+        "name": "leonardomiranda",
+        "discriminator": "0000",
+        "nickname": "Leonardo Miranda",
+        "color": "#C69B6D",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760444168372311",
+            "name": "Monk",
+            "color": "#00FF98",
+            "position": 83
+          },
+          {
+            "id": "698760523499569202",
+            "name": "Rogue",
+            "color": "#FFF468",
+            "position": 79
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624515211337768",
+            "name": "M+ 14-17",
+            "color": null,
+            "position": 72
+          },
+          {
+            "id": "972624629531295804",
+            "name": "M+ 18-20",
+            "color": null,
+            "position": 70
+          },
+          {
+            "id": "972624635692724244",
+            "name": "+20K",
+            "color": null,
+            "position": 68
+          },
+          {
+            "id": "972624638377082900",
+            "name": "+40K",
+            "color": null,
+            "position": 67
+          },
+          {
+            "id": "972624641162084372",
+            "name": "+60K",
+            "color": null,
+            "position": 66
+          },
+          {
+            "id": "972624643909374032",
+            "name": "+80K",
+            "color": null,
+            "position": 65
+          },
+          {
+            "id": "972624646514040872",
+            "name": "+100K",
+            "color": null,
+            "position": 64
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002575463313428",
+            "name": "Guardian Druid",
+            "color": "#FF7C0A",
+            "position": 53
+          },
+          {
+            "id": "982002579892494346",
+            "name": "Balance Druid",
+            "color": "#FF7C0A",
+            "position": 51
+          },
+          {
+            "id": "982002581322727435",
+            "name": "Feral Druid",
+            "color": "#FF7C0A",
+            "position": 50
+          },
+          {
+            "id": "982002598481658007",
+            "name": "Brewmaster Monk",
+            "color": "#00FF98",
+            "position": 43
+          },
+          {
+            "id": "982002614990426142",
+            "name": "Assassination Rogue",
+            "color": "#FFF468",
+            "position": 34
+          },
+          {
+            "id": "982002616743624714",
+            "name": "Outlaw Rogue",
+            "color": "#FFF468",
+            "position": 33
+          },
+          {
+            "id": "982002618073239643",
+            "name": "Subtlety Rogue",
+            "color": "#FFF468",
+            "position": 32
+          },
+          {
+            "id": "982002629280432238",
+            "name": "Protection Warrior",
+            "color": "#C69B6D",
+            "position": 25
+          },
+          {
+            "id": "982002630723248178",
+            "name": "Arms Warrior",
+            "color": "#C69B6D",
+            "position": 24
+          },
+          {
+            "id": "982002631901863989",
+            "name": "Fury Warrior",
+            "color": "#C69B6D",
+            "position": 23
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/281148279327293449/b77f3647982cf1c66ac51cc015eb28b7.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1395584050571378819",
+      "type": "Default",
+      "timestamp": "2025-07-18T07:22:46.354+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Alguem do suporte pra ajudar?",
+      "author": {
+        "id": "281148279327293449",
+        "name": "leonardomiranda",
+        "discriminator": "0000",
+        "nickname": "Leonardo Miranda",
+        "color": "#C69B6D",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760444168372311",
+            "name": "Monk",
+            "color": "#00FF98",
+            "position": 83
+          },
+          {
+            "id": "698760523499569202",
+            "name": "Rogue",
+            "color": "#FFF468",
+            "position": 79
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624515211337768",
+            "name": "M+ 14-17",
+            "color": null,
+            "position": 72
+          },
+          {
+            "id": "972624629531295804",
+            "name": "M+ 18-20",
+            "color": null,
+            "position": 70
+          },
+          {
+            "id": "972624635692724244",
+            "name": "+20K",
+            "color": null,
+            "position": 68
+          },
+          {
+            "id": "972624638377082900",
+            "name": "+40K",
+            "color": null,
+            "position": 67
+          },
+          {
+            "id": "972624641162084372",
+            "name": "+60K",
+            "color": null,
+            "position": 66
+          },
+          {
+            "id": "972624643909374032",
+            "name": "+80K",
+            "color": null,
+            "position": 65
+          },
+          {
+            "id": "972624646514040872",
+            "name": "+100K",
+            "color": null,
+            "position": 64
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002575463313428",
+            "name": "Guardian Druid",
+            "color": "#FF7C0A",
+            "position": 53
+          },
+          {
+            "id": "982002579892494346",
+            "name": "Balance Druid",
+            "color": "#FF7C0A",
+            "position": 51
+          },
+          {
+            "id": "982002581322727435",
+            "name": "Feral Druid",
+            "color": "#FF7C0A",
+            "position": 50
+          },
+          {
+            "id": "982002598481658007",
+            "name": "Brewmaster Monk",
+            "color": "#00FF98",
+            "position": 43
+          },
+          {
+            "id": "982002614990426142",
+            "name": "Assassination Rogue",
+            "color": "#FFF468",
+            "position": 34
+          },
+          {
+            "id": "982002616743624714",
+            "name": "Outlaw Rogue",
+            "color": "#FFF468",
+            "position": 33
+          },
+          {
+            "id": "982002618073239643",
+            "name": "Subtlety Rogue",
+            "color": "#FFF468",
+            "position": 32
+          },
+          {
+            "id": "982002629280432238",
+            "name": "Protection Warrior",
+            "color": "#C69B6D",
+            "position": 25
+          },
+          {
+            "id": "982002630723248178",
+            "name": "Arms Warrior",
+            "color": "#C69B6D",
+            "position": 24
+          },
+          {
+            "id": "982002631901863989",
+            "name": "Fury Warrior",
+            "color": "#C69B6D",
+            "position": 23
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/281148279327293449/b77f3647982cf1c66ac51cc015eb28b7.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 5
+}

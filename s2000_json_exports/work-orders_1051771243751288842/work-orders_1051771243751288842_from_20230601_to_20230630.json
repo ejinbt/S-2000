@@ -1,0 +1,509 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "1051771243751288842",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "work-orders",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2023-06-01T00:00:00+05:30",
+    "before": "2023-06-30T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T17:36:55.2761623+05:30",
+  "messages": [
+    {
+      "id": "1115905708454584360",
+      "type": "Default",
+      "timestamp": "2023-06-07T13:00:53.421+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "BLACKSMITH AND TAILORING ON FROSTMOURNE ALL RECIPES 41%inspiration for 447 CAN DO ALL PM INGAME TUAMA ALLY/HORDE",
+      "author": {
+        "id": "424984722893176851",
+        "name": "malesung",
+        "discriminator": "0000",
+        "nickname": "Tuama",
+        "color": "#C69B6D",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698760325545066546",
+            "name": "Death Knight",
+            "color": "#C41E3A",
+            "position": 89
+          },
+          {
+            "id": "698760387390210060",
+            "name": "Hunter",
+            "color": "#AAD372",
+            "position": 85
+          },
+          {
+            "id": "698760444168372311",
+            "name": "Monk",
+            "color": "#00FF98",
+            "position": 83
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624308771905608",
+            "name": "M+ 01-13",
+            "color": null,
+            "position": 73
+          },
+          {
+            "id": "972624515211337768",
+            "name": "M+ 14-17",
+            "color": null,
+            "position": 72
+          },
+          {
+            "id": "972624629531295804",
+            "name": "M+ 18-20",
+            "color": null,
+            "position": 70
+          },
+          {
+            "id": "972624635692724244",
+            "name": "+20K",
+            "color": null,
+            "position": 68
+          },
+          {
+            "id": "972624638377082900",
+            "name": "+40K",
+            "color": null,
+            "position": 67
+          },
+          {
+            "id": "972624641162084372",
+            "name": "+60K",
+            "color": null,
+            "position": 66
+          },
+          {
+            "id": "972624643909374032",
+            "name": "+80K",
+            "color": null,
+            "position": 65
+          },
+          {
+            "id": "972624646514040872",
+            "name": "+100K",
+            "color": null,
+            "position": 64
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982002606559854612",
+            "name": "Retribution Paladin",
+            "color": "#F48CBA",
+            "position": 38
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/424984722893176851/a53ba21fdd4a3fa565f9a4d13834b736.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1116438474745184357",
+      "type": "Default",
+      "timestamp": "2023-06-09T00:17:54.803+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Lfc JC",
+      "author": {
+        "id": "880457252547461151",
+        "name": "k0sh22",
+        "discriminator": "0000",
+        "nickname": "Koshx",
+        "color": "#FF5555",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "785363483159035954",
+            "name": "Demigod Booster",
+            "color": "#FF5555",
+            "position": 114
+          },
+          {
+            "id": "782140582713098251",
+            "name": "Junior Poster",
+            "color": "#954F12",
+            "position": 98
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002573173202974",
+            "name": "Havoc Demon Hunter",
+            "color": "#A330C9",
+            "position": 54
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/880457252547461151/697ec01acc55727fb17f348c00d54524.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1116995080683798568",
+      "type": "Default",
+      "timestamp": "2023-06-10T13:09:40+05:30",
+      "timestampEdited": "2023-06-10T13:10:01.398+05:30",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LFC Leatherworking \uD83D\uDE42",
+      "author": {
+        "id": "338637656403476481",
+        "name": "fishiekateikyo",
+        "discriminator": "0000",
+        "nickname": "FishieKateikyo",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/338637656403476481/c4dabef97b08c374d9e9fdd841084f3f.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDE42",
+          "code": "slight_smile",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f642.svg"
+        }
+      ]
+    },
+    {
+      "id": "1117065682471899196",
+      "type": "Default",
+      "timestamp": "2023-06-10T17:50:12.778+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "****Leatherworker LFW in Area52****\nAll Toxic Feets (Mail and Leather) 437/447\nAll Life-bound set and PvP Leathers 437/447\nAll Professions R5\nSome of Flame-touched available.",
+      "author": {
+        "id": "602894880876003339",
+        "name": "rhaeg4l",
+        "discriminator": "0000",
+        "nickname": "Rhaeg4L",
+        "color": "#BB30FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "785363483159035954",
+            "name": "Demigod Booster",
+            "color": "#FF5555",
+            "position": 114
+          },
+          {
+            "id": "782167289956663346",
+            "name": "Legendary Poster",
+            "color": "#55B200",
+            "position": 113
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "698760413764124783",
+            "name": "Shaman",
+            "color": "#0070DD",
+            "position": 80
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "982002619562205254",
+            "name": "Restoration Shaman",
+            "color": "#0070DD",
+            "position": 31
+          },
+          {
+            "id": "982002621307052062",
+            "name": "Elemental Shaman",
+            "color": "#0070DD",
+            "position": 30
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/602894880876003339/533a88bdc735b28fcbff9abe12082ac9.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1118259549162438899",
+      "type": "Default",
+      "timestamp": "2023-06-14T00:54:12.778+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF somebody to make 447 offhand area 52 pm me",
+      "author": {
+        "id": "143236319605161984",
+        "name": "dannyboii",
+        "discriminator": "0000",
+        "nickname": "dannyboii",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/143236319605161984/cfa123094de95b859b65cc0f213c1bee.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1118791117694054420",
+      "type": "Default",
+      "timestamp": "2023-06-15T12:06:28.592+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF [Slimy Expulsion Boots ] 447 - Zul'jin",
+      "author": {
+        "id": "468875783201488896",
+        "name": "vibraider",
+        "discriminator": "0000",
+        "nickname": "brett",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/468875783201488896/ef896cd2f048136ae30e3175517456cf.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1120161096892960910",
+      "type": "Default",
+      "timestamp": "2023-06-19T06:50:17.086+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LF Mail leatherworker on Zul'jin",
+      "author": {
+        "id": "86673056449187840",
+        "name": "i_am_matty",
+        "discriminator": "0000",
+        "nickname": "Matty",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/86673056449187840/9901a4d7592a16b2710ccf939b287d30.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 7
+}

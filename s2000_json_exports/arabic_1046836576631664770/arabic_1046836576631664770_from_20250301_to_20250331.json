@@ -1,0 +1,5252 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "1046836576631664770",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "کمک",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2025-03-01T00:00:00+05:30",
+    "before": "2025-03-31T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T18:05:40.3002367+05:30",
+  "messages": [
+    {
+      "id": "1346182463033970799",
+      "type": "Default",
+      "timestamp": "2025-03-03T23:38:30.048+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "سلام من ای او کردم 3170 ولی توی سایت 2936 باقی میمونه هر چی هم اپدیت میزنم اپدیت نمیشه مشکل از سایته یا برای سیزن 2 اینجوری شده ؟؟",
+      "author": {
+        "id": "1166065116412923944",
+        "name": "assassin_056",
+        "discriminator": "0000",
+        "nickname": "Assassin",
+        "color": "#FCA58D",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "785363491703619615",
+            "name": "Monster Booster",
+            "color": "#FCA58D",
+            "position": 107
+          },
+          {
+            "id": "733898011154841690",
+            "name": "Suspended",
+            "color": "#992D22",
+            "position": 76
+          },
+          {
+            "id": "771190045528031262",
+            "name": "Silenced",
+            "color": "#992D22",
+            "position": 75
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1166065116412923944/6cac400a4786358648f7b4256c67a276.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1346200067589275699",
+      "type": "Default",
+      "timestamp": "2025-03-04T00:48:27.301+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "salam",
+      "author": {
+        "id": "1346185687065690154",
+        "name": "poreya33",
+        "discriminator": "0000",
+        "nickname": "Nima",
+        "color": "#C69B6D",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698760807798014032",
+            "name": "Mage",
+            "color": "#3FC7EB",
+            "position": 84
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1346200209981440163",
+      "type": "Default",
+      "timestamp": "2025-03-04T00:49:01.25+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "man hero ham to lfg nemiare bala",
+      "author": {
+        "id": "1346185687065690154",
+        "name": "poreya33",
+        "discriminator": "0000",
+        "nickname": "Nima",
+        "color": "#C69B6D",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698760807798014032",
+            "name": "Mage",
+            "color": "#3FC7EB",
+            "position": 84
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1346200223201890366",
+      "type": "Default",
+      "timestamp": "2025-03-04T00:49:04.402+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ye rahnami mikonid",
+      "author": {
+        "id": "1346185687065690154",
+        "name": "poreya33",
+        "discriminator": "0000",
+        "nickname": "Nima",
+        "color": "#C69B6D",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698760807798014032",
+            "name": "Mage",
+            "color": "#3FC7EB",
+            "position": 84
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1346203053698842677",
+      "type": "Reply",
+      "timestamp": "2025-03-04T01:00:19.245+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Bot az raider io info migire...har moqe raider io update shod mitoni update bezani",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1166065116412923944",
+          "name": "assassin_056",
+          "discriminator": "0000",
+          "nickname": "Assassin",
+          "color": "#FCA58D",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "785363491703619615",
+              "name": "Monster Booster",
+              "color": "#FCA58D",
+              "position": 107
+            },
+            {
+              "id": "733898011154841690",
+              "name": "Suspended",
+              "color": "#992D22",
+              "position": 76
+            },
+            {
+              "id": "771190045528031262",
+              "name": "Silenced",
+              "color": "#992D22",
+              "position": 75
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/1166065116412923944/6cac400a4786358648f7b4256c67a276.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1346182463033970799",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1346562415013269627",
+      "type": "Default",
+      "timestamp": "2025-03-05T00:48:17.659+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@!ce @Iman کمک اینترنت هارو زدن",
+      "author": {
+        "id": "638428384443236363",
+        "name": "belupop",
+        "discriminator": "0000",
+        "nickname": "Belu",
+        "color": "#0F2814",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "782523324005089302",
+            "name": "⁣\u2002\u2002\u2002\u2002\t\uD83D\uDC4DHuokan Supporter⁣\uD83D\uDC4D⁣⁣⁣⁣   ⁣⁣⁣⁣\u2002   \u2002\u2002\u2002⁣",
+            "color": null,
+            "position": 219
+          },
+          {
+            "id": "1082048323646664796",
+            "name": "Yvonne's Bonker",
+            "color": "#0F2814",
+            "position": 137
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "785363483159035954",
+            "name": "Demigod Booster",
+            "color": "#FF5555",
+            "position": 114
+          },
+          {
+            "id": "782167289956663346",
+            "name": "Legendary Poster",
+            "color": "#55B200",
+            "position": 113
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "698760325545066546",
+            "name": "Death Knight",
+            "color": "#C41E3A",
+            "position": 89
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760387390210060",
+            "name": "Hunter",
+            "color": "#AAD372",
+            "position": 85
+          },
+          {
+            "id": "698760807798014032",
+            "name": "Mage",
+            "color": "#3FC7EB",
+            "position": 84
+          },
+          {
+            "id": "698760637920182402",
+            "name": "Priest",
+            "color": "#FFFFFF",
+            "position": 82
+          },
+          {
+            "id": "698760282520027146",
+            "name": "Paladin",
+            "color": "#F48CBA",
+            "position": 81
+          },
+          {
+            "id": "698760413764124783",
+            "name": "Shaman",
+            "color": "#0070DD",
+            "position": 80
+          },
+          {
+            "id": "698760523499569202",
+            "name": "Rogue",
+            "color": "#FFF468",
+            "position": 79
+          },
+          {
+            "id": "698760787547652104",
+            "name": "Warlock",
+            "color": "#8788EE",
+            "position": 78
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624308771905608",
+            "name": "M+ 01-13",
+            "color": null,
+            "position": 73
+          },
+          {
+            "id": "972624515211337768",
+            "name": "M+ 14-17",
+            "color": null,
+            "position": 72
+          },
+          {
+            "id": "972624629531295804",
+            "name": "M+ 18-20",
+            "color": null,
+            "position": 70
+          },
+          {
+            "id": "972624632370843689",
+            "name": "M+ 21+",
+            "color": null,
+            "position": 69
+          },
+          {
+            "id": "972624635692724244",
+            "name": "+20K",
+            "color": null,
+            "position": 68
+          },
+          {
+            "id": "972624638377082900",
+            "name": "+40K",
+            "color": null,
+            "position": 67
+          },
+          {
+            "id": "972624641162084372",
+            "name": "+60K",
+            "color": null,
+            "position": 66
+          },
+          {
+            "id": "972624643909374032",
+            "name": "+80K",
+            "color": null,
+            "position": 65
+          },
+          {
+            "id": "972624646514040872",
+            "name": "+100K",
+            "color": null,
+            "position": 64
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002565489254472",
+            "name": "Blood Death Knight",
+            "color": "#C41E3A",
+            "position": 58
+          },
+          {
+            "id": "982002567724802078",
+            "name": "Frost Death Knight",
+            "color": "#C41E3A",
+            "position": 57
+          },
+          {
+            "id": "982002570010722405",
+            "name": "Unholy Death Knight",
+            "color": "#C41E3A",
+            "position": 56
+          },
+          {
+            "id": "982002571583569950",
+            "name": "Vengeance Demon Hunter",
+            "color": "#A330C9",
+            "position": 55
+          },
+          {
+            "id": "982002577942118510",
+            "name": "Restoration Druid",
+            "color": "#FF7C0A",
+            "position": 52
+          },
+          {
+            "id": "982002579892494346",
+            "name": "Balance Druid",
+            "color": "#FF7C0A",
+            "position": 51
+          },
+          {
+            "id": "982002581322727435",
+            "name": "Feral Druid",
+            "color": "#FF7C0A",
+            "position": 50
+          },
+          {
+            "id": "982002583352803328",
+            "name": "Beast Mastery Hunter",
+            "color": "#AAD372",
+            "position": 49
+          },
+          {
+            "id": "982002585294766081",
+            "name": "Marksmanship Hunter",
+            "color": "#AAD372",
+            "position": 48
+          },
+          {
+            "id": "982002587266076732",
+            "name": "Survival Hunter",
+            "color": "#AAD372",
+            "position": 47
+          },
+          {
+            "id": "982002593331044372",
+            "name": "Arcane Mage",
+            "color": "#3FC7EB",
+            "position": 46
+          },
+          {
+            "id": "982002595587567676",
+            "name": "Fire Mage",
+            "color": "#3FC7EB",
+            "position": 45
+          },
+          {
+            "id": "982002597093335050",
+            "name": "Frost Mage",
+            "color": "#3FC7EB",
+            "position": 44
+          },
+          {
+            "id": "982002603749679164",
+            "name": "Protection Paladin",
+            "color": "#F48CBA",
+            "position": 40
+          },
+          {
+            "id": "982002605028941884",
+            "name": "Holy Paladin",
+            "color": "#F48CBA",
+            "position": 39
+          },
+          {
+            "id": "982002606559854612",
+            "name": "Retribution Paladin",
+            "color": "#F48CBA",
+            "position": 38
+          },
+          {
+            "id": "982002608623452222",
+            "name": "Discipline Priest",
+            "color": "#FFFFFF",
+            "position": 37
+          },
+          {
+            "id": "982002611077152838",
+            "name": "Holy Priest",
+            "color": "#FFFFFF",
+            "position": 36
+          },
+          {
+            "id": "982002613123940402",
+            "name": "Shadow Priest",
+            "color": "#FFFFFF",
+            "position": 35
+          },
+          {
+            "id": "982002614990426142",
+            "name": "Assassination Rogue",
+            "color": "#FFF468",
+            "position": 34
+          },
+          {
+            "id": "982002616743624714",
+            "name": "Outlaw Rogue",
+            "color": "#FFF468",
+            "position": 33
+          },
+          {
+            "id": "982002618073239643",
+            "name": "Subtlety Rogue",
+            "color": "#FFF468",
+            "position": 32
+          },
+          {
+            "id": "982002624373063750",
+            "name": "Affliction Warlock",
+            "color": "#8788EE",
+            "position": 28
+          },
+          {
+            "id": "982002625958510633",
+            "name": "Demonology Warlock",
+            "color": "#8788EE",
+            "position": 27
+          },
+          {
+            "id": "982002627485261824",
+            "name": "Destruction Warlock",
+            "color": "#8788EE",
+            "position": 26
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/638428384443236363/a80b7a632b5c453622844172ad60d785.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "822457540310204436",
+          "name": "ice.girl",
+          "discriminator": "0000",
+          "nickname": "!ce",
+          "color": "#11BAD7",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "780150794262937650",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+              "color": "#11BAD7",
+              "position": 230
+            },
+            {
+              "id": "740292114570543235",
+              "name": "Senior Support",
+              "color": null,
+              "position": 229
+            },
+            {
+              "id": "736282229881176194",
+              "name": "Support Team",
+              "color": null,
+              "position": 228
+            },
+            {
+              "id": "847393992542912543",
+              "name": "English Support",
+              "color": "#99AAB5",
+              "position": 227
+            },
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "782168018166874123",
+              "name": "Celestial Poster",
+              "color": "#5CFF00",
+              "position": 121
+            },
+            {
+              "id": "785363479128834049",
+              "name": "Celestial Booster",
+              "color": "#DA096D",
+              "position": 120
+            },
+            {
+              "id": "780248592954032158",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 94
+            },
+            {
+              "id": "780240733881368597",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 90
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972624651110973462",
+              "name": "EU Alliance",
+              "color": null,
+              "position": 62
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "758369270014541824",
+              "name": "Hydra Summoners",
+              "color": "#11806A",
+              "position": 59
+            },
+            {
+              "id": "1038533774448799884",
+              "name": "M+ Group",
+              "color": null,
+              "position": 14
+            },
+            {
+              "id": "1038555113733758976",
+              "name": "Guild",
+              "color": null,
+              "position": 13
+            },
+            {
+              "id": "1162822199258915047",
+              "name": "My Iranian Dudes",
+              "color": null,
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+        },
+        {
+          "id": "410635076842422293",
+          "name": "iman",
+          "discriminator": "0000",
+          "nickname": "Iman",
+          "color": "#FFDD43",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "698458162147229748",
+              "name": "Owner and Developer",
+              "color": "#FFDD43",
+              "position": 245
+            },
+            {
+              "id": "874549191806963742",
+              "name": "Admins",
+              "color": "#D4843D",
+              "position": 243
+            },
+            {
+              "id": "755824087540170872",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\uD83D\uDC2E Co-Founder \uD83D\uDC2E\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#65A0AA",
+              "position": 242
+            },
+            {
+              "id": "780168180415856650",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\uD83C\uDF1F  Management \uD83C\uDF1F\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+              "color": "#2ECC71",
+              "position": 234
+            },
+            {
+              "id": "698772961154302031",
+              "name": "Moderators",
+              "color": null,
+              "position": 233
+            },
+            {
+              "id": "780150794262937650",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+              "color": "#11BAD7",
+              "position": 230
+            },
+            {
+              "id": "736282229881176194",
+              "name": "Support Team",
+              "color": null,
+              "position": 228
+            },
+            {
+              "id": "782523324005089302",
+              "name": "⁣\u2002\u2002\u2002\u2002\t\uD83D\uDC4DHuokan Supporter⁣\uD83D\uDC4D⁣⁣⁣⁣   ⁣⁣⁣⁣\u2002   \u2002\u2002\u2002⁣",
+              "color": null,
+              "position": 219
+            },
+            {
+              "id": "723076361069133855",
+              "name": "WoWLFG #1 Fan",
+              "color": null,
+              "position": 134
+            },
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "1135055307387699211",
+              "name": "Supporter",
+              "color": "#FC7575",
+              "position": 125
+            },
+            {
+              "id": "782058701338181633",
+              "name": "Demigod Poster",
+              "color": "#00CF0C",
+              "position": 116
+            },
+            {
+              "id": "785363483159035954",
+              "name": "Demigod Booster",
+              "color": "#FF5555",
+              "position": 114
+            },
+            {
+              "id": "782166705723539466",
+              "name": "Monster Poster",
+              "color": "#CBFF83",
+              "position": 108
+            },
+            {
+              "id": "785363494325059604",
+              "name": "Supreme Booster",
+              "color": "#A86B3E",
+              "position": 105
+            },
+            {
+              "id": "780248592954032158",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 94
+            },
+            {
+              "id": "698746862009843853",
+              "name": "Tank",
+              "color": "#C69B6D",
+              "position": 93
+            },
+            {
+              "id": "698746942213062776",
+              "name": "DPS",
+              "color": "#AAD372",
+              "position": 91
+            },
+            {
+              "id": "780240733881368597",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 90
+            },
+            {
+              "id": "698760444168372311",
+              "name": "Monk",
+              "color": "#00FF98",
+              "position": 83
+            },
+            {
+              "id": "698760787547652104",
+              "name": "Warlock",
+              "color": "#8788EE",
+              "position": 78
+            },
+            {
+              "id": "698760229650694204",
+              "name": "Warrior",
+              "color": "#C69B6D",
+              "position": 77
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "982002598481658007",
+              "name": "Brewmaster Monk",
+              "color": "#00FF98",
+              "position": 43
+            },
+            {
+              "id": "982002601862267000",
+              "name": "Windwalker Monk",
+              "color": "#00FF98",
+              "position": 41
+            },
+            {
+              "id": "982002624373063750",
+              "name": "Affliction Warlock",
+              "color": "#8788EE",
+              "position": 28
+            },
+            {
+              "id": "982002625958510633",
+              "name": "Demonology Warlock",
+              "color": "#8788EE",
+              "position": 27
+            },
+            {
+              "id": "982002627485261824",
+              "name": "Destruction Warlock",
+              "color": "#8788EE",
+              "position": 26
+            },
+            {
+              "id": "982002629280432238",
+              "name": "Protection Warrior",
+              "color": "#C69B6D",
+              "position": 25
+            },
+            {
+              "id": "982002630723248178",
+              "name": "Arms Warrior",
+              "color": "#C69B6D",
+              "position": 24
+            },
+            {
+              "id": "982002631901863989",
+              "name": "Fury Warrior",
+              "color": "#C69B6D",
+              "position": 23
+            },
+            {
+              "id": "982569083755184169",
+              "name": "Plate",
+              "color": "#F48CBA",
+              "position": 19
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            },
+            {
+              "id": "982569088884801546",
+              "name": "Cloth",
+              "color": "#FFFFFF",
+              "position": 16
+            },
+            {
+              "id": "1038533774448799884",
+              "name": "M+ Group",
+              "color": null,
+              "position": 14
+            },
+            {
+              "id": "1038555113733758976",
+              "name": "Guild",
+              "color": null,
+              "position": 13
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/410635076842422293/d27f8a52d349a69377461b4332870447.png?size=512"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1346563787377086556",
+      "type": "Reply",
+      "timestamp": "2025-03-05T00:53:44.856+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://tenor.com/view/network-connecting-online-zoom-loading-gif-20343119",
+      "author": {
+        "id": "410635076842422293",
+        "name": "iman",
+        "discriminator": "0000",
+        "nickname": "Iman",
+        "color": "#FFDD43",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "698458162147229748",
+            "name": "Owner and Developer",
+            "color": "#FFDD43",
+            "position": 245
+          },
+          {
+            "id": "874549191806963742",
+            "name": "Admins",
+            "color": "#D4843D",
+            "position": 243
+          },
+          {
+            "id": "755824087540170872",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\uD83D\uDC2E Co-Founder \uD83D\uDC2E\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#65A0AA",
+            "position": 242
+          },
+          {
+            "id": "780168180415856650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\uD83C\uDF1F  Management \uD83C\uDF1F\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#2ECC71",
+            "position": 234
+          },
+          {
+            "id": "698772961154302031",
+            "name": "Moderators",
+            "color": null,
+            "position": 233
+          },
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "782523324005089302",
+            "name": "⁣\u2002\u2002\u2002\u2002\t\uD83D\uDC4DHuokan Supporter⁣\uD83D\uDC4D⁣⁣⁣⁣   ⁣⁣⁣⁣\u2002   \u2002\u2002\u2002⁣",
+            "color": null,
+            "position": 219
+          },
+          {
+            "id": "723076361069133855",
+            "name": "WoWLFG #1 Fan",
+            "color": null,
+            "position": 134
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "1135055307387699211",
+            "name": "Supporter",
+            "color": "#FC7575",
+            "position": 125
+          },
+          {
+            "id": "782058701338181633",
+            "name": "Demigod Poster",
+            "color": "#00CF0C",
+            "position": 116
+          },
+          {
+            "id": "785363483159035954",
+            "name": "Demigod Booster",
+            "color": "#FF5555",
+            "position": 114
+          },
+          {
+            "id": "782166705723539466",
+            "name": "Monster Poster",
+            "color": "#CBFF83",
+            "position": 108
+          },
+          {
+            "id": "785363494325059604",
+            "name": "Supreme Booster",
+            "color": "#A86B3E",
+            "position": 105
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "698746862009843853",
+            "name": "Tank",
+            "color": "#C69B6D",
+            "position": 93
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "698760444168372311",
+            "name": "Monk",
+            "color": "#00FF98",
+            "position": 83
+          },
+          {
+            "id": "698760787547652104",
+            "name": "Warlock",
+            "color": "#8788EE",
+            "position": 78
+          },
+          {
+            "id": "698760229650694204",
+            "name": "Warrior",
+            "color": "#C69B6D",
+            "position": 77
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002598481658007",
+            "name": "Brewmaster Monk",
+            "color": "#00FF98",
+            "position": 43
+          },
+          {
+            "id": "982002601862267000",
+            "name": "Windwalker Monk",
+            "color": "#00FF98",
+            "position": 41
+          },
+          {
+            "id": "982002624373063750",
+            "name": "Affliction Warlock",
+            "color": "#8788EE",
+            "position": 28
+          },
+          {
+            "id": "982002625958510633",
+            "name": "Demonology Warlock",
+            "color": "#8788EE",
+            "position": 27
+          },
+          {
+            "id": "982002627485261824",
+            "name": "Destruction Warlock",
+            "color": "#8788EE",
+            "position": 26
+          },
+          {
+            "id": "982002629280432238",
+            "name": "Protection Warrior",
+            "color": "#C69B6D",
+            "position": 25
+          },
+          {
+            "id": "982002630723248178",
+            "name": "Arms Warrior",
+            "color": "#C69B6D",
+            "position": 24
+          },
+          {
+            "id": "982002631901863989",
+            "name": "Fury Warrior",
+            "color": "#C69B6D",
+            "position": 23
+          },
+          {
+            "id": "982569083755184169",
+            "name": "Plate",
+            "color": "#F48CBA",
+            "position": 19
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          },
+          {
+            "id": "982569088884801546",
+            "name": "Cloth",
+            "color": "#FFFFFF",
+            "position": 16
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/410635076842422293/d27f8a52d349a69377461b4332870447.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "https://tenor.com/view/network-connecting-online-zoom-loading-gif-20343119",
+          "timestamp": null,
+          "description": "",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/cZJwSzfw0V1eTuLIQ4UoVeLlAv007ajEG_kXvZr0ys4/https/media.tenor.com/dKj-01-GggoAAAAe/network-connecting.png",
+            "width": 640,
+            "height": 624
+          },
+          "video": {
+            "url": "https://images-ext-1.discordapp.net/external/-viNc4dimqvDiTWgY7N8cypFP2vN6sR1JE0oucuxR7U/https/media.tenor.com/dKj-01-GggoAAAPo/network-connecting.mp4",
+            "width": 640,
+            "height": 624
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "638428384443236363",
+          "name": "belupop",
+          "discriminator": "0000",
+          "nickname": "Belu",
+          "color": "#0F2814",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "782523324005089302",
+              "name": "⁣\u2002\u2002\u2002\u2002\t\uD83D\uDC4DHuokan Supporter⁣\uD83D\uDC4D⁣⁣⁣⁣   ⁣⁣⁣⁣\u2002   \u2002\u2002\u2002⁣",
+              "color": null,
+              "position": 219
+            },
+            {
+              "id": "1082048323646664796",
+              "name": "Yvonne's Bonker",
+              "color": "#0F2814",
+              "position": 137
+            },
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "785363483159035954",
+              "name": "Demigod Booster",
+              "color": "#FF5555",
+              "position": 114
+            },
+            {
+              "id": "782167289956663346",
+              "name": "Legendary Poster",
+              "color": "#55B200",
+              "position": 113
+            },
+            {
+              "id": "780248592954032158",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 94
+            },
+            {
+              "id": "698746862009843853",
+              "name": "Tank",
+              "color": "#C69B6D",
+              "position": 93
+            },
+            {
+              "id": "698746917940887602",
+              "name": "Healer",
+              "color": "#FF7C0A",
+              "position": 92
+            },
+            {
+              "id": "698746942213062776",
+              "name": "DPS",
+              "color": "#AAD372",
+              "position": 91
+            },
+            {
+              "id": "780240733881368597",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 90
+            },
+            {
+              "id": "698760325545066546",
+              "name": "Death Knight",
+              "color": "#C41E3A",
+              "position": 89
+            },
+            {
+              "id": "698763148148080660",
+              "name": "Demon Hunter",
+              "color": "#A330C9",
+              "position": 88
+            },
+            {
+              "id": "698760102395641997",
+              "name": "Druid",
+              "color": "#FF7C0A",
+              "position": 87
+            },
+            {
+              "id": "698760387390210060",
+              "name": "Hunter",
+              "color": "#AAD372",
+              "position": 85
+            },
+            {
+              "id": "698760807798014032",
+              "name": "Mage",
+              "color": "#3FC7EB",
+              "position": 84
+            },
+            {
+              "id": "698760637920182402",
+              "name": "Priest",
+              "color": "#FFFFFF",
+              "position": 82
+            },
+            {
+              "id": "698760282520027146",
+              "name": "Paladin",
+              "color": "#F48CBA",
+              "position": 81
+            },
+            {
+              "id": "698760413764124783",
+              "name": "Shaman",
+              "color": "#0070DD",
+              "position": 80
+            },
+            {
+              "id": "698760523499569202",
+              "name": "Rogue",
+              "color": "#FFF468",
+              "position": 79
+            },
+            {
+              "id": "698760787547652104",
+              "name": "Warlock",
+              "color": "#8788EE",
+              "position": 78
+            },
+            {
+              "id": "698760229650694204",
+              "name": "Warrior",
+              "color": "#C69B6D",
+              "position": 77
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624308771905608",
+              "name": "M+ 01-13",
+              "color": null,
+              "position": 73
+            },
+            {
+              "id": "972624515211337768",
+              "name": "M+ 14-17",
+              "color": null,
+              "position": 72
+            },
+            {
+              "id": "972624629531295804",
+              "name": "M+ 18-20",
+              "color": null,
+              "position": 70
+            },
+            {
+              "id": "972624632370843689",
+              "name": "M+ 21+",
+              "color": null,
+              "position": 69
+            },
+            {
+              "id": "972624635692724244",
+              "name": "+20K",
+              "color": null,
+              "position": 68
+            },
+            {
+              "id": "972624638377082900",
+              "name": "+40K",
+              "color": null,
+              "position": 67
+            },
+            {
+              "id": "972624641162084372",
+              "name": "+60K",
+              "color": null,
+              "position": 66
+            },
+            {
+              "id": "972624643909374032",
+              "name": "+80K",
+              "color": null,
+              "position": 65
+            },
+            {
+              "id": "972624646514040872",
+              "name": "+100K",
+              "color": null,
+              "position": 64
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972624651110973462",
+              "name": "EU Alliance",
+              "color": null,
+              "position": 62
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "982002565489254472",
+              "name": "Blood Death Knight",
+              "color": "#C41E3A",
+              "position": 58
+            },
+            {
+              "id": "982002567724802078",
+              "name": "Frost Death Knight",
+              "color": "#C41E3A",
+              "position": 57
+            },
+            {
+              "id": "982002570010722405",
+              "name": "Unholy Death Knight",
+              "color": "#C41E3A",
+              "position": 56
+            },
+            {
+              "id": "982002571583569950",
+              "name": "Vengeance Demon Hunter",
+              "color": "#A330C9",
+              "position": 55
+            },
+            {
+              "id": "982002577942118510",
+              "name": "Restoration Druid",
+              "color": "#FF7C0A",
+              "position": 52
+            },
+            {
+              "id": "982002579892494346",
+              "name": "Balance Druid",
+              "color": "#FF7C0A",
+              "position": 51
+            },
+            {
+              "id": "982002581322727435",
+              "name": "Feral Druid",
+              "color": "#FF7C0A",
+              "position": 50
+            },
+            {
+              "id": "982002583352803328",
+              "name": "Beast Mastery Hunter",
+              "color": "#AAD372",
+              "position": 49
+            },
+            {
+              "id": "982002585294766081",
+              "name": "Marksmanship Hunter",
+              "color": "#AAD372",
+              "position": 48
+            },
+            {
+              "id": "982002587266076732",
+              "name": "Survival Hunter",
+              "color": "#AAD372",
+              "position": 47
+            },
+            {
+              "id": "982002593331044372",
+              "name": "Arcane Mage",
+              "color": "#3FC7EB",
+              "position": 46
+            },
+            {
+              "id": "982002595587567676",
+              "name": "Fire Mage",
+              "color": "#3FC7EB",
+              "position": 45
+            },
+            {
+              "id": "982002597093335050",
+              "name": "Frost Mage",
+              "color": "#3FC7EB",
+              "position": 44
+            },
+            {
+              "id": "982002603749679164",
+              "name": "Protection Paladin",
+              "color": "#F48CBA",
+              "position": 40
+            },
+            {
+              "id": "982002605028941884",
+              "name": "Holy Paladin",
+              "color": "#F48CBA",
+              "position": 39
+            },
+            {
+              "id": "982002606559854612",
+              "name": "Retribution Paladin",
+              "color": "#F48CBA",
+              "position": 38
+            },
+            {
+              "id": "982002608623452222",
+              "name": "Discipline Priest",
+              "color": "#FFFFFF",
+              "position": 37
+            },
+            {
+              "id": "982002611077152838",
+              "name": "Holy Priest",
+              "color": "#FFFFFF",
+              "position": 36
+            },
+            {
+              "id": "982002613123940402",
+              "name": "Shadow Priest",
+              "color": "#FFFFFF",
+              "position": 35
+            },
+            {
+              "id": "982002614990426142",
+              "name": "Assassination Rogue",
+              "color": "#FFF468",
+              "position": 34
+            },
+            {
+              "id": "982002616743624714",
+              "name": "Outlaw Rogue",
+              "color": "#FFF468",
+              "position": 33
+            },
+            {
+              "id": "982002618073239643",
+              "name": "Subtlety Rogue",
+              "color": "#FFF468",
+              "position": 32
+            },
+            {
+              "id": "982002624373063750",
+              "name": "Affliction Warlock",
+              "color": "#8788EE",
+              "position": 28
+            },
+            {
+              "id": "982002625958510633",
+              "name": "Demonology Warlock",
+              "color": "#8788EE",
+              "position": 27
+            },
+            {
+              "id": "982002627485261824",
+              "name": "Destruction Warlock",
+              "color": "#8788EE",
+              "position": 26
+            },
+            {
+              "id": "982569083755184169",
+              "name": "Plate",
+              "color": "#F48CBA",
+              "position": 19
+            },
+            {
+              "id": "982569085541974086",
+              "name": "Mail",
+              "color": "#0070DD",
+              "position": 18
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            },
+            {
+              "id": "982569088884801546",
+              "name": "Cloth",
+              "color": "#FFFFFF",
+              "position": 16
+            },
+            {
+              "id": "1162822199258915047",
+              "name": "My Iranian Dudes",
+              "color": null,
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/638428384443236363/a80b7a632b5c453622844172ad60d785.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1346562415013269627",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1347503720124121119",
+      "type": "Reply",
+      "timestamp": "2025-03-07T15:08:42.286+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://tenor.com/view/connection-issue-world-of-warcraft-cataclysm-easy-latam-doerhamy-gif-25948098",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "https://tenor.com/view/connection-issue-world-of-warcraft-cataclysm-easy-latam-doerhamy-gif-25948098",
+          "timestamp": null,
+          "description": "",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/-4Wkjgm1dSpqyb3RfyB_YMqG3fEmNUU2pRx-ExjERl0/https/media.tenor.com/GAXTSKqPDuUAAAAe/connection-issue-world-of-warcraft.png",
+            "width": 640,
+            "height": 542
+          },
+          "video": {
+            "url": "https://images-ext-1.discordapp.net/external/MPvprjOoWYKCKh0MMKVQIf_Zys1HvRbXd_LiyuDGEvQ/https/media.tenor.com/GAXTSKqPDuUAAAPo/connection-issue-world-of-warcraft.mp4",
+            "width": 640,
+            "height": 542
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "638428384443236363",
+          "name": "belupop",
+          "discriminator": "0000",
+          "nickname": "Belu",
+          "color": "#0F2814",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "782523324005089302",
+              "name": "⁣\u2002\u2002\u2002\u2002\t\uD83D\uDC4DHuokan Supporter⁣\uD83D\uDC4D⁣⁣⁣⁣   ⁣⁣⁣⁣\u2002   \u2002\u2002\u2002⁣",
+              "color": null,
+              "position": 219
+            },
+            {
+              "id": "1082048323646664796",
+              "name": "Yvonne's Bonker",
+              "color": "#0F2814",
+              "position": 137
+            },
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "785363483159035954",
+              "name": "Demigod Booster",
+              "color": "#FF5555",
+              "position": 114
+            },
+            {
+              "id": "782167289956663346",
+              "name": "Legendary Poster",
+              "color": "#55B200",
+              "position": 113
+            },
+            {
+              "id": "780248592954032158",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 94
+            },
+            {
+              "id": "698746862009843853",
+              "name": "Tank",
+              "color": "#C69B6D",
+              "position": 93
+            },
+            {
+              "id": "698746917940887602",
+              "name": "Healer",
+              "color": "#FF7C0A",
+              "position": 92
+            },
+            {
+              "id": "698746942213062776",
+              "name": "DPS",
+              "color": "#AAD372",
+              "position": 91
+            },
+            {
+              "id": "780240733881368597",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 90
+            },
+            {
+              "id": "698760325545066546",
+              "name": "Death Knight",
+              "color": "#C41E3A",
+              "position": 89
+            },
+            {
+              "id": "698763148148080660",
+              "name": "Demon Hunter",
+              "color": "#A330C9",
+              "position": 88
+            },
+            {
+              "id": "698760102395641997",
+              "name": "Druid",
+              "color": "#FF7C0A",
+              "position": 87
+            },
+            {
+              "id": "698760387390210060",
+              "name": "Hunter",
+              "color": "#AAD372",
+              "position": 85
+            },
+            {
+              "id": "698760807798014032",
+              "name": "Mage",
+              "color": "#3FC7EB",
+              "position": 84
+            },
+            {
+              "id": "698760637920182402",
+              "name": "Priest",
+              "color": "#FFFFFF",
+              "position": 82
+            },
+            {
+              "id": "698760282520027146",
+              "name": "Paladin",
+              "color": "#F48CBA",
+              "position": 81
+            },
+            {
+              "id": "698760413764124783",
+              "name": "Shaman",
+              "color": "#0070DD",
+              "position": 80
+            },
+            {
+              "id": "698760523499569202",
+              "name": "Rogue",
+              "color": "#FFF468",
+              "position": 79
+            },
+            {
+              "id": "698760787547652104",
+              "name": "Warlock",
+              "color": "#8788EE",
+              "position": 78
+            },
+            {
+              "id": "698760229650694204",
+              "name": "Warrior",
+              "color": "#C69B6D",
+              "position": 77
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624308771905608",
+              "name": "M+ 01-13",
+              "color": null,
+              "position": 73
+            },
+            {
+              "id": "972624515211337768",
+              "name": "M+ 14-17",
+              "color": null,
+              "position": 72
+            },
+            {
+              "id": "972624629531295804",
+              "name": "M+ 18-20",
+              "color": null,
+              "position": 70
+            },
+            {
+              "id": "972624632370843689",
+              "name": "M+ 21+",
+              "color": null,
+              "position": 69
+            },
+            {
+              "id": "972624635692724244",
+              "name": "+20K",
+              "color": null,
+              "position": 68
+            },
+            {
+              "id": "972624638377082900",
+              "name": "+40K",
+              "color": null,
+              "position": 67
+            },
+            {
+              "id": "972624641162084372",
+              "name": "+60K",
+              "color": null,
+              "position": 66
+            },
+            {
+              "id": "972624643909374032",
+              "name": "+80K",
+              "color": null,
+              "position": 65
+            },
+            {
+              "id": "972624646514040872",
+              "name": "+100K",
+              "color": null,
+              "position": 64
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972624651110973462",
+              "name": "EU Alliance",
+              "color": null,
+              "position": 62
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "982002565489254472",
+              "name": "Blood Death Knight",
+              "color": "#C41E3A",
+              "position": 58
+            },
+            {
+              "id": "982002567724802078",
+              "name": "Frost Death Knight",
+              "color": "#C41E3A",
+              "position": 57
+            },
+            {
+              "id": "982002570010722405",
+              "name": "Unholy Death Knight",
+              "color": "#C41E3A",
+              "position": 56
+            },
+            {
+              "id": "982002571583569950",
+              "name": "Vengeance Demon Hunter",
+              "color": "#A330C9",
+              "position": 55
+            },
+            {
+              "id": "982002577942118510",
+              "name": "Restoration Druid",
+              "color": "#FF7C0A",
+              "position": 52
+            },
+            {
+              "id": "982002579892494346",
+              "name": "Balance Druid",
+              "color": "#FF7C0A",
+              "position": 51
+            },
+            {
+              "id": "982002581322727435",
+              "name": "Feral Druid",
+              "color": "#FF7C0A",
+              "position": 50
+            },
+            {
+              "id": "982002583352803328",
+              "name": "Beast Mastery Hunter",
+              "color": "#AAD372",
+              "position": 49
+            },
+            {
+              "id": "982002585294766081",
+              "name": "Marksmanship Hunter",
+              "color": "#AAD372",
+              "position": 48
+            },
+            {
+              "id": "982002587266076732",
+              "name": "Survival Hunter",
+              "color": "#AAD372",
+              "position": 47
+            },
+            {
+              "id": "982002593331044372",
+              "name": "Arcane Mage",
+              "color": "#3FC7EB",
+              "position": 46
+            },
+            {
+              "id": "982002595587567676",
+              "name": "Fire Mage",
+              "color": "#3FC7EB",
+              "position": 45
+            },
+            {
+              "id": "982002597093335050",
+              "name": "Frost Mage",
+              "color": "#3FC7EB",
+              "position": 44
+            },
+            {
+              "id": "982002603749679164",
+              "name": "Protection Paladin",
+              "color": "#F48CBA",
+              "position": 40
+            },
+            {
+              "id": "982002605028941884",
+              "name": "Holy Paladin",
+              "color": "#F48CBA",
+              "position": 39
+            },
+            {
+              "id": "982002606559854612",
+              "name": "Retribution Paladin",
+              "color": "#F48CBA",
+              "position": 38
+            },
+            {
+              "id": "982002608623452222",
+              "name": "Discipline Priest",
+              "color": "#FFFFFF",
+              "position": 37
+            },
+            {
+              "id": "982002611077152838",
+              "name": "Holy Priest",
+              "color": "#FFFFFF",
+              "position": 36
+            },
+            {
+              "id": "982002613123940402",
+              "name": "Shadow Priest",
+              "color": "#FFFFFF",
+              "position": 35
+            },
+            {
+              "id": "982002614990426142",
+              "name": "Assassination Rogue",
+              "color": "#FFF468",
+              "position": 34
+            },
+            {
+              "id": "982002616743624714",
+              "name": "Outlaw Rogue",
+              "color": "#FFF468",
+              "position": 33
+            },
+            {
+              "id": "982002618073239643",
+              "name": "Subtlety Rogue",
+              "color": "#FFF468",
+              "position": 32
+            },
+            {
+              "id": "982002624373063750",
+              "name": "Affliction Warlock",
+              "color": "#8788EE",
+              "position": 28
+            },
+            {
+              "id": "982002625958510633",
+              "name": "Demonology Warlock",
+              "color": "#8788EE",
+              "position": 27
+            },
+            {
+              "id": "982002627485261824",
+              "name": "Destruction Warlock",
+              "color": "#8788EE",
+              "position": 26
+            },
+            {
+              "id": "982569083755184169",
+              "name": "Plate",
+              "color": "#F48CBA",
+              "position": 19
+            },
+            {
+              "id": "982569085541974086",
+              "name": "Mail",
+              "color": "#0070DD",
+              "position": 18
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            },
+            {
+              "id": "982569088884801546",
+              "name": "Cloth",
+              "color": "#FFFFFF",
+              "position": 16
+            },
+            {
+              "id": "1162822199258915047",
+              "name": "My Iranian Dudes",
+              "color": null,
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/638428384443236363/a80b7a632b5c453622844172ad60d785.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1346562415013269627",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1349448819280056414",
+      "type": "Default",
+      "timestamp": "2025-03-12T23:57:50.063+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@!ce premium tier 2 ro ba normal signup to yeja neshon mide dakhl offer ha?",
+      "author": {
+        "id": "1242669072357920849",
+        "name": "shotgun.ir",
+        "discriminator": "0000",
+        "nickname": "Shotgun",
+        "color": "#BB30FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760413764124783",
+            "name": "Shaman",
+            "color": "#0070DD",
+            "position": 80
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002577942118510",
+            "name": "Restoration Druid",
+            "color": "#FF7C0A",
+            "position": 52
+          },
+          {
+            "id": "982002619562205254",
+            "name": "Restoration Shaman",
+            "color": "#0070DD",
+            "position": 31
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1242669072357920849/0822acbbc486e6d44f155e76167d7550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "822457540310204436",
+          "name": "ice.girl",
+          "discriminator": "0000",
+          "nickname": "!ce",
+          "color": "#11BAD7",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "780150794262937650",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+              "color": "#11BAD7",
+              "position": 230
+            },
+            {
+              "id": "740292114570543235",
+              "name": "Senior Support",
+              "color": null,
+              "position": 229
+            },
+            {
+              "id": "736282229881176194",
+              "name": "Support Team",
+              "color": null,
+              "position": 228
+            },
+            {
+              "id": "847393992542912543",
+              "name": "English Support",
+              "color": "#99AAB5",
+              "position": 227
+            },
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "782168018166874123",
+              "name": "Celestial Poster",
+              "color": "#5CFF00",
+              "position": 121
+            },
+            {
+              "id": "785363479128834049",
+              "name": "Celestial Booster",
+              "color": "#DA096D",
+              "position": 120
+            },
+            {
+              "id": "780248592954032158",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 94
+            },
+            {
+              "id": "780240733881368597",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 90
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972624651110973462",
+              "name": "EU Alliance",
+              "color": null,
+              "position": 62
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "758369270014541824",
+              "name": "Hydra Summoners",
+              "color": "#11806A",
+              "position": 59
+            },
+            {
+              "id": "1038533774448799884",
+              "name": "M+ Group",
+              "color": null,
+              "position": 14
+            },
+            {
+              "id": "1038555113733758976",
+              "name": "Guild",
+              "color": null,
+              "position": 13
+            },
+            {
+              "id": "1162822199258915047",
+              "name": "My Iranian Dudes",
+              "color": null,
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1349465456909750382",
+      "type": "Reply",
+      "timestamp": "2025-03-13T01:03:56.783+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Announcement haro nemikhooni ?",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1242669072357920849",
+          "name": "shotgun.ir",
+          "discriminator": "0000",
+          "nickname": "Shotgun",
+          "color": "#BB30FF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "698746917940887602",
+              "name": "Healer",
+              "color": "#FF7C0A",
+              "position": 92
+            },
+            {
+              "id": "698760102395641997",
+              "name": "Druid",
+              "color": "#FF7C0A",
+              "position": 87
+            },
+            {
+              "id": "698760413764124783",
+              "name": "Shaman",
+              "color": "#0070DD",
+              "position": 80
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "982002577942118510",
+              "name": "Restoration Druid",
+              "color": "#FF7C0A",
+              "position": 52
+            },
+            {
+              "id": "982002619562205254",
+              "name": "Restoration Shaman",
+              "color": "#0070DD",
+              "position": 31
+            },
+            {
+              "id": "982569085541974086",
+              "name": "Mail",
+              "color": "#0070DD",
+              "position": 18
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/1242669072357920849/0822acbbc486e6d44f155e76167d7550.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1349448819280056414",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1349465573989552219",
+      "type": "Default",
+      "timestamp": "2025-03-13T01:04:24.697+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://discord.com/channels/698426461534814270/710735629910147082/1340443745581138014",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1349854981280235661",
+      "type": "Default",
+      "timestamp": "2025-03-14T02:51:46.63+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "slm\nrajebe karma tozih midid daghighan chi hast ?\nmosbat manfi beshe chi mishe",
+      "author": {
+        "id": "326513468247244800",
+        "name": "erfanmh",
+        "discriminator": "0000",
+        "nickname": "ErfanMh",
+        "color": "#BB30FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "785363498673635358",
+            "name": "Heroic Booster",
+            "color": "#FFD885",
+            "position": 101
+          },
+          {
+            "id": "698746942213062776",
+            "name": "DPS",
+            "color": "#AAD372",
+            "position": 91
+          },
+          {
+            "id": "698763148148080660",
+            "name": "Demon Hunter",
+            "color": "#A330C9",
+            "position": 88
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "982002573173202974",
+            "name": "Havoc Demon Hunter",
+            "color": "#A330C9",
+            "position": 54
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/326513468247244800/76ffe155512ebe2a522aedeb3624de41.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1349861712861597698",
+      "type": "Reply",
+      "timestamp": "2025-03-14T03:18:31.564+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://wowlfg.com/management/offers/karma",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "WoW LFG Dashboard",
+          "url": "https://wowlfg.com/management/offers/karma",
+          "timestamp": null,
+          "description": "WoW LFG is a fully automated World of Warcraft LFG Community that helps you find other wow players or helpers",
+          "color": "#1975FF",
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "326513468247244800",
+          "name": "erfanmh",
+          "discriminator": "0000",
+          "nickname": "ErfanMh",
+          "color": "#BB30FF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "785363498673635358",
+              "name": "Heroic Booster",
+              "color": "#FFD885",
+              "position": 101
+            },
+            {
+              "id": "698746942213062776",
+              "name": "DPS",
+              "color": "#AAD372",
+              "position": 91
+            },
+            {
+              "id": "698763148148080660",
+              "name": "Demon Hunter",
+              "color": "#A330C9",
+              "position": 88
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "982002573173202974",
+              "name": "Havoc Demon Hunter",
+              "color": "#A330C9",
+              "position": 54
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/326513468247244800/76ffe155512ebe2a522aedeb3624de41.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1349854981280235661",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1349861736706080878",
+      "type": "Default",
+      "timestamp": "2025-03-14T03:18:37.249+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "payine safhe tozih dade shode",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1350168505764286527",
+      "type": "Default",
+      "timestamp": "2025-03-14T23:37:36.692+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "slm doostan mikham boost dungeon konam koja bas beram ??",
+      "author": {
+        "id": "1313207573226328075",
+        "name": "666ou666",
+        "discriminator": "0000",
+        "nickname": "mariopuzo",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1313207573226328075/1c8ae69c7d1d52b1a6a99ecf74d22f8b.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1350197978887098449",
+      "type": "Reply",
+      "timestamp": "2025-03-15T01:34:43.632+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://wowlfg.com/guides",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "WoW LFG Dashboard",
+          "url": "https://wowlfg.com/guides",
+          "timestamp": null,
+          "description": "WoW LFG is a fully automated World of Warcraft LFG Community that helps you find other wow players or helpers",
+          "color": "#1975FF",
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1313207573226328075",
+          "name": "666ou666",
+          "discriminator": "0000",
+          "nickname": "mariopuzo",
+          "color": null,
+          "isBot": false,
+          "roles": [
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972624651110973462",
+              "name": "EU Alliance",
+              "color": null,
+              "position": 62
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/1313207573226328075/1c8ae69c7d1d52b1a6a99ecf74d22f8b.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1350168505764286527",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1352668239184007280",
+      "type": "Default",
+      "timestamp": "2025-03-21T21:10:39.582+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "سلام",
+      "author": {
+        "id": "941368368106205254",
+        "name": "_jinxo_",
+        "discriminator": "0000",
+        "nickname": "_jinxo_",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/941368368106205254/3d6d40bf320498f8e3c20bb19b4590f6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1352668420289859676",
+      "type": "Default",
+      "timestamp": "2025-03-21T21:11:22.761+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "من یه چند روزیه دارم پوست میکنم این رنک بوستر ترینر جلوتر نمیره که بشه بیشتر از دوتا ران گذاشت؟",
+      "author": {
+        "id": "941368368106205254",
+        "name": "_jinxo_",
+        "discriminator": "0000",
+        "nickname": "_jinxo_",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/941368368106205254/3d6d40bf320498f8e3c20bb19b4590f6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1352668444675276874",
+      "type": "Default",
+      "timestamp": "2025-03-21T21:11:28.575+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "مشکلی داره؟",
+      "author": {
+        "id": "941368368106205254",
+        "name": "_jinxo_",
+        "discriminator": "0000",
+        "nickname": "_jinxo_",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/941368368106205254/3d6d40bf320498f8e3c20bb19b4590f6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1352674184941142057",
+      "type": "Reply",
+      "timestamp": "2025-03-21T21:34:17.161+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Khodkar mire jelo",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "941368368106205254",
+          "name": "_jinxo_",
+          "discriminator": "0000",
+          "nickname": "_jinxo_",
+          "color": null,
+          "isBot": false,
+          "roles": [
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/941368368106205254/3d6d40bf320498f8e3c20bb19b4590f6.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1352668239184007280",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1353473018738905291",
+      "type": "Default",
+      "timestamp": "2025-03-24T02:28:33.98+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@!ce slm man premium tier 3 daram amma offer ke miad toye site kheyli dire signup mikone \nbazi vaghta fekrmikonam aslan signup nmide\nghablan injori nabod hatta tier 2",
+      "author": {
+        "id": "1242669072357920849",
+        "name": "shotgun.ir",
+        "discriminator": "0000",
+        "nickname": "Shotgun",
+        "color": "#BB30FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760413764124783",
+            "name": "Shaman",
+            "color": "#0070DD",
+            "position": 80
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002577942118510",
+            "name": "Restoration Druid",
+            "color": "#FF7C0A",
+            "position": 52
+          },
+          {
+            "id": "982002619562205254",
+            "name": "Restoration Shaman",
+            "color": "#0070DD",
+            "position": 31
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1242669072357920849/0822acbbc486e6d44f155e76167d7550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "822457540310204436",
+          "name": "ice.girl",
+          "discriminator": "0000",
+          "nickname": "!ce",
+          "color": "#11BAD7",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "780150794262937650",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+              "color": "#11BAD7",
+              "position": 230
+            },
+            {
+              "id": "740292114570543235",
+              "name": "Senior Support",
+              "color": null,
+              "position": 229
+            },
+            {
+              "id": "736282229881176194",
+              "name": "Support Team",
+              "color": null,
+              "position": 228
+            },
+            {
+              "id": "847393992542912543",
+              "name": "English Support",
+              "color": "#99AAB5",
+              "position": 227
+            },
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "782168018166874123",
+              "name": "Celestial Poster",
+              "color": "#5CFF00",
+              "position": 121
+            },
+            {
+              "id": "785363479128834049",
+              "name": "Celestial Booster",
+              "color": "#DA096D",
+              "position": 120
+            },
+            {
+              "id": "780248592954032158",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 94
+            },
+            {
+              "id": "780240733881368597",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 90
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972624651110973462",
+              "name": "EU Alliance",
+              "color": null,
+              "position": 62
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "758369270014541824",
+              "name": "Hydra Summoners",
+              "color": "#11806A",
+              "position": 59
+            },
+            {
+              "id": "1038533774448799884",
+              "name": "M+ Group",
+              "color": null,
+              "position": 14
+            },
+            {
+              "id": "1038555113733758976",
+              "name": "Guild",
+              "color": null,
+              "position": 13
+            },
+            {
+              "id": "1162822199258915047",
+              "name": "My Iranian Dudes",
+              "color": null,
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1353520898669543625",
+      "type": "Reply",
+      "timestamp": "2025-03-24T05:38:49.445+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "na moshkeli nadare",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1242669072357920849",
+          "name": "shotgun.ir",
+          "discriminator": "0000",
+          "nickname": "Shotgun",
+          "color": "#BB30FF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "698746917940887602",
+              "name": "Healer",
+              "color": "#FF7C0A",
+              "position": 92
+            },
+            {
+              "id": "698760102395641997",
+              "name": "Druid",
+              "color": "#FF7C0A",
+              "position": 87
+            },
+            {
+              "id": "698760413764124783",
+              "name": "Shaman",
+              "color": "#0070DD",
+              "position": 80
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "982002577942118510",
+              "name": "Restoration Druid",
+              "color": "#FF7C0A",
+              "position": 52
+            },
+            {
+              "id": "982002619562205254",
+              "name": "Restoration Shaman",
+              "color": "#0070DD",
+              "position": 31
+            },
+            {
+              "id": "982569085541974086",
+              "name": "Mail",
+              "color": "#0070DD",
+              "position": 18
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/1242669072357920849/0822acbbc486e6d44f155e76167d7550.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1353473018738905291",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1353520972103159858",
+      "type": "Default",
+      "timestamp": "2025-03-24T05:39:06.953+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "hajm e booster nesbat be post kheili bishtare,,,",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1354121124711239761",
+      "type": "Default",
+      "timestamp": "2025-03-25T21:23:54.485+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@!ce slm\nyeki az poster ha mano blacklist karde \nmano aslan yekbar ham invite nadade che in season che season ghabl\nin buge ya chi? chejori blacklist shodm pas?",
+      "author": {
+        "id": "1242669072357920849",
+        "name": "shotgun.ir",
+        "discriminator": "0000",
+        "nickname": "Shotgun",
+        "color": "#BB30FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "698746917940887602",
+            "name": "Healer",
+            "color": "#FF7C0A",
+            "position": 92
+          },
+          {
+            "id": "698760102395641997",
+            "name": "Druid",
+            "color": "#FF7C0A",
+            "position": 87
+          },
+          {
+            "id": "698760413764124783",
+            "name": "Shaman",
+            "color": "#0070DD",
+            "position": 80
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "982002577942118510",
+            "name": "Restoration Druid",
+            "color": "#FF7C0A",
+            "position": 52
+          },
+          {
+            "id": "982002619562205254",
+            "name": "Restoration Shaman",
+            "color": "#0070DD",
+            "position": 31
+          },
+          {
+            "id": "982569085541974086",
+            "name": "Mail",
+            "color": "#0070DD",
+            "position": 18
+          },
+          {
+            "id": "982569086947061831",
+            "name": "Leather",
+            "color": "#FFF468",
+            "position": 17
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1242669072357920849/0822acbbc486e6d44f155e76167d7550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "822457540310204436",
+          "name": "ice.girl",
+          "discriminator": "0000",
+          "nickname": "!ce",
+          "color": "#11BAD7",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "780150794262937650",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+              "color": "#11BAD7",
+              "position": 230
+            },
+            {
+              "id": "740292114570543235",
+              "name": "Senior Support",
+              "color": null,
+              "position": 229
+            },
+            {
+              "id": "736282229881176194",
+              "name": "Support Team",
+              "color": null,
+              "position": 228
+            },
+            {
+              "id": "847393992542912543",
+              "name": "English Support",
+              "color": "#99AAB5",
+              "position": 227
+            },
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "782168018166874123",
+              "name": "Celestial Poster",
+              "color": "#5CFF00",
+              "position": 121
+            },
+            {
+              "id": "785363479128834049",
+              "name": "Celestial Booster",
+              "color": "#DA096D",
+              "position": 120
+            },
+            {
+              "id": "780248592954032158",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 94
+            },
+            {
+              "id": "780240733881368597",
+              "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+              "color": "#2F3136",
+              "position": 90
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972624648846049340",
+              "name": "EU Horde",
+              "color": null,
+              "position": 63
+            },
+            {
+              "id": "972624651110973462",
+              "name": "EU Alliance",
+              "color": null,
+              "position": 62
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "758369270014541824",
+              "name": "Hydra Summoners",
+              "color": "#11806A",
+              "position": 59
+            },
+            {
+              "id": "1038533774448799884",
+              "name": "M+ Group",
+              "color": null,
+              "position": 14
+            },
+            {
+              "id": "1038555113733758976",
+              "name": "Guild",
+              "color": null,
+              "position": 13
+            },
+            {
+              "id": "1162822199258915047",
+              "name": "My Iranian Dudes",
+              "color": null,
+              "position": 8
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1354146181374279680",
+      "type": "Reply",
+      "timestamp": "2025-03-25T23:03:28.459+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "salam.in chizi nis ke daste ma bashe ! tebqe meyle khodesh boode...",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1242669072357920849",
+          "name": "shotgun.ir",
+          "discriminator": "0000",
+          "nickname": "Shotgun",
+          "color": "#BB30FF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "1080769179260571649",
+              "name": "Premium Tier 3",
+              "color": "#BB30FF",
+              "position": 133
+            },
+            {
+              "id": "698746917940887602",
+              "name": "Healer",
+              "color": "#FF7C0A",
+              "position": 92
+            },
+            {
+              "id": "698760102395641997",
+              "name": "Druid",
+              "color": "#FF7C0A",
+              "position": 87
+            },
+            {
+              "id": "698760413764124783",
+              "name": "Shaman",
+              "color": "#0070DD",
+              "position": 80
+            },
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            },
+            {
+              "id": "982002577942118510",
+              "name": "Restoration Druid",
+              "color": "#FF7C0A",
+              "position": 52
+            },
+            {
+              "id": "982002619562205254",
+              "name": "Restoration Shaman",
+              "color": "#0070DD",
+              "position": 31
+            },
+            {
+              "id": "982569085541974086",
+              "name": "Mail",
+              "color": "#0070DD",
+              "position": 18
+            },
+            {
+              "id": "982569086947061831",
+              "name": "Leather",
+              "color": "#FFF468",
+              "position": 17
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/1242669072357920849/0822acbbc486e6d44f155e76167d7550.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1354121124711239761",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1354505099971395637",
+      "type": "Default",
+      "timestamp": "2025-03-26T22:49:41.321+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "یک سوال در مورد پریمیوم داشتم اگر پریمیوم 3 داشته باشیم این محدودیت اینکه نمیتونیم بیشتر از 2 ران رو پوست کنیم برداشته میشه؟",
+      "author": {
+        "id": "941368368106205254",
+        "name": "_jinxo_",
+        "discriminator": "0000",
+        "nickname": "_jinxo_",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/941368368106205254/3d6d40bf320498f8e3c20bb19b4590f6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1354541886404165923",
+      "type": "Reply",
+      "timestamp": "2025-03-27T01:15:51.89+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "خیر‌ فک نمیکنم ربطی داشته باشه.محدودیت واسه اکانتته که تازس.... باید رنک آپ کنی ولی بازم از ایمان بپرس",
+      "author": {
+        "id": "822457540310204436",
+        "name": "ice.girl",
+        "discriminator": "0000",
+        "nickname": "!ce",
+        "color": "#11BAD7",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "780150794262937650",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002⚡ Support Staff ⚡\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣\u2002⁣",
+            "color": "#11BAD7",
+            "position": 230
+          },
+          {
+            "id": "740292114570543235",
+            "name": "Senior Support",
+            "color": null,
+            "position": 229
+          },
+          {
+            "id": "736282229881176194",
+            "name": "Support Team",
+            "color": null,
+            "position": 228
+          },
+          {
+            "id": "847393992542912543",
+            "name": "English Support",
+            "color": "#99AAB5",
+            "position": 227
+          },
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "782168018166874123",
+            "name": "Celestial Poster",
+            "color": "#5CFF00",
+            "position": 121
+          },
+          {
+            "id": "785363479128834049",
+            "name": "Celestial Booster",
+            "color": "#DA096D",
+            "position": 120
+          },
+          {
+            "id": "780248592954032158",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Roles ✨ \u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 94
+          },
+          {
+            "id": "780240733881368597",
+            "name": "⁣\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002✨ Classes ✨\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002\u2002⁣",
+            "color": "#2F3136",
+            "position": 90
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972624648846049340",
+            "name": "EU Horde",
+            "color": null,
+            "position": 63
+          },
+          {
+            "id": "972624651110973462",
+            "name": "EU Alliance",
+            "color": null,
+            "position": 62
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          },
+          {
+            "id": "758369270014541824",
+            "name": "Hydra Summoners",
+            "color": "#11806A",
+            "position": 59
+          },
+          {
+            "id": "1038533774448799884",
+            "name": "M+ Group",
+            "color": null,
+            "position": 14
+          },
+          {
+            "id": "1038555113733758976",
+            "name": "Guild",
+            "color": null,
+            "position": 13
+          },
+          {
+            "id": "1162822199258915047",
+            "name": "My Iranian Dudes",
+            "color": null,
+            "position": 8
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/822457540310204436/01f72c83944b72a1625201ed997768d6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "941368368106205254",
+          "name": "_jinxo_",
+          "discriminator": "0000",
+          "nickname": "_jinxo_",
+          "color": null,
+          "isBot": false,
+          "roles": [
+            {
+              "id": "744331080219230279",
+              "name": "Verified",
+              "color": null,
+              "position": 74
+            },
+            {
+              "id": "972625109116391484",
+              "name": "US Horde",
+              "color": null,
+              "position": 61
+            },
+            {
+              "id": "972625112190812191",
+              "name": "US Alliance",
+              "color": null,
+              "position": 60
+            }
+          ],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/941368368106205254/3d6d40bf320498f8e3c20bb19b4590f6.png?size=512"
+        }
+      ],
+      "reference": {
+        "messageId": "1354505099971395637",
+        "channelId": "1046836576631664770",
+        "guildId": "698426461534814270"
+      },
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 27
+}

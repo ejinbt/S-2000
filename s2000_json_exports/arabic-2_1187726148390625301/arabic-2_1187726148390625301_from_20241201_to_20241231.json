@@ -1,0 +1,93 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "1187726148390625301",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "ساعدني",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2024-12-01T00:00:00+05:30",
+    "before": "2024-12-31T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T18:08:27.5078584+05:30",
+  "messages": [
+    {
+      "id": "1316247227349336144",
+      "type": "Default",
+      "timestamp": "2024-12-11T09:06:33.691+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83E\uDEE1",
+      "author": {
+        "id": "520694601191915521",
+        "name": "cryb4die",
+        "discriminator": "0000",
+        "nickname": "\uD835\uDCD7\uD835\uDCEA\uD835\uDCF5\uD835\uDCF2\uD835\uDCF6",
+        "color": "#BB30FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1080769179260571649",
+            "name": "Premium Tier 3",
+            "color": "#BB30FF",
+            "position": 133
+          },
+          {
+            "id": "785363486217469962",
+            "name": "Legendary Booster",
+            "color": "#FDB0B0",
+            "position": 111
+          },
+          {
+            "id": "729873733929664584",
+            "name": "Elite Poster",
+            "color": "#B2831D",
+            "position": 104
+          },
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/520694601191915521/148ecfb89cc2f3db29cd18c671ebaac4.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83E\uDEE1",
+          "code": "\uD83E\uDEE1",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fae1.svg"
+        }
+      ]
+    }
+  ],
+  "messageCount": 1
+}

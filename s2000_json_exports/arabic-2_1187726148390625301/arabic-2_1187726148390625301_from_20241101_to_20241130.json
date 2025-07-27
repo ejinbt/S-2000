@@ -1,0 +1,67 @@
+{
+  "guild": {
+    "id": "698426461534814270",
+    "name": "WoW LFG",
+    "iconUrl": "https://cdn.discordapp.com/icons/698426461534814270/0f8c09798627dc0872e1747e95f91064.png?size=512"
+  },
+  "channel": {
+    "id": "1187726148390625301",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "ساعدني",
+    "topic": null
+  },
+  "dateRange": {
+    "after": "2024-11-01T00:00:00+05:30",
+    "before": "2024-11-30T00:00:00+05:30"
+  },
+  "exportedAt": "2025-07-26T18:08:27.6931194+05:30",
+  "messages": [
+    {
+      "id": "1307771160657789018",
+      "type": "Default",
+      "timestamp": "2024-11-17T23:45:41.914+05:30",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "الريتنج ف اللعبه 2537 و ع الموقع 2340 ومش راضي يتحدث اعمل اي؟",
+      "author": {
+        "id": "414279049909633052",
+        "name": "_ragab",
+        "discriminator": "0000",
+        "nickname": "ragab",
+        "color": null,
+        "isBot": false,
+        "roles": [
+          {
+            "id": "744331080219230279",
+            "name": "Verified",
+            "color": null,
+            "position": 74
+          },
+          {
+            "id": "972625109116391484",
+            "name": "US Horde",
+            "color": null,
+            "position": 61
+          },
+          {
+            "id": "972625112190812191",
+            "name": "US Alliance",
+            "color": null,
+            "position": 60
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 1
+}
