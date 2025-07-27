@@ -1,5 +1,5 @@
 config:
-  token: "MTM2ODA0MjM2MDgwNTY1ODc1NA.G_9DiU.QlDYJ0l5-QTke9GBTp6M9YCBRT04tX3lcFielU"
+  token: "TOKEN"
   dce_execpath: "F:\\programming_files\\DiscordChatExporter.Cli.win-x64\\DiscordChatExporter.Cli.exe" 
   intermediate_export_directory: "./s2000_json_exports"
   
