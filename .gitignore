@@ -1,0 +1,38 @@
+# S-2000 Project .gitignore
+
+# Executables
+# Ignore the built binary for any OS
+s2000
+s2000.exe
+
+# Output files
+# Ignore all CSV files, which are generated artifacts
+*.csv
+
+# Ignore all JSON files, which are intermediate artifacts
+*.json
+
+# Ignore the entire intermediate export directory
+# (This is a safer and cleaner way than just ignoring *.json)
+/s2000_json_exports/
+/the_big_channel_export/
+
+# Configuration files
+# It's highly recommended to ignore config files as they contain sensitive tokens
+# If you have a sample config, you can commit that instead (e.g., config.example.yaml)
+config.yaml
+
+# Go build cache
+# This is typically managed by the Go toolchain but doesn't hurt to have
+*.o
+*.a
+
+# Dependency directories (if not using Go modules, which is rare now)
+# vendor/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log

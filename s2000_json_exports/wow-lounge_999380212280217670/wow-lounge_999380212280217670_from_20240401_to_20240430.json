@@ -16,7 +16,7 @@
     "after": "2024-04-01T00:00:00+05:30",
     "before": "2024-04-30T00:00:00+05:30"
   },
-  "exportedAt": "2025-07-26T17:42:22.7709268+05:30",
+  "exportedAt": "2025-07-27T11:32:47.1143508+05:30",
   "messages": [
     {
       "id": "1224250308264464494",
@@ -2073,7 +2073,7 @@
       "attachments": [
         {
           "id": "1224408611384459366",
-          "url": "https://cdn.discordapp.com/attachments/999380212280217670/1224408611384459366/image.png?ex=6885b7a1&is=68846621&hm=2f17b34d699787d88bfe8f02833fd675e3df0bf2f6a39863ee1a340807e2b4e8&",
+          "url": "https://cdn.discordapp.com/attachments/999380212280217670/1224408611384459366/image.png?ex=68870921&is=6885b7a1&hm=003935d9a122911b13486d41d8d18058ca79fb160ca00e27739e6f9015239a27&",
           "fileName": "image.png",
           "fileSizeBytes": 20095
         }
@@ -3388,18 +3388,6 @@
             "position": 77
           },
           {
-            "id": "733898011154841690",
-            "name": "Suspended",
-            "color": "#992D22",
-            "position": 76
-          },
-          {
-            "id": "771190045528031262",
-            "name": "Silenced",
-            "color": "#992D22",
-            "position": 75
-          },
-          {
             "id": "744331080219230279",
             "name": "Verified",
             "color": null,
@@ -3772,18 +3760,6 @@
             "name": "Warrior",
             "color": "#C69B6D",
             "position": 77
-          },
-          {
-            "id": "733898011154841690",
-            "name": "Suspended",
-            "color": "#992D22",
-            "position": 76
-          },
-          {
-            "id": "771190045528031262",
-            "name": "Silenced",
-            "color": "#992D22",
-            "position": 75
           },
           {
             "id": "744331080219230279",
@@ -4492,18 +4468,6 @@
               "name": "Warrior",
               "color": "#C69B6D",
               "position": 77
-            },
-            {
-              "id": "733898011154841690",
-              "name": "Suspended",
-              "color": "#992D22",
-              "position": 76
-            },
-            {
-              "id": "771190045528031262",
-              "name": "Silenced",
-              "color": "#992D22",
-              "position": 75
             },
             {
               "id": "744331080219230279",
@@ -6921,18 +6885,6 @@
               "name": "Warrior",
               "color": "#C69B6D",
               "position": 77
-            },
-            {
-              "id": "733898011154841690",
-              "name": "Suspended",
-              "color": "#992D22",
-              "position": 76
-            },
-            {
-              "id": "771190045528031262",
-              "name": "Silenced",
-              "color": "#992D22",
-              "position": 75
             },
             {
               "id": "744331080219230279",

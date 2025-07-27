@@ -16,7 +16,7 @@
     "after": "2022-08-01T00:00:00+05:30",
     "before": "2022-08-31T00:00:00+05:30"
   },
-  "exportedAt": "2025-07-26T17:38:42.9497744+05:30",
+  "exportedAt": "2025-07-27T11:28:36.1960052+05:30",
   "messages": [
     {
       "id": "1003422950566928394",
@@ -6769,7 +6769,7 @@
             "position": 16
           }
         ],
-        "avatarUrl": "https://cdn.discordapp.com/avatars/229567451954675712/b03ceebdae00f5161be7fef50573361a.png?size=512"
+        "avatarUrl": "https://cdn.discordapp.com/avatars/229567451954675712/dee3b1268c8027468a131876b4f037ea.png?size=512"
       },
       "attachments": [],
       "embeds": [],
@@ -6915,7 +6915,7 @@
             "position": 16
           }
         ],
-        "avatarUrl": "https://cdn.discordapp.com/avatars/229567451954675712/b03ceebdae00f5161be7fef50573361a.png?size=512"
+        "avatarUrl": "https://cdn.discordapp.com/avatars/229567451954675712/dee3b1268c8027468a131876b4f037ea.png?size=512"
       },
       "attachments": [],
       "embeds": [],
@@ -33881,7 +33881,7 @@
           "timestamp": null,
           "description": "",
           "thumbnail": {
-            "url": "https://media.discordapp.net/attachments/858062706447876137/1008114295982268446/unknown.png?ex=6885e75a&is=688495da&hm=5fb0da29d32f4f74a7ca16c576471ec8992d064c59aa7a4c453c7b12dc977d97&",
+            "url": "https://media.discordapp.net/attachments/858062706447876137/1008114295982268446/unknown.png?ex=6886901a&is=68853e9a&hm=2960e8f6a0ef76ab9d924da18c04e2a2fd50a57574295d6bba017ac15b2b386e&",
             "width": 243,
             "height": 127
           },

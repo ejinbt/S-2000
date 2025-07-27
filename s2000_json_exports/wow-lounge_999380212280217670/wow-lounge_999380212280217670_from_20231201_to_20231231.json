@@ -16,7 +16,7 @@
     "after": "2023-12-01T00:00:00+05:30",
     "before": "2023-12-31T00:00:00+05:30"
   },
-  "exportedAt": "2025-07-26T17:41:37.2799059+05:30",
+  "exportedAt": "2025-07-27T11:32:18.7767386+05:30",
   "messages": [
     {
       "id": "1180714304295669790",
@@ -2722,7 +2722,7 @@
       "attachments": [
         {
           "id": "1185380255209373717",
-          "url": "https://cdn.discordapp.com/attachments/999380212280217670/1185380255209373717/54fc874a-945f-4682-90dd-6e5b7621585c.png?ex=688574e4&is=68842364&hm=64ae944cbc15554436841a0bf41574bb7b4352e6c172de930fb89b107f972813&",
+          "url": "https://cdn.discordapp.com/attachments/999380212280217670/1185380255209373717/54fc874a-945f-4682-90dd-6e5b7621585c.png?ex=6886c664&is=688574e4&hm=8eef85fba0d1ddaf6f1cbafd7e01e2064b9fbf4e6afc2aa2103b5943fc2e7d56&",
           "fileName": "54fc874a-945f-4682-90dd-6e5b7621585c.png",
           "fileSizeBytes": 76701
         }
@@ -2909,7 +2909,7 @@
         "color": null,
         "isBot": false,
         "roles": [],
-        "avatarUrl": "https://cdn.discordapp.com/avatars/210534838237790208/af034fda6ce3eade78ec8ccc53225834.png?size=512"
+        "avatarUrl": "https://cdn.discordapp.com/avatars/210534838237790208/b34bdfe01d7c3d3329d482ab0c0a1abe.png?size=512"
       },
       "attachments": [],
       "embeds": [],

@@ -16,7 +16,7 @@
     "after": "2024-03-01T00:00:00+05:30",
     "before": "2024-03-31T00:00:00+05:30"
   },
-  "exportedAt": "2025-07-26T17:42:38.346769+05:30",
+  "exportedAt": "2025-07-27T11:32:39.068356+05:30",
   "messages": [
     {
       "id": "1214072140144312330",
@@ -6904,7 +6904,7 @@
             "position": 17
           }
         ],
-        "avatarUrl": "https://cdn.discordapp.com/avatars/364955678252466178/a_3de9f51f24128800cb211281243cea07.gif?size=512"
+        "avatarUrl": "https://cdn.discordapp.com/avatars/364955678252466178/3de9f51f24128800cb211281243cea07.png?size=512"
       },
       "attachments": [],
       "embeds": [],
