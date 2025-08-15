@@ -1,4 +1,4 @@
----
+
 
 # S-2000 (Scrapper-2000) - Discord Chat Operations Tool
 
@@ -144,5 +144,3 @@ Skips DCE exporting. Scrapes display names and message content from existing JSO
 *   **Disk Space:** Exporting a full server, even for 3 months, can consume significant disk space.
 
 
-
-```
