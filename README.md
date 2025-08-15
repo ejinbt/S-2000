@@ -1,24 +1,26 @@
-# S-2000 (Scrapper-2000) - Discord Chat Ops Tool
+---
 
-S-2000 is a powerful, Go-based command-line tool designed to automate the process of exporting Discord chat history using [DiscordChatExporter (DCE)](https://github.com/Tyrrrz/DiscordChatExporter) and then scraping specific data from the generated JSON files. It features multiple modes of operation for flexible data extraction.
+# S-2000 (Scrapper-2000) - Discord Chat Operations Tool
 
-The tool supports chunking large channel exports by date ranges for parallel processing and aggregates all scraped data into clean, usable CSV files.
+S-2000 is a powerful, Go-based command-line tool designed to fully automate the process of exporting and analyzing Discord chat history using [DiscordChatExporter (DCE)](https://github.com/Tyrrrz/DiscordChatExporter).
+
+It features multiple modes of operation, from simple message scraping to a comprehensive, server-wide analysis that gathers message content, reactions, and detailed sender metadata (including account creation and server join dates).
 
 ## Features
 
 *   **Modular Subcommand System:**
-    *   `run-all`: A complete pipeline to first run DCE to export JSON, and then scrape user/role data.
-    *   `scrape-roles`: A dedicated mode to scrape user ID, username, display name, and role information from existing JSON files.
-    *   `scrape-messages`: A dedicated mode to scrape just display names and message content from existing JSON files.
-*   **DCE Orchestration:**
-    *   Concurrently runs multiple instances of DiscordChatExporter CLI.
-    *   Supports exporting entire channels or chunking exports by specified date ranges (manual or auto-generated).
-    *   Manages a configurable number of concurrent DCE processes to respect system resources and Discord API rate limits.
-*   **High-Performance Scraping:**
-    *   Efficiently streams and parses potentially very large JSON files.
-    *   Leverages Go's concurrency for both DCE execution and JSON parsing.
-*   **Configuration Driven:** Uses a central `config.yaml` file for all settings.
-*   **Organized Output:** Creates intermediate JSON files in structured directories and produces separate, clearly-named final CSV reports for different data types.
+    *   `scrape-extended`: A fully automated, one-command solution to scrape all text channels in a server for a recent period, generating a detailed report.
+    *   `run-all`: A pipeline to export specific channels (chunked by date) and then scrape aggregated user/role data.
+    *   `scrape-roles`: A dedicated mode to scrape user ID, display names, and a complete list of all their roles from existing JSON files.
+    *   `scrape-messages`: A simple mode to scrape just display names and message content from existing JSON files.
+*   **Automated Data Gathering:** The `scrape-extended` mode automatically discovers all server channels, fetches member data for join dates, and orchestrates the entire export process.
+*   **High-Performance Operations:**
+    *   Concurrently runs multiple instances of DiscordChatExporter to speed up exports.
+    *   Leverages Go's concurrency for ultra-fast scraping of the generated JSON files.
+    *   Uses efficient JSON streaming to handle very large files without consuming excessive memory.
+*   **Rich Data Extraction:** Capable of calculating user account creation dates from their ID and correlating messages with server join dates.
+*   **Configuration Driven:** A single `config.yaml` file controls all settings for all modes.
+*   **Organized Output:** Creates intermediate JSON files in structured directories and produces clean, clearly-named final CSV reports.
 
 ## Prerequisites
 
@@ -27,124 +29,109 @@ The tool supports chunking large channel exports by date ranges for parallel pro
 
 ## Installation & Setup
 
-1.  **Download or Clone S-2000:**
-    ```bash
-    # If you have it in a git repo:
-    # git clone <your-s2000-repo-url>
-    # cd <s2000-repo-directory>
-
-    # Otherwise, just ensure s2000.go (or main.go) is in your current directory
-    ```
+1.  **Download S-2000:**
+    *   Clone or download the source code into a directory.
 
 2.  **Install DiscordChatExporter CLI:**
     *   Download the appropriate release for your OS from the [DCE releases page](https://github.com/Tyrrrz/DiscordChatExporter/releases).
-    *   Make sure the DCE executable is either in your system's PATH or you provide its full path in the `config.yaml` (`dce_execpath`).
+    *   Place the executable where S-2000 can find it (e.g., in the same directory, or a location in your system's PATH).
 
-3.  **Build S-2000 Executable (Recommended):**
-    ```bash
-    go build -o s2000 .
-    ```
-    This creates an executable named `s2000` (or `s2000.exe` on Windows).
+3.  **Build S-2000 Executable:**
+    *   Open a terminal in the S-2000 source directory.
+    *   Run: `go build -o s2000 .`
+    *   This creates an executable named `s2000` (or `s2000.exe` on Windows).
 
 4.  **Prepare `config.yaml`:**
-    *   Create a `config.yaml` file in the same directory as your S-2000 executable (or specify its path using the `-config` flag).
-    *   See the "Configuration" section below for details on its structure.
+    *   Create a `config.yaml` file in the same directory as your S-2000 executable.
+    *   See the "Configuration" section below for details.
 
 ## Configuration (`config.yaml`)
 
-All settings are managed via `config.yaml`. Here's an example:
+All settings are managed via `config.yaml`.
 
 ```yaml
 config:
   token: "YOUR_DISCORD_BOT_TOKEN"           # REQUIRED: Your Discord Bot Token
   dce_execpath: "DiscordChatExporter.Cli"   # REQUIRED: Path to DCE CLI executable
-                                            # e.g., "./DiscordChatExporter.Cli" or "/usr/local/bin/DiscordChatExporter.Cli" (Linux/macOS)
-                                            # e.g., "DiscordChatExporter.Cli.exe" or "C:\\DCE\\DiscordChatExporter.Cli.exe" (Windows)
-  intermediate_export_directory: "./s2000_json_exports" # Directory for DCE's JSON output chunks
+  
+  # --- Settings for 'scrape-extended' Mode ---
+  server_id_to_export: "YOUR_SERVER_ID_HERE"  # REQUIRED for scrape-extended
+  export_duration_months: 3                   # How many months of history to fetch
+
+  # --- General Settings ---
+  intermediate_export_directory: "./s2000_exports" # Directory for all intermediate JSON files
+  dce_export_format: "Json"
+  dce_max_concurrent: 8                       # Max parallel DCE processes (adjust based on CPU)
 
   # --- Output Paths for Different Modes ---
-  # For 'run-all' and 'scrape-roles' modes
-  final_csv_output_path: "./s2000_aggregated_user_role_data.csv"
-  # For 'scrape-messages' mode
-  messages_csv_output_path: "./s2000_scraped_messages.csv"
+  # For 'run-all' and 'scrape-roles'
+  final_csv_output_path: "./s2000_user_roles.csv"
+  # For 'scrape-messages'
+  messages_csv_output_path: "./s2000_messages.csv"
+  # For 'scrape-extended'
+  extended_scrape_csv_output_path: "./s2000_extended_report.csv"
 
-  dce_export_format: "Json"                 # Should always be "Json" for S-2000
-  dce_max_concurrent: 4                     # Max number of DCE instances to run in parallel (e.g., 2-16)
+  # --- Settings for 'run-all' and 'scrape-roles' Modes ---
+  # This section is used if you are NOT running scrape-extended
   channels:
-    - id: "YOUR_CHANNEL_ID_1"               # REQUIRED: Numerical ID of the Discord channel
-      name: "my-large-channel"              # Optional: Friendly name for directory/file naming
-      autochunk:                            # Optional: Settings for automatic date chunking
-        startdate: "2019-05-23"             # REQUIRED if autochunk is used
-        enddate: "2024-07-21"               # REQUIRED if autochunk is used - e.g., today's date
-        chunkdurationmonths: 1              # REQUIRED if autochunk is used (e.g., 1, 3, 6)
+    - id: "MANUAL_CHANNEL_ID_1"
+      name: "manual-export-channel"
+      autochunk:
+        startdate: "2023-01-01"
+        enddate: "2023-12-31"
+        chunkdurationmonths: 1
 ```
-
-**Key Configuration Fields:**
-
-*   `token`: Your Discord bot token.
-*   `dce_execpath`: Path to the DCE executable.
-*   `intermediate_export_directory`: Folder where DCE will save JSON chunk files.
-*   `final_csv_output_path`: Path for the CSV report from the `scrape-roles` mode.
-*   `messages_csv_output_path`: Path for the CSV report from the `scrape-messages` mode.
-*   `dce_max_concurrent`: The maximum number of DCE processes S-2000 will run at the same time.
-*   `channels`: A list of channel configurations, each with an `id`, optional `name`, and optional `dateranges` or `autochunk` settings.
 
 ## Usage
 
-S-2000 uses subcommands to determine its mode of operation. You must provide a command and a path to the config file.
+S-2000 uses subcommands to determine its mode of operation.
 
 **Syntax:**
-
-```bash
-./s2000 <command> -config <path/to/config.yaml>
-```
+`./s2000 <command> -config <path/to/config.yaml>`
 
 ---
 
-### Commands
-
-#### 1. `run-all`
-This command executes the full pipeline: it runs DCE to export JSON files based on your configuration and then immediately scrapes them for user and role data.
+### **Primary Command: `scrape-extended`**
+This is the most powerful, fully automated command. It discovers all channels in a server, fetches member data, exports recent messages, and generates a detailed report.
 
 ```bash
-# Run the full export and role scraping process
+# Run the full, automated server analysis
+./s2000 scrape-extended -config config.yaml
+```
+
+**Output:**
+*   A CSV file at the path specified by `extended_scrape_csv_output_path`.
+
+**CSV Format (`scrape-extended`):**
+*   `MessageID`, `TimestampUTC`, `AuthorID`, `AuthorName`, `DisplayName`, `AccountCreationDateUTC`, `ServerJoinDateUTC`, `MessageContent`, `Reactions` (e.g., `emoji1:count|emoji2:count`)
+
+---
+
+### Other Commands
+
+#### `run-all`
+Runs the DCE export pipeline for the channels manually specified in the `channels` section of the config, then scrapes them for aggregated user roles.
+
+```bash
 ./s2000 run-all -config config.yaml
 ```
 
-**Output:**
-*   JSON files will be created in the `intermediate_export_directory`.
-*   A CSV file will be created at the path specified by `final_csv_output_path`.
-
----
-
-#### 2. `scrape-roles`
-This command skips the DCE export phase and directly scrapes user/role data from any existing JSON files found in the `intermediate_export_directory`. Useful for re-running analysis without re-downloading.
+#### `scrape-roles`
+Skips DCE exporting. Scrapes aggregated user and role data from existing JSON files in the `intermediate_export_directory`.
 
 ```bash
-# Scrape roles from already exported JSON files
 ./s2000 scrape-roles -config config.yaml
 ```
+**CSV Format (`scrape-roles`):**
+*   `UserID`, `Username`, `DisplayName`, `RoleIDs` (e.g., `id1|id2`), `RoleNames` (e.g., `Role1|Role2`)
 
-**Output:**
-*   A CSV file will be created at the path specified by `final_csv_output_path`.
-
-**CSV Format (Roles):**
-*   `UserID`, `Username`, `DisplayName`, `RoleID`, `RoleName`
-
----
-
-#### 3. `scrape-messages`
-This command skips the DCE export phase and directly scrapes display names and message content from existing JSON files in the `intermediate_export_directory`.
+#### `scrape-messages`
+Skips DCE exporting. Scrapes display names and message content from existing JSON files.
 
 ```bash
-# Scrape messages from already exported JSON files
 ./s2000 scrape-messages -config config.yaml
 ```
-
-**Output:**
-*   A CSV file will be created at the path specified by `messages_csv_output_path`.
-
-**CSV Format (Messages):**
+**CSV Format (`scrape-messages`):**
 *   `DisplayName`, `MessageContent`
 
 ---
@@ -152,19 +139,10 @@ This command skips the DCE export phase and directly scrapes display names and m
 ## Troubleshooting & Notes
 
 *   **Discord Rate Limits:** DCE respects Discord's API rate limits. High concurrency or large exports will be slowed down by Discord. Monitor the console output for rate limit messages.
-*   **Permissions:** Ensure the bot token used has `View Channel` and `Read Message History` permissions for all configured channels.
-*   **Paths:** Double-check all paths in your `config.yaml` (`dce_execpath`, output directories).
-*   **Disk Space:** Exporting large channels can consume significant disk space.
+*   **Permissions:** Ensure the bot token used has the `Server Members Intent` enabled in the Discord Developer Portal, as well as `View Channel` and `Read Message History` permissions for all channels.
+*   **Paths:** Double-check all paths in your `config.yaml`, especially `dce_execpath`.
+*   **Disk Space:** Exporting a full server, even for 3 months, can consume significant disk space.
 
-## Development
 
-S-2000 is written in Go. Key components:
-*   `flag` package for subcommand routing.
-*   `gopkg.in/yaml.v2` for configuration.
-*   `os/exec` for running DiscordChatExporter CLI.
-*   Goroutines and semaphores for managing concurrency.
-*   `encoding/json.NewDecoder` for memory-efficient JSON streaming.
-
-## License
 
 ```
