@@ -52,56 +52,34 @@ type RootConfig struct {
 }
 
 // --- JSON Scraping Structures ---
-// For user/role scraping
 type ScraperMessageRoles struct {
 	Author ScraperAuthorRoles `json:"author"`
 }
 type ScraperAuthorRoles struct {
-	ID       string        `json:"id"`
-	Name     string        `json:"name"`
-	Nickname string        `json:"nickname"`
-	Roles    []ScraperRole `json:"roles"`
+	ID, Name, Nickname string
+	Roles              []ScraperRole `json:"roles"`
 }
-type ScraperRole struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
-}
+type ScraperRole struct{ ID, Name string }
 type AggregatedUserEntry struct {
 	UserID, Username, DisplayName string
 	Roles                         map[string]string
 }
-
-// For message content scraping
 type ScraperMessageContent struct {
-	Content string               `json:"content"`
+	Content string
 	Author  ScraperAuthorContent `json:"author"`
 }
-type ScraperAuthorContent struct {
-	Name, Nickname string
-}
-
-// For extended scrape
-type DiscoveredChannel struct {
-	ID, Name, Type string
-}
-type MemberInfo struct {
-	User     struct{ ID string }
-	JoinedAt time.Time `json:"joined_at"`
-}
+type ScraperAuthorContent struct{ Name, Nickname string }
 type ScraperMessageExtended struct {
-	ID        string    `json:"id"`
-	Content   string    `json:"content"`
-	Timestamp time.Time `json:"timestamp"`
-	Author    ScraperAuthorRoles
-	Reactions []ScraperReaction `json:"reactions"`
+	ID, Content string
+	Timestamp   time.Time
+	Author      ScraperAuthorRoles
+	Reactions   []ScraperReaction `json:"reactions"`
 }
 type ScraperReaction struct {
 	Emoji ScraperEmoji
 	Count int
 }
-type ScraperEmoji struct {
-	Name string
-}
+type ScraperEmoji struct{ Name string }
 
 // --- Helper Functions ---
 const discordEpoch = 1420070400000
@@ -115,8 +93,7 @@ func getCreationTimeFromID(id string) (time.Time, error) {
 	return time.Unix(0, timestamp*int64(time.Millisecond)).UTC(), nil
 }
 func sanitizeFilename(name string) string {
-	replacer := strings.NewReplacer(" ", "_", "/", "_", "\\", "_", ":", "_", "*", "_", "?", "_", "\"", "_", "<", "_", ">", "_", "|", "_")
-	return replacer.Replace(name)
+	return strings.NewReplacer(" ", "_", "/", "_", "\\", "_", ":", "_", "*", "_", "?", "_", "\"", "_", "<", "_", ">", "_", "|", "_").Replace(name)
 }
 func limitString(s string, length int) string {
 	if len(s) <= length {
@@ -136,18 +113,18 @@ func generateDateRanges(autoChunk AutoChunkConfig) ([]DateRangeStr, error) {
 	layout := "2006-01-02"
 	startDate, err := time.Parse(layout, autoChunk.StartDate)
 	if err != nil {
-		return nil, fmt.Errorf("error parsing autochunk start date '%s': %v", autoChunk.StartDate, err)
+		return nil, fmt.Errorf("error parsing start date: %v", err)
 	}
 	endDate, err := time.Parse(layout, autoChunk.EndDate)
 	if err != nil {
-		return nil, fmt.Errorf("error parsing autochunk end date '%s': %v", autoChunk.EndDate, err)
+		return nil, fmt.Errorf("error parsing end date: %v", err)
 	}
 	if startDate.After(endDate) {
-		return nil, fmt.Errorf("autochunk start date '%s' is after end date '%s'", autoChunk.StartDate, autoChunk.EndDate)
+		return nil, fmt.Errorf("start date is after end date")
 	}
 	currentStartDate := startDate
 	for !currentStartDate.After(endDate) {
-		currentEndDate := currentStartDate.AddDate(0, autoChunk.ChunkDurationMonths, -1)
+		currentEndDate := currentStartDate.AddDate(0, autoChunk.ChunkDurationMonths, 0).AddDate(0, 0, -1)
 		if currentEndDate.After(endDate) {
 			currentEndDate = endDate
 		}
@@ -156,48 +133,11 @@ func generateDateRanges(autoChunk AutoChunkConfig) ([]DateRangeStr, error) {
 	}
 	return ranges, nil
 }
-
-func createDynamicDceCommands(appConfig S2000AppConfig, discoveredChannels []DiscoveredChannel) []CommandAndFileOutput {
-	var commandsAndOutputs []CommandAndFileOutput
-
-	// Calculate the "--after" date based on the config
-	// AddDate(Years, Months, Days)
-	afterDate := time.Now().AddDate(0, -appConfig.ExportDurationMonths, 0)
-	afterDateStr := afterDate.Format("2006-01-02")
-
-	for _, channel := range discoveredChannels {
-		// IMPORTANT: We only want to scrape text-based channels.
-		// Adjust this list if needed based on DCE's output for channel types.
-		switch channel.Type {
-		case "GuildTextChat", "GuildAnnouncement", "GuildForum":
-			// It's a text channel, so we'll export it.
-		default:
-			// It's a voice channel, category, etc. Skip it.
-			log.Printf("Skipping non-text channel: %s (Type: %s)", channel.Name, channel.Type)
-			continue
-		}
-
-		channelSubDir := sanitizeFilename(channel.Name) + "_" + channel.ID
-		channelOutputDir := filepath.Join(appConfig.IntermediateExportDirectory, channelSubDir)
-		_ = os.MkdirAll(channelOutputDir, os.ModePerm)
-
-		outputJSONPath := filepath.Join(channelOutputDir, fmt.Sprintf("%s_last_%d_months.json", channel.ID, appConfig.ExportDurationMonths))
-
-		args := []string{
-			appConfig.DceExecPath, "export", "-t", appConfig.Token,
-			"-c", channel.ID, "-f", "Json",
-			"--after", afterDateStr,
-			"-o", outputJSONPath,
-		}
-		commandsAndOutputs = append(commandsAndOutputs, CommandAndFileOutput{CommandArgs: args, OutputJSONPath: outputJSONPath})
-	}
-	return commandsAndOutputs
-}
 func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error) {
 	var commandsAndOutputs []CommandAndFileOutput
 	err := os.MkdirAll(appConfig.IntermediateExportDirectory, os.ModePerm)
 	if err != nil {
-		return nil, fmt.Errorf("error creating intermediate export directory '%s': %v", appConfig.IntermediateExportDirectory, err)
+		return nil, fmt.Errorf("error creating dir: %v", err)
 	}
 	for _, channel := range appConfig.Channels {
 		channelSubDir := channel.ID
@@ -210,7 +150,7 @@ func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error)
 		if channel.AutoChunk != nil {
 			generatedRanges, errGen := generateDateRanges(*channel.AutoChunk)
 			if errGen != nil {
-				log.Printf("Error generating date ranges for channel %s (%s): %v. Skipping.", channel.ID, channel.Name, errGen)
+				log.Printf("Error generating ranges: %v.", errGen)
 			} else {
 				effectiveDateRanges = generatedRanges
 			}
@@ -230,7 +170,7 @@ func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error)
 			for _, drStr := range effectiveDateRanges {
 				parts := strings.Split(string(drStr), ";")
 				if len(parts) != 2 {
-					log.Printf("Warning: Invalid date range '%s' for channel %s. Skipping.", drStr, channel.ID)
+					log.Printf("Warning: Invalid date range '%s'.", drStr)
 					continue
 				}
 				startDateStr, endDateStr := strings.TrimSpace(parts[0]), strings.TrimSpace(parts[1])
@@ -243,7 +183,6 @@ func createDceCommands(appConfig S2000AppConfig) ([]CommandAndFileOutput, error)
 	}
 	return commandsAndOutputs, nil
 }
-
 func runDceCommand(cmdAndOutput CommandAndFileOutput, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
 	defer wg.Done()
 	defer bar.Add(1)
@@ -257,7 +196,6 @@ func runDceCommand(cmdAndOutput CommandAndFileOutput, wg *sync.WaitGroup, sem ch
 		log.Printf("\nDCE ERROR: %s %s\nError: %v\nOutput (last 500 chars):\n%s\n", executable, strings.Join(argsOnly, " "), err, limitString(string(output), 500))
 	}
 }
-
 func executeDcePhase(dceCommands []CommandAndFileOutput, maxConcurrent int) {
 	if len(dceCommands) == 0 {
 		log.Println("No DCE export tasks to run.")
@@ -328,7 +266,6 @@ func processJSONFileForAggregatedRoles(filePath string, aggregatedUsers map[stri
 		break
 	}
 }
-
 func scrapeMessagesFromJSON(filePath string, writer *csv.Writer, muWriter *sync.Mutex, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
 	defer wg.Done()
 	defer bar.Add(1)
@@ -372,8 +309,7 @@ func scrapeMessagesFromJSON(filePath string, writer *csv.Writer, muWriter *sync.
 		break
 	}
 }
-
-func processJSONFileForExtendedScrape(filePath string, writer *csv.Writer, muWriter *sync.Mutex, memberJoinDateMap map[string]time.Time, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
+func processJSONFileForExtendedScrape(filePath string, writer *csv.Writer, muWriter *sync.Mutex, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
 	defer wg.Done()
 	defer bar.Add(1)
 	sem <- struct{}{}
@@ -405,7 +341,6 @@ func processJSONFileForExtendedScrape(filePath string, writer *csv.Writer, muWri
 				continue
 			}
 			accountCreationDate, _ := getCreationTimeFromID(msg.Author.ID)
-			serverJoinDate := memberJoinDateMap[msg.Author.ID]
 			displayName := msg.Author.Nickname
 			if displayName == "" {
 				displayName = msg.Author.Name
@@ -415,7 +350,7 @@ func processJSONFileForExtendedScrape(filePath string, writer *csv.Writer, muWri
 				reactionParts = append(reactionParts, fmt.Sprintf("%s:%d", reaction.Emoji.Name, reaction.Count))
 			}
 			reactionsStr := strings.Join(reactionParts, "|")
-			record := []string{msg.ID, msg.Timestamp.UTC().Format(time.RFC3339), msg.Author.ID, msg.Author.Name, displayName, accountCreationDate.Format(time.RFC3339), serverJoinDate.UTC().Format(time.RFC3339), msg.Content, reactionsStr}
+			record := []string{msg.ID, msg.Timestamp.UTC().Format(time.RFC3339), msg.Author.ID, msg.Author.Name, displayName, accountCreationDate.Format(time.RFC3339), msg.Content, reactionsStr}
 			muWriter.Lock()
 			_ = writer.Write(record)
 			muWriter.Unlock()
@@ -428,34 +363,29 @@ func processJSONFileForExtendedScrape(filePath string, writer *csv.Writer, muWri
 func main() {
 	startTime := time.Now()
 	log.Println("S-2000 (Scrapper-2000) Initializing...")
+	configFile := flag.String("config", "config.yaml", "Path to the configuration file.")
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage: %s <command> -config <path/to/config.yaml>\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "S-2000 - Discord Chat Operations Tool\n\nUsage: %s <command> [options]\n\n", os.Args[0])
 		fmt.Fprintln(os.Stderr, "Commands:")
 		fmt.Fprintln(os.Stderr, "  run-all           : Runs DCE export, then scrapes for aggregated user/role data.")
 		fmt.Fprintln(os.Stderr, "  scrape-roles      : Scrapes aggregated user/role data from existing JSON files.")
 		fmt.Fprintln(os.Stderr, "  scrape-messages   : Scrapes usernames and messages from existing JSON files.")
 		fmt.Fprintln(os.Stderr, "  scrape-extended   : Fully automates a server-wide scrape for a detailed report.")
+		fmt.Fprintln(os.Stderr, "\nOptions:")
+		flag.PrintDefaults()
 	}
-	if len(os.Args) < 2 {
+	flag.Parse()
+	if flag.NArg() == 0 {
+		log.Println("Error: No command provided.")
 		flag.Usage()
 		os.Exit(1)
 	}
-	var configFile string
-	switch os.Args[1] {
-	case "run-all", "scrape-roles", "scrape-messages", "scrape-extended":
-		cmdFlags := flag.NewFlagSet(os.Args[1], flag.ExitOnError)
-		cmdFlags.StringVar(&configFile, "config", "config.yaml", "Path to the configuration file.")
-		_ = cmdFlags.Parse(os.Args[2:])
-	default:
-		log.Printf("Error: Unknown command '%s'", os.Args[1])
-		flag.Usage()
-		os.Exit(1)
-	}
-	appConfig, err := loadConfig(configFile)
+	command := flag.Arg(0)
+	appConfig, err := loadConfig(*configFile)
 	if err != nil {
 		log.Fatal(err)
 	}
-	switch os.Args[1] {
+	switch command {
 	case "run-all":
 		runFullOrchestrationAndScrape(appConfig, startTime)
 	case "scrape-roles":
@@ -464,6 +394,10 @@ func main() {
 		runMessageScrapeOnly(appConfig, startTime)
 	case "scrape-extended":
 		runExtendedScrape(appConfig, startTime)
+	default:
+		log.Printf("Error: Unknown command '%s'", command)
+		flag.Usage()
+		os.Exit(1)
 	}
 }
 
@@ -624,66 +558,34 @@ func runMessageScrapeOnly(appConfig S2000AppConfig, startTime time.Time) {
 
 func runExtendedScrape(appConfig S2000AppConfig, startTime time.Time) {
 	log.Println("--- Mode: Extended Server Scrape ---")
-	log.Println("--- Phase 0: Discovering members and channels ---")
+	log.Println("--- Phase 1: Exporting all server channels (this may take a while)... ---")
 	err := os.MkdirAll(appConfig.IntermediateExportDirectory, os.ModePerm)
 	if err != nil {
 		log.Fatalf("FATAL: Could not create intermediate directory: %v", err)
 	}
-	membersJSONPath := filepath.Join(appConfig.IntermediateExportDirectory, "members.json")
-	channelsJSONPath := filepath.Join(appConfig.IntermediateExportDirectory, "channels.json")
-	log.Println("Executing DCE to get server members...")
-	membersCmd := exec.Command(appConfig.DceExecPath, "get-members", "-t", appConfig.Token, "-g", appConfig.ServerIdToExport, "-o", membersJSONPath)
-	if output, err := membersCmd.CombinedOutput(); err != nil {
-		log.Fatalf("FATAL: Failed to get server members with DCE: %v\nOutput:\n%s", err, string(output))
+
+	afterDate := time.Now().AddDate(0, -appConfig.ExportDurationMonths, 0)
+	afterDateStr := afterDate.Format("2006-01-02")
+
+	// The output path for exportguild is a directory. DCE will create files inside it.
+	// We add a trailing slash to be explicit, which DCE recommends.
+	outputDir := appConfig.IntermediateExportDirectory + string(os.PathSeparator)
+
+	log.Printf("Executing DCE 'exportguild' for server %s for messages after %s...", appConfig.ServerIdToExport, afterDateStr)
+	guildExportCmd := exec.Command(appConfig.DceExecPath, "exportguild", "-t", appConfig.Token, "-g", appConfig.ServerIdToExport, "-f", "Json", "--after", afterDateStr, "-o", outputDir)
+
+	// This is a single, long-running command, so no progress bar for this part. We just wait for it to finish.
+	if output, err := guildExportCmd.CombinedOutput(); err != nil {
+		log.Fatalf("FATAL: Failed to export server with DCE 'exportguild': %v\nOutput:\n%s", err, string(output))
 	}
-	log.Printf("Successfully exported member data to %s", membersJSONPath)
-	log.Println("Executing DCE to get server channels...")
-	channelsCmd := exec.Command(appConfig.DceExecPath, "get-channels", "-t", appConfig.Token, "-g", appConfig.ServerIdToExport, "-o", channelsJSONPath)
-	if output, err := channelsCmd.CombinedOutput(); err != nil {
-		log.Fatalf("FATAL: Failed to get server channels with DCE: %v\nOutput:\n%s", err, string(output))
-	}
-	log.Printf("Successfully discovered channel data and saved to %s", channelsJSONPath)
-	log.Println("--- Phase 1: Orchestrating message exports for all discovered channels ---")
-	channelsFile, err := os.ReadFile(channelsJSONPath)
-	if err != nil {
-		log.Fatalf("FATAL: Could not read discovered channels file: %v", err)
-	}
-	var discoveredChannels []DiscoveredChannel
-	if err := json.Unmarshal(channelsFile, &discoveredChannels); err != nil {
-		log.Fatalf("FATAL: Could not parse discovered channels file: %v", err)
-	}
-	dceCommands := createDynamicDceCommands(appConfig, discoveredChannels)
-	executeDcePhase(dceCommands, appConfig.DceMaxConcurrent)
+	log.Printf("Successfully exported server channels to directory: %s", appConfig.IntermediateExportDirectory)
+
 	log.Println("--- Phase 2: Starting extended scrape of all exported data ---")
-	membersFile, err := os.ReadFile(membersJSONPath)
-	if err != nil {
-		log.Fatalf("FATAL: Could not read members data file: %v", err)
+	exportedMessageFiles, err := getJSONFilesFromExportDir(appConfig.IntermediateExportDirectory)
+	if err != nil || len(exportedMessageFiles) == 0 {
+		log.Fatalf("FATAL: No message JSON files found to scrape after export phase. Error: %v", err)
 	}
-	var memberList []MemberInfo
-	if err := json.Unmarshal(membersFile, &memberList); err != nil {
-		log.Fatalf("FATAL: Could not parse members data file: %v", err)
-	}
-	memberJoinDateMap := make(map[string]time.Time)
-	for _, member := range memberList {
-		memberJoinDateMap[member.User.ID] = member.JoinedAt.UTC()
-	}
-	log.Printf("Loaded join dates for %d members.", len(memberJoinDateMap))
-	allJsonFiles, err := getJSONFilesFromExportDir(appConfig.IntermediateExportDirectory)
-	if err != nil {
-		log.Fatalf("FATAL: Could not read JSON files: %v", err)
-	}
-	var exportedMessageFiles []string
-	for _, f := range allJsonFiles {
-		base := filepath.Base(f)
-		if base != "members.json" && base != "channels.json" {
-			exportedMessageFiles = append(exportedMessageFiles, f)
-		}
-	}
-	if len(exportedMessageFiles) == 0 {
-		log.Println("No message JSON files found to scrape. Exiting.")
-		log.Printf("S-2000 (scrape-extended) finished in %s.", time.Since(startTime))
-		return
-	}
+
 	csvFile, err := os.Create(appConfig.ExtendedScrapeCsvOutputPath)
 	if err != nil {
 		log.Fatalf("FATAL: Error creating extended scrape CSV file %s: %v", appConfig.ExtendedScrapeCsvOutputPath, err)
@@ -691,9 +593,12 @@ func runExtendedScrape(appConfig S2000AppConfig, startTime time.Time) {
 	defer csvFile.Close()
 	csvWriter := csv.NewWriter(bufio.NewWriter(csvFile))
 	defer csvWriter.Flush()
-	headers := []string{"MessageID", "TimestampUTC", "AuthorID", "AuthorName", "DisplayName", "AccountCreationDateUTC", "ServerJoinDateUTC", "MessageContent", "Reactions"}
+
+	headers := []string{"MessageID", "TimestampUTC", "AuthorID", "AuthorName", "DisplayName", "AccountCreationDateUTC", "MessageContent", "Reactions"}
 	_ = csvWriter.Write(headers)
+
 	bar := progressbar.NewOptions(len(exportedMessageFiles), progressbar.OptionSetDescription("Scraping Extended Data  "), progressbar.OptionSetTheme(progressbar.Theme{Saucer: "[blue]=[reset]", SaucerHead: "[blue]>[reset]", BarStart: "[", BarEnd: "]"}), progressbar.OptionSetWidth(30), progressbar.OptionShowCount(), progressbar.OptionOnCompletion(func() { fmt.Fprint(os.Stderr, "\n") }))
+
 	var wg sync.WaitGroup
 	var muWriter sync.Mutex
 	scraperConcurrency := runtime.NumCPU() * 2
@@ -704,12 +609,14 @@ func runExtendedScrape(appConfig S2000AppConfig, startTime time.Time) {
 		scraperConcurrency = 16
 	}
 	sem := make(chan struct{}, scraperConcurrency)
+
 	log.Printf("Scraping extended data from %d message files (Concurrency: %d)...", len(exportedMessageFiles), scraperConcurrency)
 	for _, jsonPath := range exportedMessageFiles {
 		wg.Add(1)
-		go processJSONFileForExtendedScrape(jsonPath, csvWriter, &muWriter, memberJoinDateMap, &wg, sem, bar)
+		go processJSONFileForExtendedScrape(jsonPath, csvWriter, &muWriter, &wg, sem, bar)
 	}
 	wg.Wait()
+
 	if err := csvWriter.Error(); err != nil {
 		log.Fatalf("FATAL: Error flushing CSV writer for extended scrape: %v", err)
 	}
