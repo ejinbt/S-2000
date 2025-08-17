@@ -33,39 +33,25 @@ type ChannelConfig struct {
 	DateRanges []DateRangeStr
 	AutoChunk  *AutoChunkConfig
 }
-// type S2000AppConfig struct {
-// 	Token, DceExecPath, ServerIdToExport                                                                string
-// 	ExportDurationMonths                                                                                int
-// 	InputUserCsvPath, FirstMessageOutputPath                                                            string
-// 	IntermediateExportDirectory, FinalCsvOutputPath, MessagesCsvOutputPath, ExtendedScrapeCsvOutputPath string
-// 	ExtendedAnalysisJsonDirectory                                                                       string
-// 	DceExportFormat                                                                                     string
-// 	DceMaxConcurrent                                                                                    int
-// 	Channels                                                                                            []ChannelConfig
-//}
-// type RootConfig struct {
-// 	Config S2000AppConfig `yaml:"config"`
-// }
-
 type S2000AppConfig struct {
-    Token                       string          `yaml:"token"`
-    DceExecPath                 string          `yaml:"dce_execpath"`
-    ServerIdToExport            string          `yaml:"server_id_to_export"`
-    ExportDurationMonths        int             `yaml:"export_duration_months"`
-    InputUserCsvPath            string          `yaml:"input_user_csv_path"`
-    FirstMessageOutputPath      string          `yaml:"first_message_output_path"`
-    IntermediateExportDirectory string          `yaml:"intermediate_export_directory"` // Correct tag added
-    FinalCsvOutputPath          string          `yaml:"final_csv_output_path"`
-    MessagesCsvOutputPath       string          `yaml:"messages_csv_output_path"`
-    ExtendedScrapeCsvOutputPath string          `yaml:"extended_scrape_csv_output_path"`
-    ExtendedAnalysisJsonDirectory string        `yaml:"extended_analysis_json_directory"` // Correct tag added
-    DceExportFormat             string          `yaml:"dce_export_format"`
-    DceMaxConcurrent            int             `yaml:"dce_max_concurrent"`
-    Channels                    []ChannelConfig `yaml:"channels"`
+	Token                         string          `yaml:"token"`
+	DceExecPath                   string          `yaml:"dce_execpath"`
+	ServerIdToExport              string          `yaml:"server_id_to_export"`
+	ExportDurationMonths          int             `yaml:"export_duration_months"`
+	InputUserCsvPath              string          `yaml:"input_user_csv_path"`
+	FirstMessageOutputPath        string          `yaml:"first_message_output_path"`
+	IntermediateExportDirectory   string          `yaml:"intermediate_export_directory"` // Correct tag added
+	FinalCsvOutputPath            string          `yaml:"final_csv_output_path"`
+	MessagesCsvOutputPath         string          `yaml:"messages_csv_output_path"`
+	ExtendedScrapeCsvOutputPath   string          `yaml:"extended_scrape_csv_output_path"`
+	ExtendedAnalysisJsonDirectory string          `yaml:"extended_analysis_json_directory"` // Correct tag added
+	DceExportFormat               string          `yaml:"dce_export_format"`
+	DceMaxConcurrent              int             `yaml:"dce_max_concurrent"`
+	Channels                      []ChannelConfig `yaml:"channels"`
 }
 
-type RootConfig struct { 
-    Config S2000AppConfig `yaml:"config"` 
+type RootConfig struct {
+	Config S2000AppConfig `yaml:"config"`
 }
 
 // --- JSON Scraping Structures ---
@@ -539,14 +525,6 @@ func processFileForJsonAnalysis(filePath string, outputDir string, wg *sync.Wait
 func main() {
 	startTime := time.Now()
 	log.Println("S-2000 (Scrapper-2000) Initializing...")
-	    // --- DEBUG ---
-    // This will show us EXACTLY what arguments the program is seeing
-    log.Println("-------------------- DEBUG INFO --------------------")
-    log.Printf("Raw Command-Line Arguments: %v", os.Args)
-    wd, _ := os.Getwd()
-    log.Printf("Current Working Directory: %s", wd)
-    log.Println("--------------------------------------------------")
-    // --- END DEBUG ---
 	configFile := flag.String("config", "config.yaml", "Path to the configuration file.")
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "S-2000 - Discord Chat Operations Tool\n\nUsage: %s <command> [options]\n\n", os.Args[0])
@@ -947,10 +925,6 @@ func runFindFirstMessage(appConfig S2000AppConfig, startTime time.Time) {
 
 func runAnalyzeToJson(appConfig S2000AppConfig, startTime time.Time) {
 	log.Println("--- Mode: Analyze to JSON per Channel ---")
-	    log.Println("-------------------- DEBUG INFO --------------------")
-    log.Printf("Value of 'intermediate_export_directory' in this function: '%s'", appConfig.IntermediateExportDirectory)
-    log.Printf("Value of 'extended_analysis_json_directory' in this function: '%s'", appConfig.ExtendedAnalysisJsonDirectory)
-    log.Println("--------------------------------------------------")
 	if appConfig.IntermediateExportDirectory == "" {
 		log.Fatal("FATAL: 'intermediate_export_directory' must be set in config.yaml for input.")
 	}
