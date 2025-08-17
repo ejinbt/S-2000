@@ -80,6 +80,12 @@ type ScraperReaction struct {
 	Count int
 }
 type ScraperEmoji struct{ Name string }
+type GuildChannel struct{ ID, Name, Type string }
+type GuildExportFile struct{ Channels []GuildChannel }
+type ExtendedUserData struct {
+	Author       ScraperAuthorRoles
+	FirstMessage ScraperMessageExtended
+}
 
 // --- Helper Functions ---
 const discordEpoch = 1420070400000
@@ -309,7 +315,7 @@ func scrapeMessagesFromJSON(filePath string, writer *csv.Writer, muWriter *sync.
 		break
 	}
 }
-func processJSONFileForExtendedScrape(filePath string, writer *csv.Writer, muWriter *sync.Mutex, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
+func aggregateExtendedDataFromJSON(filePath string, aggregatedData map[string]*ExtendedUserData, muData *sync.Mutex, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
 	defer wg.Done()
 	defer bar.Add(1)
 	sem <- struct{}{}
@@ -340,20 +346,18 @@ func processJSONFileForExtendedScrape(filePath string, writer *csv.Writer, muWri
 			if msg.Author.ID == "" {
 				continue
 			}
-			accountCreationDate, _ := getCreationTimeFromID(msg.Author.ID)
-			displayName := msg.Author.Nickname
-			if displayName == "" {
-				displayName = msg.Author.Name
+			muData.Lock()
+			userData, exists := aggregatedData[msg.Author.ID]
+			if !exists {
+				userData = &ExtendedUserData{Author: msg.Author, FirstMessage: msg}
+				aggregatedData[msg.Author.ID] = userData
+			} else {
+				if msg.Timestamp.Before(userData.FirstMessage.Timestamp) {
+					userData.FirstMessage = msg
+					userData.Author = msg.Author
+				}
 			}
-			var reactionParts []string
-			for _, reaction := range msg.Reactions {
-				reactionParts = append(reactionParts, fmt.Sprintf("%s:%d", reaction.Emoji.Name, reaction.Count))
-			}
-			reactionsStr := strings.Join(reactionParts, "|")
-			record := []string{msg.ID, msg.Timestamp.UTC().Format(time.RFC3339), msg.Author.ID, msg.Author.Name, displayName, accountCreationDate.Format(time.RFC3339), msg.Content, reactionsStr}
-			muWriter.Lock()
-			_ = writer.Write(record)
-			muWriter.Unlock()
+			muData.Unlock()
 		}
 		break
 	}
@@ -566,15 +570,11 @@ func runExtendedScrape(appConfig S2000AppConfig, startTime time.Time) {
 
 	afterDate := time.Now().AddDate(0, -appConfig.ExportDurationMonths, 0)
 	afterDateStr := afterDate.Format("2006-01-02")
-
-	// The output path for exportguild is a directory. DCE will create files inside it.
-	// We add a trailing slash to be explicit, which DCE recommends.
 	outputDir := appConfig.IntermediateExportDirectory + string(os.PathSeparator)
 
 	log.Printf("Executing DCE 'exportguild' for server %s for messages after %s...", appConfig.ServerIdToExport, afterDateStr)
 	guildExportCmd := exec.Command(appConfig.DceExecPath, "exportguild", "-t", appConfig.Token, "-g", appConfig.ServerIdToExport, "-f", "Json", "--after", afterDateStr, "-o", outputDir)
 
-	// This is a single, long-running command, so no progress bar for this part. We just wait for it to finish.
 	if output, err := guildExportCmd.CombinedOutput(); err != nil {
 		log.Fatalf("FATAL: Failed to export server with DCE 'exportguild': %v\nOutput:\n%s", err, string(output))
 	}
@@ -586,6 +586,29 @@ func runExtendedScrape(appConfig S2000AppConfig, startTime time.Time) {
 		log.Fatalf("FATAL: No message JSON files found to scrape after export phase. Error: %v", err)
 	}
 
+	log.Println("Aggregating user data from all files to find first messages...")
+	barAgg := progressbar.NewOptions(len(exportedMessageFiles), progressbar.OptionSetDescription("Aggregating Data          "), progressbar.OptionSetTheme(progressbar.Theme{Saucer: "[yellow]=[reset]", SaucerHead: "[yellow]>[reset]", BarStart: "[", BarEnd: "]"}), progressbar.OptionSetWidth(30), progressbar.OptionShowCount(), progressbar.OptionOnCompletion(func() { fmt.Fprint(os.Stderr, "\n") }))
+
+	aggregatedData := make(map[string]*ExtendedUserData)
+	var muData sync.Mutex
+	var wgAgg sync.WaitGroup
+	scraperConcurrency := runtime.NumCPU() * 2
+	if scraperConcurrency < 4 {
+		scraperConcurrency = 4
+	}
+	if scraperConcurrency > 16 {
+		scraperConcurrency = 16
+	}
+	semAgg := make(chan struct{}, scraperConcurrency)
+
+	for _, jsonPath := range exportedMessageFiles {
+		wgAgg.Add(1)
+		go aggregateExtendedDataFromJSON(jsonPath, aggregatedData, &muData, &wgAgg, semAgg, barAgg)
+	}
+	wgAgg.Wait()
+	log.Printf("Successfully aggregated data for %d unique users.", len(aggregatedData))
+
+	log.Println("Writing final CSV report...")
 	csvFile, err := os.Create(appConfig.ExtendedScrapeCsvOutputPath)
 	if err != nil {
 		log.Fatalf("FATAL: Error creating extended scrape CSV file %s: %v", appConfig.ExtendedScrapeCsvOutputPath, err)
@@ -594,31 +617,35 @@ func runExtendedScrape(appConfig S2000AppConfig, startTime time.Time) {
 	csvWriter := csv.NewWriter(bufio.NewWriter(csvFile))
 	defer csvWriter.Flush()
 
-	headers := []string{"MessageID", "TimestampUTC", "AuthorID", "AuthorName", "DisplayName", "AccountCreationDateUTC", "MessageContent", "Reactions"}
+	headers := []string{"AuthorID", "AuthorName", "DisplayName", "AccountCreationDateUTC", "FirstMessageDateInExportUTC", "FirstMessageContent", "FirstMessageReactions"}
 	_ = csvWriter.Write(headers)
 
-	bar := progressbar.NewOptions(len(exportedMessageFiles), progressbar.OptionSetDescription("Scraping Extended Data  "), progressbar.OptionSetTheme(progressbar.Theme{Saucer: "[blue]=[reset]", SaucerHead: "[blue]>[reset]", BarStart: "[", BarEnd: "]"}), progressbar.OptionSetWidth(30), progressbar.OptionShowCount(), progressbar.OptionOnCompletion(func() { fmt.Fprint(os.Stderr, "\n") }))
+	for _, userData := range aggregatedData {
+		accountCreationDate, _ := getCreationTimeFromID(userData.Author.ID)
+		displayName := userData.Author.Nickname
+		if displayName == "" {
+			displayName = userData.Author.Name
+		}
 
-	var wg sync.WaitGroup
-	var muWriter sync.Mutex
-	scraperConcurrency := runtime.NumCPU() * 2
-	if scraperConcurrency < 4 {
-		scraperConcurrency = 4
-	}
-	if scraperConcurrency > 16 {
-		scraperConcurrency = 16
-	}
-	sem := make(chan struct{}, scraperConcurrency)
+		var reactionParts []string
+		for _, reaction := range userData.FirstMessage.Reactions {
+			reactionParts = append(reactionParts, fmt.Sprintf("%s:%d", reaction.Emoji.Name, reaction.Count))
+		}
 
-	log.Printf("Scraping extended data from %d message files (Concurrency: %d)...", len(exportedMessageFiles), scraperConcurrency)
-	for _, jsonPath := range exportedMessageFiles {
-		wg.Add(1)
-		go processJSONFileForExtendedScrape(jsonPath, csvWriter, &muWriter, &wg, sem, bar)
+		record := []string{
+			userData.Author.ID,
+			userData.Author.Name,
+			displayName,
+			accountCreationDate.Format(time.RFC3339),
+			userData.FirstMessage.Timestamp.UTC().Format(time.RFC3339),
+			userData.FirstMessage.Content,
+			strings.Join(reactionParts, "|"),
+		}
+		_ = csvWriter.Write(record)
 	}
-	wg.Wait()
 
 	if err := csvWriter.Error(); err != nil {
-		log.Fatalf("FATAL: Error flushing CSV writer for extended scrape: %v", err)
+		log.Fatalf("FATAL: Error flushing CSV writer: %v", err)
 	}
 	log.Printf("Successfully wrote extended scrape data to %s", appConfig.ExtendedScrapeCsvOutputPath)
 	log.Printf("S-2000 (scrape-extended) finished successfully in %s.", time.Since(startTime))
