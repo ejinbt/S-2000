@@ -4,20 +4,22 @@
 
 S-2000 is a powerful, Go-based command-line tool designed to automate the process of exporting and analyzing Discord chat history using [DiscordChatExporter (DCE)](https://github.com/Tyrrrz/DiscordChatExporter).
 
-It features multiple modes of operation, from simple message scraping to comprehensive, server-wide analysis and targeted user-activity lookups.
+It features a suite of modular subcommands, enabling a wide range of data extraction tasks—from simple message scraping to comprehensive, server-wide analysis and targeted user-activity lookups.
 
 ## Features
 
-*   **Modular Subcommand System:**
-    *   `scrape-extended`: Fully automates a server-wide scrape of recent messages for a detailed, channel-centric report.
-    *   `analyze-extended`: Scrapes a detailed, channel-centric report from a folder of existing JSON files, skipping the export step.
+*   **Modular Subcommand System:** A command for every need.
+    *   `scrape-extended`: Fully automates a server-wide scrape of recent messages for a detailed, channel-centric CSV report.
+    *   `analyze-extended`: Scrapes a detailed, channel-centric CSV report from a folder of existing JSON files, skipping the export step.
+    *   `analyze-to-json`: Analyzes a folder of existing JSONs and creates a separate, new JSON analysis file for each channel, listing all unique users and their metadata.
     *   `find-first-message`: For a given list of users, exports the full history of specified channels to find their absolute first message.
-    *   `run-all`: Exports specific channels (chunked by date) and scrapes aggregated user/role data.
+    *   `run-all`: Exports specific channels (with date-chunking) and scrapes aggregated user/role data.
     *   `scrape-roles`: Scrapes user IDs, display names, and a complete list of all their roles from existing JSON files.
     *   `scrape-messages`: Scrapes display names and message content from existing JSON files.
 *   **Automated & Targeted Exporting:** Can export entire servers, specific channels with date filters, or the full history of channels for deep analysis.
 *   **High-Performance Operations:** Leverages Go's concurrency for both DCE execution and ultra-fast JSON scraping, complete with progress bars for all long-running tasks.
-*   **Rich Data Extraction:** Can calculate user account creation dates and find a user's first-ever message in a given set of channels.
+*   **Rich Data Extraction:** Can calculate user account creation dates and find a user's first-ever message or first message within a channel.
+*   **Flexible Output:** Generates reports in both aggregated CSV and structured, per-channel JSON formats.
 *   **Configuration Driven:** A single `config.yaml` file controls all settings for all modes.
 
 ## Prerequisites
@@ -48,6 +50,9 @@ config:
   export_duration_months: 3
   extended_scrape_csv_output_path: "./s2000_extended_report.csv"
   
+  # --- Settings for 'analyze-to-json' ---
+  extended_analysis_json_directory: "./s2000_json_analysis"
+  
   # --- Settings for 'find-first-message' Mode ---
   # CSV file with UserIDs in the first column (must have a header)
   input_user_csv_path: "./input_users.csv"
@@ -55,7 +60,7 @@ config:
   first_message_output_path: "./s2000_first_messages_report.csv"
 
   # --- General Settings ---
-  intermediate_export_directory: "./s2000_exports"
+  intermediate_export_directory: "./s2000_exports" # Input for analyze modes, output for export modes
   dce_max_concurrent: 8
 
   # --- Output Paths for Other Modes ---
@@ -63,7 +68,7 @@ config:
   messages_csv_output_path: "./s2000_messages.csv"
   
   # --- Channels for 'run-all' and 'find-first-message' Modes ---
-  # For 'find-first-message', list ALL channels you want to search through for the true first message.
+  # For 'find-first-message', list ALL channels you want to search through.
   # For 'run-all', this list is used for targeted, date-chunked exports.
   channels:
     - id: "111111111111111111"
@@ -95,6 +100,13 @@ Skips the export step and runs the same analysis as `scrape-extended` on a folde
 ```
 **Output:** The same detailed, channel-centric CSV report as `scrape-extended`.
 
+#### `analyze-to-json`
+Analyzes a folder of existing JSONs and creates a new, separate JSON analysis file for each channel.
+```bash
+./s2000 analyze-to-json -config config.yaml
+```
+**Output:** A new folder (`extended_analysis_json_directory`) containing structured JSON files, one for each channel.
+
 #### `find-first-message`
 For a list of users (from a CSV), this command exports the **entire history** of specified channels to find their absolute earliest message.
 ```bash
@@ -106,9 +118,9 @@ For a list of users (from a CSV), this command exports the **entire history** of
 
 ### **Other Commands**
 
-*   **`run-all`**: Exports specific channels from the `channels` list (supports date-chunking) and then runs the role scraper.
-*   **`scrape-roles`**: Scrapes aggregated user and role data from existing JSON files in the `intermediate_export_directory`.
-*   **`scrape-messages`**: Scrapes just display names and message content from existing JSON files.
+*   **`run-all`**: Exports specific channels from the `channels` list and then runs the role scraper.
+*   **`scrape-roles`**: Scrapes aggregated user and role data from existing JSON files.
+*   **`scrape-messages`**: Scrapes display names and message content from existing JSON files.
 
 ## Troubleshooting & Notes
 
@@ -116,6 +128,3 @@ For a list of users (from a CSV), this command exports the **entire history** of
 *   **User Tokens:** When using a user token (not a bot), you are acting as your own user. Be mindful of Discord's ToS.
 *   **Permissions:** Ensure you have permission to view the channels you are trying to export.
 
-## License
-
-RapidFreelancin CopyRights
