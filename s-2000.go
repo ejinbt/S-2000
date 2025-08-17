@@ -88,15 +88,31 @@ type ExtendedUserData struct {
 	FirstMessage            ScraperMessageExtended
 	FirstMessageChannelName string
 }
+
+// Structs for analyze-to-json output
 type ChannelAnalysisOutput struct {
-	Channel     ChannelInfo
-	AnalyzedAt  time.Time
-	UniqueUsers []UserAnalysis
+	Channel      ChannelInfo       `json:"channel"`
+	AnalyzedAt   time.Time         `json:"analyzedAt"`
+	MessageCount int               `json:"messageCount"`
+	Messages     []AnalyzedMessage `json:"messages"`
 }
 type ChannelInfo struct{ ID, Name string }
-type UserAnalysis struct {
-	UserID, Username, DisplayName string
-	AccountCreationDateUTC        time.Time `json:"accountCreationDateUTC"`
+type AnalyzedMessage struct {
+	MessageID    string             `json:"messageId"`
+	Content      string             `json:"content"`
+	TimestampUTC time.Time          `json:"timestampUTC"`
+	Author       AnalyzedAuthor     `json:"author"`
+	Reactions    []AnalyzedReaction `json:"reactions"`
+}
+type AnalyzedAuthor struct {
+	UserID                 string    `json:"userId"`
+	Username               string    `json:"username"`
+	DisplayName            string    `json:"displayName"`
+	AccountCreationDateUTC time.Time `json:"accountCreationDateUTC"`
+}
+type AnalyzedReaction struct {
+	EmojiName string `json:"emojiName"`
+	Count     int    `json:"count"`
 }
 
 // --- Helper Functions ---
@@ -425,8 +441,8 @@ func processFileForJsonAnalysis(filePath string, outputDir string, wg *sync.Wait
 	if err != nil {
 		return
 	}
-	uniqueUsers := make(map[string]UserAnalysis)
 	var channelInfo ChannelInfo
+	var messages []AnalyzedMessage
 	content, err := io.ReadAll(file)
 	if err != nil {
 		return
@@ -450,7 +466,7 @@ func processFileForJsonAnalysis(filePath string, outputDir string, wg *sync.Wait
 		}
 		_, _ = decoder.Token() // '['
 		for decoder.More() {
-			var msg ScraperMessageRoles
+			var msg ScraperMessageExtended
 			if err := decoder.Decode(&msg); err != nil {
 				var skipDummy interface{}
 				_ = decoder.Decode(&skipDummy)
@@ -459,23 +475,31 @@ func processFileForJsonAnalysis(filePath string, outputDir string, wg *sync.Wait
 			if msg.Author.ID == "" {
 				continue
 			}
-			if _, exists := uniqueUsers[msg.Author.ID]; !exists {
-				accountCreationDate, _ := getCreationTimeFromID(msg.Author.ID)
-				displayName := msg.Author.Nickname
-				if displayName == "" {
-					displayName = msg.Author.Name
-				}
-				uniqueUsers[msg.Author.ID] = UserAnalysis{UserID: msg.Author.ID, Username: msg.Author.Name, DisplayName: displayName, AccountCreationDateUTC: accountCreationDate}
+			accountCreationDate, _ := getCreationTimeFromID(msg.Author.ID)
+			displayName := msg.Author.Nickname
+			if displayName == "" {
+				displayName = msg.Author.Name
 			}
+			var analyzedReactions []AnalyzedReaction
+			for _, reaction := range msg.Reactions {
+				analyzedReactions = append(analyzedReactions, AnalyzedReaction{EmojiName: reaction.Emoji.Name, Count: reaction.Count})
+			}
+			analyzedMsg := AnalyzedMessage{
+				MessageID:    msg.ID,
+				Content:      msg.Content,
+				TimestampUTC: msg.Timestamp.UTC(),
+				Author: AnalyzedAuthor{
+					UserID: msg.Author.ID, Username: msg.Author.Name, DisplayName: displayName, AccountCreationDateUTC: accountCreationDate,
+				},
+				Reactions: analyzedReactions,
+			}
+			messages = append(messages, analyzedMsg)
 		}
 		break
 	}
-	var usersSlice []UserAnalysis
-	for _, user := range uniqueUsers {
-		usersSlice = append(usersSlice, user)
+	outputData := ChannelAnalysisOutput{
+		Channel: channelInfo, AnalyzedAt: time.Now().UTC(), MessageCount: len(messages), Messages: messages,
 	}
-	sort.Slice(usersSlice, func(i, j int) bool { return usersSlice[i].UserID < usersSlice[j].UserID })
-	outputData := ChannelAnalysisOutput{Channel: channelInfo, AnalyzedAt: time.Now().UTC(), UniqueUsers: usersSlice}
 	outputFilename := filepath.Join(outputDir, fmt.Sprintf("%s_%s_analysis.json", sanitizeFilename(channelInfo.Name), channelInfo.ID))
 	outputFile, err := os.Create(outputFilename)
 	if err != nil {
@@ -501,8 +525,8 @@ func main() {
 		fmt.Fprintln(os.Stderr, "  run-all              : Runs DCE export, then scrapes for aggregated user/role data.")
 		fmt.Fprintln(os.Stderr, "  scrape-roles         : Scrapes aggregated user/role data from existing JSON files.")
 		fmt.Fprintln(os.Stderr, "  scrape-messages      : Scrapes usernames and messages from existing JSON files.")
-		fmt.Fprintln(os.Stderr, "  scrape-extended      : Fully automates a server-wide scrape for a detailed CSV report.")
-		fmt.Fprintln(os.Stderr, "  analyze-extended     : Scrapes a detailed CSV report from a folder of existing JSON files.")
+		fmt.Fprintln(os.Stderr, "  scrape-extended      : Fully automates a server-wide scrape for a detailed report.")
+		fmt.Fprintln(os.Stderr, "  analyze-extended     : Scrapes a detailed report from a folder of existing JSON files.")
 		fmt.Fprintln(os.Stderr, "  analyze-to-json      : Analyzes a folder of JSONs, creating a separate JSON analysis file per channel.")
 		fmt.Fprintln(os.Stderr, "  find-first-message   : For a list of users, finds their first ever message in specified channels.")
 		fmt.Fprintln(os.Stderr, "\nOptions:")
