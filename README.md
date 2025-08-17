@@ -1,3 +1,5 @@
+
+
 # S-2000 (Scrapper-2000) - Discord Chat Operations Tool
 
 S-2000 is a powerful, Go-based command-line tool designed to automate the process of exporting and analyzing Discord chat history using [DiscordChatExporter (DCE)](https://github.com/Tyrrrz/DiscordChatExporter).
@@ -7,7 +9,8 @@ It features multiple modes of operation, from simple message scraping to compreh
 ## Features
 
 *   **Modular Subcommand System:**
-    *   `scrape-extended`: Fully automates a server-wide scrape of recent messages for a detailed report.
+    *   `scrape-extended`: Fully automates a server-wide scrape of recent messages for a detailed, channel-centric report.
+    *   `analyze-extended`: Scrapes a detailed, channel-centric report from a folder of existing JSON files, skipping the export step.
     *   `find-first-message`: For a given list of users, exports the full history of specified channels to find their absolute first message.
     *   `run-all`: Exports specific channels (chunked by date) and scrapes aggregated user/role data.
     *   `scrape-roles`: Scrapes user IDs, display names, and a complete list of all their roles from existing JSON files.
@@ -40,10 +43,11 @@ config:
   token: "YOUR_DISCORD_TOKEN_HERE"          # REQUIRED: Your Discord User or Bot Token
   dce_execpath: "DiscordChatExporter.Cli"   # REQUIRED: Path to DCE CLI executable
 
-  # --- Settings for 'scrape-extended' Mode ---
+  # --- Settings for 'scrape-extended' & 'analyze-extended' ---
   server_id_to_export: "YOUR_SERVER_ID_HERE"
   export_duration_months: 3
-
+  extended_scrape_csv_output_path: "./s2000_extended_report.csv"
+  
   # --- Settings for 'find-first-message' Mode ---
   # CSV file with UserIDs in the first column (must have a header)
   input_user_csv_path: "./input_users.csv"
@@ -57,7 +61,6 @@ config:
   # --- Output Paths for Other Modes ---
   final_csv_output_path: "./s2000_user_roles.csv"
   messages_csv_output_path: "./s2000_messages.csv"
-  extended_scrape_csv_output_path: "./s2000_extended_report.csv"
   
   # --- Channels for 'run-all' and 'find-first-message' Modes ---
   # For 'find-first-message', list ALL channels you want to search through for the true first message.
@@ -77,28 +80,27 @@ config:
 
 ### **Primary Commands**
 
-#### `find-first-message`
-For a list of users (provided in a CSV), this command exports the **entire history** of the channels specified in the `channels` list and finds the absolute earliest message for each user.
-
-1.  Create a CSV file specified in `input_user_csv_path` with a `UserID` column.
-2.  List all channels to search in the `channels` section of the config.
-3.  Run the command:
-    ```bash
-    ./s2000 find-first-message -config config.yaml
-    ```
-**Output:** A detailed CSV report about each user's first message at `first_message_output_path`.
-
----
-
 #### `scrape-extended`
 Performs a fully automated scrape of an entire server for recent messages.
+```bash
+./s2000 scrape-extended -config config.yaml
+```
+**Output:** A detailed, channel-centric CSV report.
 
-1.  Set `server_id_to_export` and `export_duration_months` in the config.
-2.  Run the command:
-    ```bash
-    ./s2000 scrape-extended -config config.yaml
-    ```
-**Output:** A detailed CSV report of user activity over the specified period at `extended_scrape_csv_output_path`.
+#### `analyze-extended`
+Skips the export step and runs the same analysis as `scrape-extended` on a folder of existing JSON files.
+```bash
+# First, ensure 'intermediate_export_directory' in your config points to your JSON folder.
+./s2000 analyze-extended -config config.yaml
+```
+**Output:** The same detailed, channel-centric CSV report as `scrape-extended`.
+
+#### `find-first-message`
+For a list of users (from a CSV), this command exports the **entire history** of specified channels to find their absolute earliest message.
+```bash
+./s2000 find-first-message -config config.yaml
+```
+**Output:** A detailed CSV report about each user's first message.
 
 ---
 
@@ -116,4 +118,4 @@ Performs a fully automated scrape of an entire server for recent messages.
 
 ## License
 
-RAPIDFREELANCIN COPYRIGHTS
+RapidFreelancin CopyRights

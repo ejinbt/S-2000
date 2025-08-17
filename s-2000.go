@@ -24,22 +24,30 @@ import (
 // --- S-2000 Configuration Structures ---
 type DateRangeStr string
 type AutoChunkConfig struct {
-	StartDate, EndDate  string
-	ChunkDurationMonths int
+	StartDate           string `yaml:"startdate"`
+	EndDate             string `yaml:"enddate"`
+	ChunkDurationMonths int    `yaml:"chunkdurationmonths"`
 }
 type ChannelConfig struct {
-	ID, Name   string
-	DateRanges []DateRangeStr
-	AutoChunk  *AutoChunkConfig
+	ID         string           `yaml:"id"`
+	Name       string           `yaml:"name"`
+	DateRanges []DateRangeStr   `yaml:"dateranges"`
+	AutoChunk  *AutoChunkConfig `yaml:"autochunk"`
 }
 type S2000AppConfig struct {
-	Token, DceExecPath, ServerIdToExport                                                                string
-	ExportDurationMonths                                                                                int
-	InputUserCsvPath, FirstMessageOutputPath                                                            string
-	IntermediateExportDirectory, FinalCsvOutputPath, MessagesCsvOutputPath, ExtendedScrapeCsvOutputPath string
-	DceExportFormat                                                                                     string
-	DceMaxConcurrent                                                                                    int
-	Channels                                                                                            []ChannelConfig
+	Token                       string          `yaml:"token"`
+	DceExecPath                 string          `yaml:"dce_execpath"`
+	ServerIdToExport            string          `yaml:"server_id_to_export"`
+	ExportDurationMonths        int             `yaml:"export_duration_months"`
+	InputUserCsvPath            string          `yaml:"input_user_csv_path"`
+	FirstMessageOutputPath      string          `yaml:"first_message_output_path"`
+	IntermediateExportDirectory string          `yaml:"intermediate_export_directory"`
+	FinalCsvOutputPath          string          `yaml:"final_csv_output_path"`
+	MessagesCsvOutputPath       string          `yaml:"messages_csv_output_path"`
+	ExtendedScrapeCsvOutputPath string          `yaml:"extended_scrape_csv_output_path"`
+	DceExportFormat             string          `yaml:"dce_export_format"`
+	DceMaxConcurrent            int             `yaml:"dce_max_concurrent"`
+	Channels                    []ChannelConfig `yaml:"channels"`
 }
 type RootConfig struct {
 	Config S2000AppConfig `yaml:"config"`
@@ -316,16 +324,13 @@ func scrapeMessagesFromJSON(filePath, channelName string, writer *csv.Writer, mu
 		break
 	}
 }
-func aggregateExtendedDataFromJSON(filePath, channelName string, aggregatedData map[string]*ExtendedUserData, muData *sync.Mutex, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
-	defer wg.Done()
-	defer bar.Add(1)
-	sem <- struct{}{}
-	defer func() { <-sem }()
+func findFirstMessagesInFile(filePath string) (map[string]ScraperMessageExtended, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
-		return
+		return nil, err
 	}
 	defer file.Close()
+	firstMessages := make(map[string]ScraperMessageExtended)
 	decoder := json.NewDecoder(bufio.NewReader(file))
 	_, _ = decoder.Token() // '{'
 	for decoder.More() {
@@ -347,22 +352,14 @@ func aggregateExtendedDataFromJSON(filePath, channelName string, aggregatedData 
 			if msg.Author.ID == "" {
 				continue
 			}
-			muData.Lock()
-			userData, exists := aggregatedData[msg.Author.ID]
-			if !exists {
-				userData = &ExtendedUserData{Author: msg.Author, FirstMessage: msg, FirstMessageChannelName: channelName}
-				aggregatedData[msg.Author.ID] = userData
-			} else {
-				if msg.Timestamp.Before(userData.FirstMessage.Timestamp) {
-					userData.FirstMessage = msg
-					userData.Author = msg.Author
-					userData.FirstMessageChannelName = channelName
-				}
+			existingMsg, exists := firstMessages[msg.Author.ID]
+			if !exists || msg.Timestamp.Before(existingMsg.Timestamp) {
+				firstMessages[msg.Author.ID] = msg
 			}
-			muData.Unlock()
 		}
 		break
 	}
+	return firstMessages, nil
 }
 func aggregateFirstMessageFromJSON(filePath, channelName string, targetUsers map[string]bool, firstMessages map[string]*ExtendedUserData, muData *sync.Mutex, wg *sync.WaitGroup, sem chan struct{}, bar *progressbar.ProgressBar) {
 	defer wg.Done()
@@ -424,11 +421,12 @@ func main() {
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "S-2000 - Discord Chat Operations Tool\n\nUsage: %s <command> [options]\n\n", os.Args[0])
 		fmt.Fprintln(os.Stderr, "Commands:")
-		fmt.Fprintln(os.Stderr, "  run-all             : Runs DCE export, then scrapes for aggregated user/role data.")
-		fmt.Fprintln(os.Stderr, "  scrape-roles        : Scrapes aggregated user/role data from existing JSON files.")
-		fmt.Fprintln(os.Stderr, "  scrape-messages     : Scrapes usernames and messages from existing JSON files.")
-		fmt.Fprintln(os.Stderr, "  scrape-extended     : Fully automates a server-wide scrape for a detailed report.")
-		fmt.Fprintln(os.Stderr, "  find-first-message  : For a list of users, finds their first ever message in specified channels.")
+		fmt.Fprintln(os.Stderr, "  run-all              : Runs DCE export, then scrapes for aggregated user/role data.")
+		fmt.Fprintln(os.Stderr, "  scrape-roles         : Scrapes aggregated user/role data from existing JSON files.")
+		fmt.Fprintln(os.Stderr, "  scrape-messages      : Scrapes usernames and messages from existing JSON files.")
+		fmt.Fprintln(os.Stderr, "  scrape-extended      : Fully automates a server-wide scrape for a detailed report.")
+		fmt.Fprintln(os.Stderr, "  analyze-extended     : Scrapes a detailed report from a folder of existing JSON files.")
+		fmt.Fprintln(os.Stderr, "  find-first-message   : For a list of users, finds their first ever message in specified channels.")
 		fmt.Fprintln(os.Stderr, "\nOptions:")
 		flag.PrintDefaults()
 	}
@@ -452,6 +450,8 @@ func main() {
 		runMessageScrapeOnly(appConfig, startTime)
 	case "scrape-extended":
 		runExtendedScrape(appConfig, startTime)
+	case "analyze-extended":
+		runAnalyzeExtended(appConfig, startTime)
 	case "find-first-message":
 		runFindFirstMessage(appConfig, startTime)
 	default:
@@ -643,60 +643,76 @@ func runExtendedScrape(appConfig S2000AppConfig, startTime time.Time) {
 	}
 	log.Printf("Successfully exported server channels to directory: %s", appConfig.IntermediateExportDirectory)
 	log.Println("--- Phase 2: Starting extended scrape of all exported data ---")
+	runAnalyzeExtended(appConfig, startTime)
+}
+
+func runAnalyzeExtended(appConfig S2000AppConfig, startTime time.Time) {
+	log.Println("--- Mode: Analyze Extended Data from Folder ---")
+	log.Println("--- Starting extended analysis of existing data ---")
+	if appConfig.IntermediateExportDirectory == "" {
+		log.Fatal("FATAL: 'intermediate_export_directory' must be set in config.yaml.")
+	}
 	exportedMessageFiles, err := getJSONFilesFromExportDir(appConfig.IntermediateExportDirectory)
-	if err != nil || len(exportedMessageFiles) == 0 {
-		log.Fatalf("FATAL: No message JSON files found to scrape after export phase. Error: %v", err)
+	if err != nil {
+		log.Fatalf("FATAL: Could not read JSON files from '%s': %v", appConfig.IntermediateExportDirectory, err)
 	}
-	log.Println("Aggregating user data from all files to find first messages...")
-	barAgg := progressbar.NewOptions(len(exportedMessageFiles), progressbar.OptionSetDescription("Aggregating Data          "), progressbar.OptionSetTheme(progressbar.Theme{Saucer: "[yellow]=[reset]", SaucerHead: "[yellow]>[reset]", BarStart: "[", BarEnd: "]"}), progressbar.OptionSetWidth(30), progressbar.OptionShowCount(), progressbar.OptionOnCompletion(func() { fmt.Fprint(os.Stderr, "\n") }))
-	aggregatedData := make(map[string]*ExtendedUserData)
-	var muData sync.Mutex
-	var wgAgg sync.WaitGroup
-	scraperConcurrency := runtime.NumCPU() * 2
-	if scraperConcurrency < 4 {
-		scraperConcurrency = 4
+	if len(exportedMessageFiles) == 0 {
+		log.Fatalf("FATAL: No JSON files found to scrape in '%s'.", appConfig.IntermediateExportDirectory)
 	}
-	if scraperConcurrency > 16 {
-		scraperConcurrency = 16
-	}
-	semAgg := make(chan struct{}, scraperConcurrency)
-	for _, jsonPath := range exportedMessageFiles {
-		channelDir := filepath.Base(filepath.Dir(jsonPath))
-		parts := strings.Split(channelDir, "_")
-		channelName := parts[0]
-		wgAgg.Add(1)
-		go aggregateExtendedDataFromJSON(jsonPath, channelName, aggregatedData, &muData, &wgAgg, semAgg, barAgg)
-	}
-	wgAgg.Wait()
-	log.Printf("Successfully aggregated data for %d unique users.", len(aggregatedData))
-	log.Println("Writing final CSV report...")
 	csvFile, err := os.Create(appConfig.ExtendedScrapeCsvOutputPath)
 	if err != nil {
-		log.Fatalf("FATAL: Error creating extended scrape CSV file %s: %v", err)
+		log.Fatalf("FATAL: Error creating extended CSV file %s: %v", appConfig.ExtendedScrapeCsvOutputPath, err)
 	}
 	defer csvFile.Close()
 	csvWriter := csv.NewWriter(bufio.NewWriter(csvFile))
 	defer csvWriter.Flush()
-	headers := []string{"AuthorID", "AuthorName", "DisplayName", "AccountCreationDateUTC", "FirstMessageDateInExportUTC", "FirstMessageChannel", "FirstMessageContent", "FirstMessageReactions"}
+	headers := []string{"ChannelID", "ChannelName", "AuthorID", "AuthorName", "DisplayName", "AccountCreationDateUTC", "FirstMessageDateInChannelUTC", "MessageContent", "Reactions"}
 	_ = csvWriter.Write(headers)
-	for _, userData := range aggregatedData {
-		accountCreationDate, _ := getCreationTimeFromID(userData.Author.ID)
-		displayName := userData.Author.Nickname
-		if displayName == "" {
-			displayName = userData.Author.Name
+	bar := progressbar.NewOptions(len(exportedMessageFiles), progressbar.OptionSetDescription("Analyzing Extended Data   "), progressbar.OptionSetTheme(progressbar.Theme{Saucer: "[yellow]=[reset]", SaucerHead: "[yellow]>[reset]", BarStart: "[", BarEnd: "]"}), progressbar.OptionSetWidth(30), progressbar.OptionShowCount(), progressbar.OptionOnCompletion(func() { fmt.Fprint(os.Stderr, "\n") }))
+	log.Printf("Analyzing %d JSON files from %s...", len(exportedMessageFiles), appConfig.IntermediateExportDirectory)
+	for _, jsonPath := range exportedMessageFiles {
+		var data struct{ Channel struct{ ID, Name string } }
+		file, err := os.Open(jsonPath)
+		if err != nil {
+			bar.Add(1)
+			continue
 		}
-		var reactionParts []string
-		for _, reaction := range userData.FirstMessage.Reactions {
-			reactionParts = append(reactionParts, fmt.Sprintf("%s:%d", reaction.Emoji.Name, reaction.Count))
+		json.NewDecoder(file).Decode(&data)
+		file.Close()
+		channelID, channelName := data.Channel.ID, data.Channel.Name
+		firstMessages, err := findFirstMessagesInFile(jsonPath)
+		if err != nil {
+			log.Printf("\nWarning: Could not process file %s: %v", jsonPath, err)
+			bar.Add(1)
+			continue
 		}
-		record := []string{userData.Author.ID, userData.Author.Name, displayName, accountCreationDate.Format(time.RFC3339), userData.FirstMessage.Timestamp.UTC().Format(time.RFC3339), userData.FirstMessageChannelName, userData.FirstMessage.Content, strings.Join(reactionParts, "|")}
-		_ = csvWriter.Write(record)
+		var userIDs []string
+		for uid := range firstMessages {
+			userIDs = append(userIDs, uid)
+		}
+		sort.Strings(userIDs)
+		for _, userID := range userIDs {
+			msg := firstMessages[userID]
+			accountCreationDate, _ := getCreationTimeFromID(msg.Author.ID)
+			displayName := msg.Author.Nickname
+			if displayName == "" {
+				displayName = msg.Author.Name
+			}
+			var reactionParts []string
+			for _, reaction := range msg.Reactions {
+				reactionParts = append(reactionParts, fmt.Sprintf("%s:%d", reaction.Emoji.Name, reaction.Count))
+			}
+			reactionsStr := strings.Join(reactionParts, "|")
+			record := []string{channelID, channelName, msg.Author.ID, msg.Author.Name, displayName, accountCreationDate.Format(time.RFC3339), msg.Timestamp.UTC().Format(time.RFC3339), msg.Content, reactionsStr}
+			_ = csvWriter.Write(record)
+		}
+		bar.Add(1)
 	}
 	if err := csvWriter.Error(); err != nil {
-		log.Fatalf("FATAL: Error flushing CSV writer: %v", err)
+		log.Fatalf("FATAL: Error flushing CSV writer for extended analysis: %v", err)
 	}
-	log.Printf("Successfully wrote extended scrape data to %s", appConfig.ExtendedScrapeCsvOutputPath)
-	log.Printf("S-2000 (scrape-extended) finished successfully in %s.", time.Since(startTime))
+	log.Printf("Successfully wrote extended analysis data to %s", appConfig.ExtendedScrapeCsvOutputPath)
+	log.Printf("S-2000 (analyze-extended) finished successfully in %s.", time.Since(startTime))
 }
 
 func readTargetUsers(filePath string) (map[string]bool, error) {
